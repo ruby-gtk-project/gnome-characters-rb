@@ -30,26 +30,48 @@ install it and build the dialog explicitly.
 
 ## Current state of `ruby`
 
-`lib/` holds a placeholder only:
+`lib/` now holds the port itself, flat and one file per upstream source:
 
-| Path | Contents |
+| Path | Upstream it ports |
 |---|---|
-| `lib/gnome_characters.rb` | `require_relative "gnome_characters/application"` |
-| `lib/gnome_characters/application.rb` | `GnomeCharacters::Application` — `Gtk::Application` + `Adwaita::ApplicationWindow` + `Adwaita::ToolbarView` + `Adwaita::HeaderBar` + an `Adwaita::StatusPage` reading "The Ruby port has not been written yet." |
-| `lib/gnome/characters/rb/version.rb` | version constant |
+| `lib/gnome_characters.rb` | entry point, `require_relative 'main'` |
+| `lib/main.rb` | `src/main.js` |
+| `lib/window.rb` | `src/window.js` + `data/window.ui` (menu included) |
+| `lib/sidebar.rb` | `src/sidebar.js` + `data/sidebar.ui` |
+| `lib/sidebar_item.rb` | `src/sidebarItem.js` |
+| `lib/characters_view.rb` | `src/charactersView.js` |
+| `lib/character_dialog.rb` | `src/characterDialog.js` + `data/character_dialog.ui` |
+| `lib/shortcuts_dialog.rb` | `data/shortcuts.ui` |
+| `lib/about_dialog.rb` | the `_about` method of `src/window.js` |
+| `lib/shell_search_provider.rb` | `src/searchProvider.js` + `data/ShellSearchProvider2.xml` |
+| `lib/util.rb` | `src/util.js` |
+| `lib/gc.rb` + `lib/data/*.tsv` | `lib/gc.{c,h}` and its generated headers |
+| `lib/settings.rb` | `data/org.gnome.Characters.gschema.xml` |
+| `lib/style.css` | `data/style.css` |
+| `lib/gnome/characters/rb/version.rb` | version constant (port only) |
 
-So **no user-facing component of the app exists yet**. The placeholder's
-window, toolbar view and header bar are the right shells for the main window
-and become part of `lib/window.rb`; the status page is scaffolding to delete.
+So **every unit upstream has a counterpart on `ruby`**, and the survey's job is
+now to name what is still missing inside them rather than which files are
+absent. The three standing gaps are translations (`po/` does not exist), the
+seven app-shipped `characters-*-symbolic` icons (referenced by the sidebar and
+the empty-state page but not shipped or registered with the icon theme), and
+the conditional `devel` CSS class on the window for the `…Devel` app id.
 
-Note the house shape in the pilot (`gnome-contacts-rb`) is flat `lib/*.rb`, one
+Two units deliberately diverge from upstream's mechanism rather than its
+behaviour, and both are documented in the file's own header comment:
+`lib/gc.rb` reimplements libgc in Ruby over TSV tables converted from the
+generated headers, and `lib/settings.rb` keeps the schema's keys, defaults and
+semantics in a JSON file under `XDG_CONFIG_HOME` instead of requiring a
+compiled GSettings schema to be installed before the app will run.
+`lib/characters_view.rb` likewise draws into a `Gtk::DrawingArea` inside a
+`Gtk::ScrolledWindow` instead of subclassing `Gtk::Widget` and implementing
+`Gtk::Scrollable`.
+
+The house shape in the pilot (`gnome-contacts-rb`) is flat `lib/*.rb`, one
 upstream source file per file, each opening with `# frozen_string_literal: true`
 then `require 'adwaita'` and `require_relative` siblings, a class comment
 naming the upstream file, and widgets as memoized accessors configured in `.tap`
-blocks. The port's files below follow that, which means the existing
-`lib/gnome_characters/application.rb` is the odd one out and the application
-unit should move to `lib/main.rb` as in the pilot.
-
+blocks. Every file above follows that.
 ---
 
 ## Components, in the order a user meets them
@@ -70,9 +92,10 @@ accelerators, the D-Bus registration and the search-provider export.
 | inactivity timeout | 1 | 10 s when launched as a D-Bus service |
 | `vfunc_dbus_register` | 1 | exports the search provider at `<path>/SearchProvider` |
 
-Present on `ruby`: **partial** — a `Gtk::Application` with an app id exists in
-`lib/gnome_characters/application.rb`; no actions, no accels, no style manager,
-no D-Bus.
+Present on `ruby`: **yes** — `lib/main.rb`: `Gtk::Application`, `app.quit` and
+`app.shortcuts`, the `win.find` accel, the `PREFER_LIGHT` style manager, the
+stylesheet, and the search-provider export over `app.dbus_connection`. Gap: the
+conditional `devel` CSS class for the `…Devel` app id is not applied.
 
 ### 2. `src/window.js` + `data/window.ui` → `lib/window.rb` — the main window
 
@@ -102,15 +125,17 @@ State: `recent-characters` read from and written back to GSettings.
 Repeaters: none. Conditional: the `devel` class; the stack page chosen by
 search state, category and result count.
 
-Present on `ruby`: **partial** — only the window, toolbar view and header bar
-shells, with a placeholder status page in place of the whole content stack.
+Present on `ruby`: **yes** — `lib/window.rb` carries the split view, both
+toolbar views and header bars, the search toggle and entry, the menu button,
+the four-page stack with both status pages and the `Adwaita::Spinner` loading
+page, the `Adwaita::Breakpoint`, and the `win.about` / `win.find` actions.
 
 ### 3. `data/window.ui` menu → folded into `lib/window.rb`
 
 Two-item `Gio::Menu` section. Not a separate port file; listed because it is a
 component no widget subclass owns upstream.
 
-Present on `ruby`: **no**.
+Present on `ruby`: **yes**.
 
 ### 4. `src/sidebar.js` + `data/sidebar.ui` → `lib/sidebar.rb` — the category sidebar
 
@@ -130,7 +155,7 @@ Behaviour to reproduce: `restoreSelection`, `itemByName(name)` over the 17 slugs
 Repeaters: the 17 items are written out one by one upstream; in the port they
 are naturally one repeater over a constant table of `[slug, icon, title, category]`.
 
-Present on `ruby`: **no**.
+Present on `ruby`: **yes**.
 
 ### 5. `src/sidebarItem.js` → `lib/sidebar_item.rb` — one sidebar row
 
@@ -145,8 +170,9 @@ Its `icon-name` and `title` come from `sidebar.ui`. The 17 icon names are
 `emoji-flags-symbolic`, and the seven app-shipped
 `characters-{punctuation,arrow,bullet,picture,currency,math,latin}-symbolic`.
 
-Present on `ruby`: **no**. The seven app icons also have to be shipped and
-registered with the icon theme; none are in the port yet.
+Present on `ruby`: **yes** — `lib/sidebar_item.rb`. Gap: the seven app-shipped
+`characters-*-symbolic` icons are referenced by name but are not in the port and
+nothing adds an icon search path, so those seven rows render iconless.
 
 ### 6. `src/charactersView.js` → `lib/characters_view.rb` — the character grid
 
@@ -181,7 +207,7 @@ resolves layouts to languages via `GnomeDesktop.XkbInfo`, optionally asks IBus
 for engine languages, maps languages to Unicode scripts and always prepends
 Latin while excluding Han.
 
-Present on `ruby`: **no**.
+Present on `ruby`: **yes**.
 
 ### 7. `src/characterDialog.js` + `data/character_dialog.ui` → `lib/character_dialog.rb`
 
@@ -213,7 +239,7 @@ Present on `ruby`: **no**.
 Conditional: `detailRow` hidden for composite characters; `seeAlsoRow` hidden
 until the related search returns; the stack page by glyph availability.
 
-Present on `ruby`: **no**.
+Present on `ruby`: **yes**.
 
 ### 8. `data/shortcuts.ui` → `lib/shortcuts_dialog.rb` — keyboard shortcuts
 
@@ -232,7 +258,7 @@ accelerators come from the application's accel map — `<Primary>f` and
 `lib/shortcuts_dialog.rb` is the shape to copy, including the quirk that
 `Adwaita::ShortcutsItem.new(title, accelerator)` takes positional arguments.
 
-Present on `ruby`: **no**.
+Present on `ruby`: **yes**.
 
 ### 9. about dialog — in `src/window.js` → folded into `lib/window.rb` (or `lib/about_dialog.rb`)
 
@@ -240,7 +266,7 @@ Present on `ruby`: **no**.
 |---|---:|---|
 | `Adw.AboutDialog` | 1 | application name "Characters", app icon = app id, developer name "The GNOME Project", three designers, two developers, `translator-credits`, copyright "Copyright 2014-2018 Daiki Ueno", `Gtk.License.GPL_2_0`, version, website `https://apps.gnome.org/Characters/`, issue URL |
 
-Present on `ruby`: **no**.
+Present on `ruby`: **yes**.
 
 ### 10. `src/searchProvider.js` + `data/ShellSearchProvider2.xml` → `lib/shell_search_provider.rb`
 
@@ -255,7 +281,7 @@ results) and the pilot ports its equivalent.
 | `LaunchSearch` | activates the app and calls the window's `setSearchKeywords` |
 | `data/org.gnome.Characters.search-provider.ini`, `.busname`, `.service.in` | the registration files that make the above reachable |
 
-Present on `ruby`: **no**.
+Present on `ruby`: **yes**.
 
 ### 11. `src/util.js` → `lib/util.rb`
 
@@ -271,7 +297,7 @@ No widgets; the helpers every other unit needs.
 | `searchResultToArray` | view, search provider |
 | `characterToIconData` (GSK render to texture, GL renderer with a Cairo fallback) | search provider |
 
-Present on `ruby`: **no**.
+Present on `ruby`: **yes**.
 
 ### 12. `lib/gc.*` (the C library) → `lib/gc.rb` + generated data
 
@@ -288,10 +314,10 @@ generators producing `blocks.h`, `confusables.h`, `emoji.h`, `hangul.h`,
 | character predicates | `character_name`, `character_is_composite`, `character_is_invisible` |
 | language/script | `get_current_language`, `get_scripts_for_language` |
 
-Present on `ruby`: **no**. This is the port's largest non-UI risk: the Ruby
-bindings give no `Gc`, so either the C library is used through introspection or
-the character data and search are reimplemented in Ruby. Decide before any
-view or dialog work, because every other unit's data comes through here.
+Present on `ruby`: **yes**, as a reimplementation — `lib/gc.rb` with the tables
+as `lib/data/*.tsv` converted one-for-one from upstream's generated headers.
+The blocker below is settled this way: nothing is loaded through
+introspection, so there is no `Gc` typelib dependency.
 
 ### 13. GSettings → `lib/settings.rb`
 
@@ -306,7 +332,7 @@ view or dialog work, because every other unit's data comes through here.
 Also read, not owned: `org.gnome.desktop.input-sources` key `sources`, via
 GSettings or the XDG settings portal.
 
-Present on `ruby`: **no**.
+Present on `ruby`: **yes**.
 
 ### 14. Stylesheet → `lib/style.css` loaded by a `Gtk::CssProvider`
 
@@ -318,7 +344,7 @@ The other classes the app uses (`view`, `pill`, `boxed-list`, `dim-label`,
 applied in `window.ui` and **defined nowhere** — dead upstream; the port should
 either drop it or note it.
 
-Present on `ruby`: **no**.
+Present on `ruby`: **yes**.
 
 ### 15. Translations → `po/`
 
@@ -336,9 +362,9 @@ titles), `shortcuts.ui` (section + four item titles, msgctxt `shortcut window`),
 `searchProvider.js` ("Unknown character name", "U+%s", "Character copied",
 "Character was copied successfully"), `sidebarItem.js`, `main.js` ("Characters").
 
-Present on `ruby`: **no** — there is no `po/` on the branch and no gettext
-wiring. Translation parity is its own step; recorded here so the string sites
-are known.
+Present on `ruby`: **no** — there is still no `po/` on the branch and no gettext
+wiring; every string in `lib/` is a bare Ruby literal. Translation parity is its
+own step; recorded here so the string sites are known.
 
 ---
 
@@ -346,48 +372,48 @@ are known.
 
 | # | Upstream file(s) | Port file | Kind | Exists on `ruby` |
 |---:|---|---|---|---|
-| 1 | `src/main.js` | `lib/main.rb` | application | partial (`lib/gnome_characters/application.rb`) |
-| 2 | `src/window.js` + `data/window.ui` | `lib/window.rb` | window | partial (shell only) |
-| 3 | `data/window.ui` `primary_menu` | in `lib/window.rb` | menu | no |
-| 4 | `src/sidebar.js` + `data/sidebar.ui` | `lib/sidebar.rb` | sidebar | no |
-| 5 | `src/sidebarItem.js` | `lib/sidebar_item.rb` | row | no |
-| 6 | `src/charactersView.js` | `lib/characters_view.rb` | custom widget / page | no |
-| 7 | `src/characterDialog.js` + `data/character_dialog.ui` | `lib/character_dialog.rb` | dialog | no |
-| 8 | `data/shortcuts.ui` | `lib/shortcuts_dialog.rb` | dialog | no |
-| 9 | `src/window.js` `_about` | `lib/about_dialog.rb` | dialog | no |
-| 10 | `src/searchProvider.js` + `data/ShellSearchProvider2.xml` | `lib/shell_search_provider.rb` | D-Bus service | no |
-| 11 | `src/util.js` | `lib/util.rb` | helpers | no |
-| 12 | `lib/gc.{c,h}` + generated headers | `lib/gc.rb` | data/search engine | no |
-| 13 | `data/org.gnome.Characters.gschema.xml` | `lib/settings.rb` | settings | no |
-| 14 | `data/style.css` | `lib/style.css` | stylesheet | no |
+| 1 | `src/main.js` | `lib/main.rb` | application | yes |
+| 2 | `src/window.js` + `data/window.ui` | `lib/window.rb` | window | yes |
+| 3 | `data/window.ui` `primary_menu` | in `lib/window.rb` | menu | yes |
+| 4 | `src/sidebar.js` + `data/sidebar.ui` | `lib/sidebar.rb` | sidebar | yes |
+| 5 | `src/sidebarItem.js` | `lib/sidebar_item.rb` | row | yes (icons missing) |
+| 6 | `src/charactersView.js` | `lib/characters_view.rb` | custom widget / page | yes (DrawingArea, not Gtk.Scrollable) |
+| 7 | `src/characterDialog.js` + `data/character_dialog.ui` | `lib/character_dialog.rb` | dialog | yes |
+| 8 | `data/shortcuts.ui` | `lib/shortcuts_dialog.rb` | dialog | yes |
+| 9 | `src/window.js` `_about` | `lib/about_dialog.rb` | dialog | yes |
+| 10 | `src/searchProvider.js` + `data/ShellSearchProvider2.xml` | `lib/shell_search_provider.rb` | D-Bus service | yes |
+| 11 | `src/util.js` | `lib/util.rb` | helpers | yes |
+| 12 | `lib/gc.{c,h}` + generated headers | `lib/gc.rb` | data/search engine | yes (Ruby reimplementation + TSV tables) |
+| 13 | `data/org.gnome.Characters.gschema.xml` | `lib/settings.rb` | settings | yes (JSON file, not GSettings) |
+| 14 | `data/style.css` | `lib/style.css` | stylesheet | yes |
 | 15 | `po/` (75 locales, 13 POTFILES) | `po/` | translations | no |
 
 Empty states: two (`No Recent Characters`, `No Results`). Loading state: one
 (`Adw.Spinner`). Error states: none surfaced to the user — upstream logs search
 failures and leaves the view as it is.
 
-## Blockers to settle before writing widget code
+## Blockers, as settled
 
-1. **No `Gc`.** The Unicode data and the whole search engine are a C library
-   introspected as `Gc`. Nothing in the port provides it and the Ruby bindings
-   do not ship it. Every category page, the search, the character names, the
-   "See Also" list and the search provider depend on it.
-2. **Very new libadwaita widgets.** `Adw.Sidebar`, `Adw.SidebarSection`,
-   `Adw.SidebarItem`, `Adw.SidebarMode`, `Adw.Spinner` and
-   `Adw.ShortcutsDialog` are all recent. Whether the Ruby bindings in this
-   fork's dev shell expose them, and with what constructor signatures, has to
-   be probed in the shell before `lib/sidebar.rb` can be written.
-3. **A hand-drawn scrollable widget.** `charactersView.js` subclasses
-   `Gtk.Widget`, implements `Gtk.Scrollable` and overrides `measure`,
-   `size_allocate` and `snapshot`. Subclassing a GTK widget and overriding
-   vfuncs from Ruby is the riskiest single piece of the port; probe it before
-   committing to the design.
-4. **`GnomeDesktop` and `IBus`.** `populateScripts` needs
-   `GnomeDesktop.XkbInfo` and optionally IBus. Both are optional at runtime
-   upstream; confirm the typelibs exist in the dev shell or decide on the
-   fallback.
-5. **App-shipped icons.** Seven `characters-*-symbolic.svg` plus the app icons
-   live in `data/icons/` upstream and are loaded from a GResource. The port has
-   no resource bundle, so an icon search-path strategy is needed.
-6. **No gettext in the port.** 75 locales and 13 POTFILES upstream; the branch
-   has no `po/` and no translation wiring at all.
+1. **No `Gc`.** ~~Settled~~: `lib/gc.rb` reimplements libgc in Ruby over
+   `lib/data/*.tsv`, converted from upstream's generated headers. No typelib.
+2. **Very new libadwaita widgets.** Settled: `Adwaita::Sidebar`,
+   `Adwaita::SidebarSection`, `Adwaita::SidebarItem`, `Adwaita::Spinner`,
+   `Adwaita::Breakpoint`/`BreakpointCondition.parse` and
+   `Adwaita::ShortcutsDialog` are all in use in the dev shell's bindings.
+3. **A hand-drawn scrollable widget.** Settled by substitution rather than by
+   subclassing: `lib/characters_view.rb` draws into a `Gtk::DrawingArea` sized
+   to the whole list inside a `Gtk::ScrolledWindow`, so GTK scrolls it and no
+   `Gtk::Scrollable` vfuncs are overridden from Ruby.
+4. **`GnomeDesktop` and `IBus`.** Open. `Util.getInputSources`' equivalent is
+   in `lib/util.rb`; the layout-to-language resolution that upstream does
+   through `GnomeDesktop.XkbInfo` (and optionally IBus) still needs confirming
+   against the dev shell's typelibs.
+
+## Open gaps
+
+| Gap | Where |
+|---|---|
+| no `po/`, no gettext — 75 locales and 13 POTFILES upstream | whole port |
+| seven `characters-*-symbolic` icons not shipped, no icon search path | `lib/sidebar.rb`, `lib/window.rb` empty-state page |
+| `devel` CSS class not applied for the `…Devel` app id | `lib/main.rb` |
+| script search's language resolution (`GnomeDesktop.XkbInfo`, IBus) | `lib/characters_view.rb`, `lib/util.rb` |
