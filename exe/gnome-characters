@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "gnome_characters"
+# Entry point for the Ruby port of GNOME Characters, matching upstream's
+# src/org.gnome.Characters.in: no options, one application instance.
 
-GnomeCharacters::Application.new.build.run
+require_relative '../lib/main'
+
+App.new.build.run
