@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.gnome.CharactersRb</id>
+  <name>Characters</name>
+  <summary>Character map application</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>BSD-3-Clause AND GPL-2.0-or-later</project_license>
+  <description>
+    <p>
+      Characters is a simple utility application to find and insert unusual characters. It allows you to quickly find the character you are looking for by searching for keywords.
+    </p>
+    <p>
+      You can also browse characters by categories, such as Punctuation, Pictures, etc.
+    </p>
+    <p>
+      This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME
+      Characters.
+    </p>
+  </description>
+  <project_group>GNOME</project_group>
+  <developer id="org.gnome">
+    <name>The GNOME Project</name>
+  </developer>
+  <launchable type="desktop-id">org.gnome.CharactersRb.desktop</launchable>
+  <url type="homepage">https://github.com/ruby-gtk-project/gnome-characters-rb</url>
+  <url type="bugtracker">https://github.com/ruby-gtk-project/gnome-characters-rb/issues</url>
+  <url type="vcs-browser">https://github.com/ruby-gtk-project/gnome-characters-rb</url>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </supports>
+  <requires>
+    <display_length>360</display_length>
+  </requires>
+  <content_rating type="oars-1.1"/>
+  <branding>
+    <color type="primary" scheme_preference="light">#f9f06b</color>
+    <color type="primary" scheme_preference="dark">#26a269</color>
+  </branding>
+  <releases>
+    <release version="0.1.0" date="2026-11-06">
+      <description>
+        <p>Initial Ruby GTK4 / Libadwaita port of GNOME Characters.</p>
+      </description>
+    </release>
+  </releases>
+</component>
