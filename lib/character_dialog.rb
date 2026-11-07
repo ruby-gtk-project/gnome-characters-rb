@@ -235,6 +235,8 @@ class CharacterDialog
       end
     end
 
+  public
+
     def dialog
       @dialog ||= Adwaita::Dialog.new.tap do |widget|
         widget.content_width = CONTENT_WIDTH

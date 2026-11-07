@@ -236,7 +236,7 @@ class MainWindow
     end
 
     def handle_character_selected(character)
-      CharacterDialog.new(
+      @character_dialog = CharacterDialog.new(
         character,
         characters_view.font_description,
         on_character_copied: method(:add_to_recent),
@@ -263,6 +263,13 @@ class MainWindow
     def toggle_search
       search_button.active = !search_button.active?
     end
+
+  public
+
+    # The CharacterDialog opened for the character most recently selected
+    # from the grid, nil before the first selection — a test seam, so a drive
+    # script can reach the dialog without walking widget children.
+    def character_dialog = @character_dialog
 
     # --- widgets ---------------------------------------------------------
 
