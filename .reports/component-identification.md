@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Upstream | `main` @ `4b42297` |
-| Port | `ruby` @ `686d2f1` |
+| Port | `ruby` @ `d89d6f1` |
 
 Upstream has no `.ui`/`.blp` files for most of the app except `data/window.ui`,
 `data/sidebar.ui`, `data/character_dialog.ui`, `data/shortcuts.ui` — read
@@ -82,5 +82,8 @@ upstream actually ships as a passing test, which this is not.
 - `Gc.SearchCriteria`/`Gc.SearchContext` search (`"pizza"` → 🍕, `"joy"` → 😂,
   `"space"` → 0 results) → `lib/gc.rb`'s search API
 
-Both exist in the port. Neither is exercised by any port test — see the
-test-parity report; this is a test gap, not a missing component.
+Both exist in the port. Both are now exercised directly by `spec/util_spec.rb`
+and `spec/gc_spec.rb` (added since this report was first written, commit
+`3fc46f8`) — re-run this round (`15 examples, 0 failures`). See the
+test-parity report, which was itself stale on this point and has been
+corrected this round.

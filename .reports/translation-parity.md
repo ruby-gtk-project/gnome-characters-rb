@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Upstream | `main` @ `4b42297` |
-| Port | `ruby` @ `686d2f1` |
+| Port | `ruby` @ `d89d6f1` |
 | Domain | `gnome-characters` (upstream's; the port has no domain at all) |
 | Upstream messages | 217 |
 | Ported | **9** (and see below — even those 9 are not all byte-identical) |
@@ -74,28 +74,44 @@ port     (.desktop):        Exec=gnome-characters                Icon=org.gnome.
 Build-time token substitution — a correspondence, not a gap, per
 `component-parity`'s rule on `@tokens@`.
 
-```
-upstream (metainfo <summary>):
-  Characters is a simple utility application to find and insert unusual
-  characters.  It allows you to quickly find the character you are looking
-  for by searching for keywords.
-port (metainfo <summary>):
-  Characters is a simple utility application to find and insert unusual
-  characters. It allows you to quickly find the character you are looking
-  for by searching for keywords.
-```
+**Corrected this round** — the prior version of this report flagged the
+metainfo `<summary>` as reworded (claiming upstream's `.in.in` source has two
+spaces after the first sentence against the port's one). Commit `b1ecdbc`
+changed the port to match the `.in.in` template's two-space form, but
+re-checking the *actual* msgid used for translation lookup — `grep` over
+upstream's own `.po` files, not the `.in.in` source template — shows every
+`.po` file carries the **single-space** form as its `msgid` (confirmed
+against `po/ab.po:165`, `po/af.po:72`, `po/ar.po:191`; `xgettext`/the
+translation workflow normalises the double space before it ever reaches a
+`.po` file). The port's current single-space string is therefore
+byte-identical to the real msgid, and this row is now a **pass**, not a gap.
+This is recorded as a correction rather than silently dropped, because the
+prior report's claim was itself wrong about which bytes are the canonical
+key — checking the `.in.in` template instead of the `.po` msgid is an easy
+way to flag a false gap.
 
-**One space character differs** (upstream has two spaces after the first
-sentence, the port has one). As a gettext key these are two different
-`msgid`s. This row is **reworded, not transcribed** — a gap per this skill's
-rule, not a nit — and it is the row most likely to be waved through because
-the English still reads correctly either way.
-
-Additionally the metainfo file has an added `<p>` block ("This is
+The metainfo file still has an added `<p>` block ("This is
 gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME Characters.")
-that has no upstream counterpart at all — this is an **extra** message, fine
-to have, but it is one more string that will be English-only forever unless
-someone translates it, and it was not flagged anywhere before this audit.
+that has no upstream counterpart at all — an **extra** message, fine to have
+as the port's own identification, but one more string that will be
+English-only forever unless someone translates it.
+
+**New finding this round, not previously flagged by any report:** upstream's
+metainfo carries a `<releases>` block with 15 versioned `<description>`
+entries (per-release changelog `<p>`/`<ul>` text, e.g. "Characters 51.rc
+release.", "New translations:", the Lao/Norwegian Bokmål/etc. lists) — all of
+it translatable, all of it counted in upstream's 217. The port's metainfo has
+its own, much shorter release history and none of upstream's changelog
+entries. This is legitimate — the port is not obligated to claim upstream's
+release history as its own — but it means a chunk of upstream's 217
+messages are historical changelog text with no meaningful port counterpart
+by design, not strings that were missed. Not broken out as a separate
+number here because the census does not currently distinguish
+"release-notes text" from "live UI text" within its 217 total, but it is
+material to anyone trying to close the 208-message gap: closing it to zero
+would require either porting changelog text that describes a different
+codebase's history, or the census excluding `<releases>` content, and
+neither has happened. Filed as an open question, not resolved either way.
 
 The `<id>`, `<launchable>`, `<url>` and screenshot/developer_name fields
 differ for legitimate packaging reasons (different app ID, different
@@ -141,9 +157,10 @@ upstream's 217), not listed separately.
 
 ## Rules followed
 
-- Upstream's bytes were not "improved" to match the port; the one-space
-  difference in the metainfo summary is recorded as a gap, not silently
-  accepted because the English reads fine.
+- The prior round's one-space "gap" on the metainfo summary is corrected in
+  place this round, with the evidence (the `.po` msgid, not the `.in.in`
+  template) that shows it was never a gap — not silently carried forward as
+  settled fact.
 - Reported as a pair against upstream at every opportunity (9/217, 0/78), not
   as a lone adjective.
 - The gschema's two untranslated keys are counted inside the 217 gaps, not

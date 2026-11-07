@@ -96,6 +96,61 @@ TODO ..." inside `lib/data/character_names.tsv` — a legitimate character name
 table, not an excuse. Zero real TODO/FIXME/"not implemented"/"for now"/"in a
 future" comments exist in `lib/` or `exe/`.
 
+## This round — three more stale claims found and corrected, not re-cited
+
+Three commits landed on `ruby` between the previous audit round (reports
+pinned at port `d89d6f1`'s ancestor `686d2f1`) and this one:
+
+```
+3fc46f8 Port tests/testUtil.js and fix the search-result whitespace filter
+b1ecdbc Port the mirrored-character related-entry via BidiMirroring.txt
+d89d6f1 test: give the search-result screenshot enough settle time to realise
+```
+
+Before writing anything new, every number in the four existing reports was
+re-derived against the current tree rather than trusted, and three had gone
+stale in the direction that matters most — reporting a gap as still open
+when it had been closed, which is the shape that makes a reviewer skip
+re-checking something that already needs no more work, but also the shape
+that makes a reviewer *distrust a report that turns out to have been right
+to flag the gap in the first place and just never got credit for the fix*:
+
+1. **`test-parity.md`** said 0/1 upstream tests ported and `spec/` broken
+   with zero test files. Re-run this round:
+   `nix develop --command xvfb-run -a ruby -e 'require "rspec/core"; ...'`
+   → **15 examples, 0 failures**. `spec/util_spec.rb` and `spec/gc_spec.rb`
+   (added in `3fc46f8`) port `tests/testUtil.js` in full. Corrected in place.
+2. **`component-parity.md`** carried Gc's mirrored-character "See Also"
+   cross-ref as a real, documented gap (no Ruby binding for
+   `g_unichar_get_mirror_char`). `b1ecdbc` closed it by porting the
+   underlying BidiMirroring.txt data table directly. Re-verified by reading
+   `lib/gc.rb:584-638` and running `spec/gc_spec.rb`'s three mirroring
+   assertions. Corrected in place; axis 1–3 count moved from 9/12 to 10/12.
+3. **`translation-parity.md`** carried the metainfo `<summary>` as a reworded
+   (gap) string over one space character, citing upstream's `.in.in`
+   template. `b1ecdbc` changed the port to match the template, but the
+   template is not the canonical msgid — upstream's own `.po` files carry
+   the single-space form. Checking the `.po` files directly this round shows
+   the port's **original, pre-`b1ecdbc`** single-space string was already
+   correct, and the "gap" the prior report flagged was itself wrong about
+   which bytes are authoritative. Corrected in place, with the `.po` grep
+   that proves it, rather than either silently dropped or re-asserted.
+
+**Why this is filed under accountability-ensurance rather than just fixed
+quietly:** a report that goes stale and keeps claiming a closed gap is open
+is the same failure class as `component-inventory.md`'s stale `MISSING`
+rows from the prior round — a document cited as current fact about the
+tree without anyone re-running what it depends on. The fix in both cases is
+the same: re-derive before citing, and correct in place with the commit that
+changed the ground truth named, never just overwrite the number silently.
+
+None of these three corrections changes this round's two open, real
+findings — **zero gettext anywhere in `lib/`/`exe/`, 0/78 languages shipped,
+no `po/` directory** (unchanged, re-confirmed: `grep -rn 'require .gettext\|
+FastGettext\|_("' lib/ exe/` still returns nothing) — which remain the
+dominant gap in this port and are not touched by any of the three commits
+above.
+
 ## Verdict
 
 The port's actual code (`lib/`, `exe/`) carries no excuse language — the
