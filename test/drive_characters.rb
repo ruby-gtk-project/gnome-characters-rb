@@ -217,7 +217,7 @@ GtkDriver.drive(App.new(app_id: APP_ID), shots: SHOTS) do |d, app|
     end
   end
 
-  d.step('the search result page settles') { pump(100) }
+  d.step('the search result page settles') { pump(300) }
 
   d.step('the search result page renders') { d.shot('06-search') }
 
