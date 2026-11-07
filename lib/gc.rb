@@ -14,12 +14,10 @@ require 'glib2'
 # general category, script, case mappings, canonical decomposition — from
 # Ruby's own Unicode tables instead of from glib's.
 #
-# The one behaviour of gc.c that is absent here is the mirrored-character
-# entry in "See Also": gc.c calls g_unichar_get_mirror_char, the Ruby bindings
-# expose no equivalent, and BidiMirroring.txt is not in the upstream tree to
-# convert, so the port cannot build that table. Related characters from case
-# mappings, decomposition, emoji sequences and the confusables table are all
-# present.
+# gc.c's mirrored-character entry in "See Also" calls g_unichar_get_mirror_char,
+# which the Ruby bindings expose no equivalent of. This port carries the same
+# data glib reads it from instead: lib/data/mirroring.tsv, converted from
+# Unicode's BidiMirroring.txt (15.0.0, matching Ruby's own Unicode tables).
 module Gc
   # GcCategory, in upstream's declaration order — searchByCategory compares
   # against LETTER_LATIN to decide whether to draw a baseline, so the order is
@@ -158,6 +156,15 @@ module Gc
         @confusables ||= rows('confusables.tsv').to_h do |code, members|
           [Integer(code, 16), members.split.map { |member| Integer(member, 16) }]
         end
+      end
+
+      # mirroring: the Bidi_Mirroring_Glyph table (Unicode's BidiMirroring.txt,
+      # 15.0.0), the data g_unichar_get_mirror_char reads from glib. The Ruby
+      # bindings expose no equivalent, so this port carries the table itself,
+      # the same way it carries confusables.tsv and the other UCD-derived
+      # tables.
+      def mirroring
+        @mirroring ||= rows('mirroring.tsv').to_h { |code, mirror| [Integer(code, 16), Integer(mirror, 16)] }
       end
 
       def language_scripts
@@ -625,6 +632,12 @@ module Gc
             related.concat(case_related(character))
             related.concat(script_related(character, codepoint))
             related.concat(Data.confusables.fetch(codepoint, []).filter_map { |code| character_for(code) })
+
+            Data.mirroring[codepoint].then do |mirror|
+              if mirror && mirror != codepoint
+                related << character_for(mirror)
+              end
+            end
           end
 
           related.uniq!

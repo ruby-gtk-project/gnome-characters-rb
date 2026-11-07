@@ -38,4 +38,22 @@ RSpec.describe Gc do
       expect(search('space')).to be_empty
     end
   end
+
+  # Extra coverage, not from testUtil.js: gc.c's "See Also" includes the
+  # mirrored character via g_unichar_get_mirror_char, which the Ruby bindings
+  # don't expose. This port carries the BidiMirroring.txt table itself
+  # (lib/data/mirroring.tsv) — pin it so a regression there is caught.
+  describe 'related characters (mirroring)' do
+    it 'lists the mirrored closing paren for an opening paren' do
+      expect(Gc.send(:related_characters, '(')).to include(')')
+    end
+
+    it 'lists the mirrored closing bracket for an opening bracket' do
+      expect(Gc.send(:related_characters, '[')).to include(']')
+    end
+
+    it 'has no mirror entry for a character with no Bidi_Mirroring_Glyph' do
+      expect(Gc::Data.mirroring).not_to have_key('a'.codepoints.first)
+    end
+  end
 end
