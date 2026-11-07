@@ -58,6 +58,11 @@ module Gc
 
   SURROGATES = (0xD800..0xDFFF)
 
+  # What JS's String.prototype.trim() considers whitespace: the full Unicode
+  # White_Space property, not just ASCII. searchResultToArray and
+  # characterToIconData both guard on it (`!c.trim().length`).
+  WHITESPACE_ONLY = /\A\p{White_Space}*\z/
+
   ARROW_BLOCK_STARTERS = [0x2190, 0x27F0, 0x2900].freeze
   PICTURE_BLOCK_STARTERS = [0x2600, 0x2700, 0x1F000, 0x1F030, 0x1F0A0, 0x1F300].freeze
   LATIN_BLOCK_STARTERS = [0x0000, 0x0080, 0x0100, 0x0180].freeze
@@ -261,6 +266,12 @@ module Gc
 
       # The enumeration yields nil as a progress tick, so that a long stretch
       # of non-matching codepoints still gives the main loop a chance to run.
+      #
+      # Raw matches, including a whitespace-only one (a bare SPACE, say,
+      # matches the keyword search for "space" by name same as upstream's
+      # gc_search_context_search does): max_matches truncates this raw count,
+      # same as upstream, and search_result_to_array is what drops the
+      # whitespace-only ones afterwards, in #step.
       def collect(batch)
         begin
           @characters.next.then do |character|
@@ -280,6 +291,15 @@ module Gc
   end
 
   class << self
+    # search_result_to_array is the port of upstream's searchResultToArray
+    # (src/util.js): it drops a whitespace-only match from a batch of search
+    # results. Upstream's version unwraps a GcSearchResult boxed pointer
+    # through gc_search_result_get; this port's Gc::SearchContext already
+    # hands back plain strings, so the only work left is the trim check -
+    # against the full Unicode White_Space property, matching JS's trim(),
+    # not just ASCII whitespace.
+    def search_result_to_array(characters) = characters.reject { |character| WHITESPACE_ONLY.match?(character) }
+
     def category_index(category) = CATEGORIES.index(category)
 
     # searchByCategory draws a baseline for everything up to and including

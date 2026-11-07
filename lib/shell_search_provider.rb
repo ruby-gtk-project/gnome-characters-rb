@@ -129,7 +129,7 @@ class ShellSearchProvider
     def criteria_for(terms) = Gc::SearchCriteria.keywords(terms.map(&:upcase))
 
     def collect(batch)
-      @characters.concat(batch)
+      @characters.concat(Gc.search_result_to_array(batch))
     end
 
     def finish_query(invocation)

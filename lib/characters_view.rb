@@ -121,8 +121,10 @@ class CharactersView
     end
 
     def add_search_result(batch)
-      if batch.any?
-        self.characters = characters + batch
+      Gc.search_result_to_array(batch).then do |visible|
+        if visible.any?
+          self.characters = characters + visible
+        end
       end
     end
 

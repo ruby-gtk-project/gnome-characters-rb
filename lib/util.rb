@@ -17,6 +17,11 @@ module Util
   PREFIXES = ['IDEOGRAPH-', 'SELECTOR-'].freeze
   ICON_SIZE = 48.0
 
+  # What JS's String.prototype.trim() considers whitespace: the full Unicode
+  # White_Space property, not just ASCII. characterToIconData guards on it
+  # with `!character.trim().length`.
+  WHITESPACE_ONLY = /\A\p{White_Space}*\z/
+
   class << self
     # initActions: each entry is { name:, activate: } and gets a
     # Gio::SimpleAction added to the map.
@@ -61,7 +66,7 @@ module Util
     # these bindings raises NotImplementedError for a tuple, and
     # GLib::Variant.parse is what can carry one.
     def character_to_icon_data(character)
-      if character.to_s.strip.empty?
+      if WHITESPACE_ONLY.match?(character.to_s)
         nil
       else
         GLib::Variant.parse(icon_data_text(character), '(iiibiiay)')
