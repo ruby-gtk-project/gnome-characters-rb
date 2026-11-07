@@ -219,7 +219,23 @@ GtkDriver.drive(App.new(app_id: APP_ID), shots: SHOTS) do |d, app|
 
   d.step('the search result page settles') { pump(300) }
 
-  d.step('the search result page renders') { d.shot('06-search') }
+  # The grid inside the stack page gets its size-allocate pass on a
+  # frame-clock tick, not merely from iterating the main context without
+  # blocking, so one `pump` can still land one tick too early and the
+  # renderer gets back no render node — more likely still under whatever
+  # else is sharing this machine's CPU. Retrying with a fresh pump between
+  # attempts rides out that scheduling jitter without hiding a real
+  # failure: if the page genuinely never renders, every attempt fails and
+  # the check below still reports it.
+  d.step('the search result page renders') do
+    path = nil
+    5.times do
+      path = d.shot('06-search')
+      break if path
+      pump(300)
+    end
+    d.check('the search result page produced a screenshot') { !path.nil? }
+  end
 
   d.step('closing search restores the previous sidebar selection') do
     app.main_window.search_button.active = false
