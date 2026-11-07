@@ -1,0 +1,268 @@
+# Bengali translation for gnome-characters.
+# Copyright (C) 2024 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+# Mahdi Hasan <mahdi4260@proton.me>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2024-03-27 07:12+0600\n"
+"Last-Translator: Mahdi Hasan <mahdi4260@proton.me>\n"
+"Language-Team: Bengali <bn@li.org>\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "চিহ্নসমূহ"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "জিনোম প্রকল্প"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr "Mahdi Hasan <mahdi4260@proton.me>"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "চরিত্রের নাম অজানা"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s %s তে অন্তর্ভুক্ত নয়"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "চরিত্র ক্লিপবোর্ডে অনুলিপি করা হয়েছে"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "এছাড়াও দেখুন"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_চিহ্ন অনুলিপি করুন"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "ইউনিকোড"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "এছাড়াও _দেখুন"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "অনির্ধারিত"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "চিহ্ন অনুলিপি করা হয়েছে"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "চিহ্নটি সফলভাবে অনুলিপি করা হয়েছে"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "_কীবোর্ড শর্টকাট"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "সাধারণ"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "প্রধান মেনু খুলুন"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "অনুসন্ধান"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "কীবোর্ড শর্টকাট দেখান"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "বেরিয়ে যান"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "সম্প্রতি ব্যবহৃত"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "ইমোজি"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "হাসিমুখ ও আবেগ"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "মানুষ ও শরীর"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "প্রাণী ও প্রকৃতি"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "খাবার ও পানীয়"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "ভ্রমণ ও স্থান"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "কার্যকলাপ"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "বস্তু"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "প্রতীক"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "পতাকা"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "অক্ষর ও প্রতীক"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "যতিচিহ্ন"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "তীর"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "বুলেট"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "ছবি"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "মুদ্রা"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "গণিত"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "অক্ষর"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "অনুসন্ধান ফলাফল"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "অনুসন্ধান"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "প্রধান মেনু"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "_কীবোর্ড শর্টকাট"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "চিহ্নসমূহ _সম্পর্কে"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "চিহ্ন অনুসন্ধান করুন"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "কোন সাম্প্রতিক চিহ্ন নেই"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "আপনি যদি ব্যবহার করেন তবে চিহ্নসমূহ এখানে প্রদর্শিত হবে"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "কোন ফলাফল নেই"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "ভিন্ন অনুসন্ধান চেষ্টা করুন"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "অস্বাভাবিক চিহ্নসমূহ খুঁজে বের করার এবং ব্যবহারের জন্য উপযোগী অ্যাপ্লিকেশন"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "চিহ্ন;ইউনিকোড;যতিচিহ্ন;গণিত;অক্ষর;ইমোজি;ইমোটিকন;প্রতীক;চরিত্র;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "চিহ্নসমূহের মানচিত্র অ্যাপ্লিকেশন"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"চিহ্নসমূহ অস্বাভাবিক চিহ্ন খুঁজে বের করার এবং ব্যবহারের জন্য একটি সহজ উপযোগী "
+"অ্যাপ্লিকেশন। এটি আপনাকে কীওয়ার্ড অনুসন্ধান করে আপনি যে চিহ্নটি খুঁজছেন তা দ্রুত খুঁজে "
+"পেতে দেয়।"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr "আপনি বিভাগ অনুসারে চিহ্নসমূহ ব্রাউজ করতে পারেন, যেমন যতিচিহ্ন, ছবি ইত্যাদি।"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Loading…"
+#~ msgstr "লোড হচ্ছে…"
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "সর্বোচ্চ সাম্প্রতিক চিহ্ন"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s সাইডবার সারি"

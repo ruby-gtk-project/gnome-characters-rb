@@ -2,6 +2,7 @@
 
 require 'adwaita'
 
+require_relative 'i18n'
 require_relative 'gc'
 require_relative 'settings'
 require_relative 'shell_search_provider'
@@ -19,6 +20,8 @@ require_relative 'window'
 # a virtual function rather than a signal; the export happens on startup here,
 # off the connection the application has already registered on.
 class App
+  include Translatable
+
   APP_ID = 'org.gnome.CharactersRb'
   OBJECT_PATH = '/org/gnome/CharactersRb'
   INACTIVITY_TIMEOUT = 10_000
@@ -133,7 +136,7 @@ class App
     def app
       @app ||= begin
         Adwaita.init
-        GLib.application_name = 'Characters'
+        GLib.application_name = _('Characters')
         Gtk::Application.new(@app_id, :default_flags)
       end
     end

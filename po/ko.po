@@ -1,0 +1,296 @@
+# Korean translation for gnome-characters.
+# Copyright (C) 2015, 2016 Seong-ho Cho, et al.
+# This file is distributed under the same license as the gnome-characters package.
+# Seong-ho Cho <shcho@gnome.org>, 2015-2017.
+# DaeHyun Sung <sungdh86@gmail.com>, 2017-2026.
+# Changwoo Ryu <cwryu@debian.org>, 2021-2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-02-26 18:40+0900\n"
+"Last-Translator: DaeHyun Sung <sungdh86+git@gmail.com>\n"
+"Language-Team: Korean <gnome-kr@googlegroups.com>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "문자 도구"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "그놈 프로젝트"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+"조성호 <shcho@gnome.org>\n"
+"성대현 <sungdh86@gmail.com>\n"
+"류창우 <cwryu@debian.org>"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "알 수 없는 문자 이름"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s이(가) %s에 없습니다"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "클립보드에 문자를 복사했습니다"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "더 보기"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "문자 복사(_C)"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "유니코드"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "더 보기(_S)"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "할당하지 않음"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "문자 복사함"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "문자를 성공적으로 복사했습니다"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "키보드 바로 가기(_K)"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "일반"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "주 메뉴 열기"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "검색"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "키보드 바로 가기 표시"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "끝내기"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "최근 사용"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "이모지"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "표정 및 감정"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "사람 및 신체"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "동물 및 자연"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "음식 및 음료"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "여행 및 장소"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "활동"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "사물"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "기호"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "깃발"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "문자와 기호"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "구두 기호"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "화살표"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "문단 기호"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "그림 문자"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "화폐 단위"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "수학기호"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "문자"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "검색 결과"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "검색"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "주 메뉴"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "키보드 바로 가기(_K)"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "문자 도구 정보(_A)"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "문자 검색"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "최근 문자가 없습니다"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "사용한 문자가 여기에 나타납니다"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "검색 결과 없음"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "다른 단어로 검색하십시오"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "자주 사용하지 않는 문자를 찾아 입력하는 유틸리티 프로그램"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr ""
+"characters;문자;unicode;유니코드;punctuation;구두기호;구두점;math;수"
+"학;letters;언어문자;emoji;이모지;emoticon;이모티콘;symbols;심볼;기호;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "문자 도구 프로그램"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"문자 도구는 자주 사용하지 않는 문자를 찾아 입력하는 단순한 유틸리티 프로그램"
+"입니다. 찾아볼 문자를 단어로 빨리 찾아볼 수 있습니다."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr "구두기호, 그림 등의 분류 방식으로 문자를 찾아볼 수 있습니다."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "최대 최근 사용 문자"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "문자 도구의 기본 화면"
+
+#~ msgid "Letters page"
+#~ msgstr "문자 화면"
+
+#~ msgid "Loading…"
+#~ msgstr "불러오는 중…"
+
+# "<TITLE> Sidebar Row"
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s 가장자리 창 열"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Open menu"
+#~ msgstr "메뉴 열기"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "키보드 바로 가기"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "그놈 문자 도구"
+
+#~ msgid "Character Map"
+#~ msgstr "문자표"

@@ -1,0 +1,351 @@
+# Scottish Gaelic translation for gnome-characters.
+# Copyright (C) 2017 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+# GunChleoc <fios@foramnagaidhlig.net>, 2017, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters gnome-3-22\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2018-02-23 09:51+0100\n"
+"Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
+"Language-Team: Fòram na Gàidhlig\n"
+"Language: gd\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Caractaran"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr ""
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr "GunChleoc <fios@foramnagaidhlig.net>"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Ainm caractar nach aithne dhuinn"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "Chan eil %s am broinn %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Chaidh lethbhreac dhen charactar a chur dhan stòr-bhòrd"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "Faic cuideachd"
+
+#: ../lib/character_dialog.rb:309
+#, fuzzy
+msgid "_Copy Character"
+msgstr "Dèan lethbhreac dhen charactar"
+
+#: ../lib/character_dialog.rb:334
+#, fuzzy
+msgid "Unicode"
+msgstr "Unicode U+%04s"
+
+#: ../lib/character_dialog.rb:345
+#, fuzzy
+msgid "_See Also"
+msgstr "Faic cuideachd"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "Gun iomruineadh"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr ""
+
+#: ../lib/shell_search_provider.rb:199
+#, fuzzy
+msgid "Character copied"
+msgstr "Mapa nan caractaran"
+
+#: ../lib/shell_search_provider.rb:200
+#, fuzzy
+msgid "Character was copied successfully"
+msgstr "Chaidh lethbhreac dhen charactar a chur dhan stòr-bhòrd"
+
+#: ../lib/shortcuts_dialog.rb:23
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:43
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Toradh luirg"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:45
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Fàg an-seo"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Air an cleachdadh o chionn ghoirid"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Emojis"
+
+#: ../lib/sidebar.rb:98
+#, fuzzy
+msgid "Smileys & Emotion"
+msgstr "Samhlaidhean-gnùis ⁊ daoine"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr ""
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Beathaichean ⁊ an nàdar"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Biadh ⁊ deoch"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Siubhal ⁊ àitichean"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Gnìomhachdan"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Nithean"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Samhlaidhean"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Brataichean"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Litrichean ⁊ samhlaidhean"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Puingeachadh"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Saighdean"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Peilearan"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Dealbhan"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Airgeadrathan"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Matamataig"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Litrichean"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Toradh luirg"
+
+#: ../lib/window.rb:318
+#, fuzzy
+msgid "Search"
+msgstr "Toradh luirg"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr ""
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/window.rb:336
+#, fuzzy
+msgid "_About Characters"
+msgstr "Caractaran"
+
+#: ../lib/window.rb:346
+#, fuzzy
+msgid "Search characters"
+msgstr "Liosta charactaran nan toraidhean luirg"
+
+#: ../lib/window.rb:362
+#, fuzzy
+msgid "No Recent Characters"
+msgstr "Cha deach caractar o chionn goirid a lorg"
+
+#: ../lib/window.rb:363
+#, fuzzy
+msgid "Characters will appear here if you use them"
+msgstr "Nochdaidh caractaran an-seo nuair a chleachdas tu iad."
+
+#: ../lib/window.rb:370
+#, fuzzy
+msgid "No Results"
+msgstr "Toradh luirg"
+
+#: ../lib/window.rb:371
+#, fuzzy
+msgid "Try a different search"
+msgstr "Feuch lorg eile."
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Goireas gus caractaran sònraichte a lorg ’s a chur ann"
+
+#: data/org.gnome.CharactersRb.desktop:12
+#, fuzzy
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr ""
+"characters;unicode;punctuation;math;letters;emoji;emoticon;caractaran;puingeachadh;matamataig;litrichean;litir;samhlaidhean-"
+"gnùis;samhla-gnùis;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "Aplacaid mapa charactaran"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"’S e goireas simplidh a th’ ann an Caractaran gus caractaran sònraichte a "
+"lorg ’s a chur ann. Leigidh e leat an caractar a tha thu ag iarraidh a lorg "
+"gu luath le taic faclan-luirg."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"’S urrainn dhut na caractaran a bhrabhsadh a-rèir roinn-seòrsa cuideachd, "
+"can puingeachadh, dealbhan is msaa."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "About"
+#~ msgstr "Mu dhèidhinn"
+
+#~| msgid "Search produced empty result"
+#~ msgid "Search found no results"
+#~ msgstr "Cha deach toradh a lorg"
+
+#~ msgid "Loading…"
+#~ msgstr "’Ga luchdadh…"
+
+#~ msgid "Current page"
+#~ msgstr "An duilleag làithreach"
+
+#~ msgid "Filter by Font"
+#~ msgstr "Criathraich a-rèir crutha-chlò"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "Caractaran GNOME"
+
+#~ msgid "gnome-characters"
+#~ msgstr "gnome-characters"
+
+#~ msgid "Font to display characters"
+#~ msgstr "An cruth-clò gus na caractaran a shealltainn"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr ""
+#~ "cleachd an cruth-clò seo gus na caractaran air liosta nan caractaran a "
+#~ "reandaradh."
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Uiread as motha nan caractaran o chionn goirid"
+
+#, javascript-format
+#~ msgid "%s Category List Row"
+#~ msgstr "Ràgh air liosta na roinne-seòrsa %s"
+
+#~ msgid "Characters Application"
+#~ msgstr "Aplacaid charactaran"
+
+#~ msgid "Characters Application started"
+#~ msgstr "Chaidh aplacaid nan caractaran a thòiseachadh"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "Tha aplacaid nan caractaran ’ga fàgail"
+
+#~ msgid "None"
+#~ msgstr "Chan eil gin"
+
+#, javascript-format
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#, javascript-format
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (%s a-mhàin)"
+
+#, javascript-format
+#~ msgid "%s Character List"
+#~ msgstr "Liosta charactaran %s"
+
+#, javascript-format
+#~| msgid "%s Character List"
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "Liosta charactaran %s o chionn ghoirid"
+
+#~ msgid "Try another search criteria."
+#~ msgstr "Feuch lorg eile."
+
+#~ msgid "Emoticons"
+#~ msgstr "Samhlaidhean-gnùis"

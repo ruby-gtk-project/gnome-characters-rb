@@ -1,0 +1,344 @@
+# Tamil translation for gnome-characters.
+# Copyright (C) 2017 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+# sudhakaru <sudhakaru@cdac.in>, 2017.
+# அருள்ராஜன் அ லை <alarulrajan@gmail.com>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2018-12-11 07:53+0530\n"
+"Last-Translator: அருள்ராஜன் அ லை <alarulrajan@gmail.com>\n"
+"Language-Team: Tamil <>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.7\n"
+"X-Language: ta\n"
+"X-Source-Language: C\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "எழுத்துக்கள்"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr ""
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr "மொழிபெயர்ப்பாளர்-புகழ்"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "அறியப்படாத எழுத்துக்குறி பெயர்"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s உள்ளே சேர்க்கப்படவில்லை %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "எழுத்து கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "மேலும் காண்க"
+
+#: ../lib/character_dialog.rb:309
+#, fuzzy
+msgid "_Copy Character"
+msgstr "எழுத்தை நகலெடு"
+
+#: ../lib/character_dialog.rb:334
+#, fuzzy
+msgid "Unicode"
+msgstr "யுனிகோட் U+%04s"
+
+#: ../lib/character_dialog.rb:345
+#, fuzzy
+msgid "_See Also"
+msgstr "மேலும் காண்க"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "ஒதுக்கப்படாத"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr ""
+
+#: ../lib/shell_search_provider.rb:199
+#, fuzzy
+msgid "Character copied"
+msgstr "எழுத்து வரைபடம்"
+
+#: ../lib/shell_search_provider.rb:200
+#, fuzzy
+msgid "Character was copied successfully"
+msgstr "எழுத்து கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "(_K) விசைப்பலகை குறுக்குவழிகள்"
+
+#: ../lib/shortcuts_dialog.rb:41
+#, fuzzy
+msgctxt "shortcut window"
+msgid "General"
+msgstr "பொது"
+
+#: ../lib/shortcuts_dialog.rb:42
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "பட்டியலை திற"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "தேடல்"
+
+#: ../lib/shortcuts_dialog.rb:44
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "(_K) விசைப்பலகை குறுக்குவழிகள்"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "வெளியேறு"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "சமீபத்தில் பயன்படுத்திய"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "ஈமோஜிகள்"
+
+#: ../lib/sidebar.rb:98
+#, fuzzy
+msgid "Smileys & Emotion"
+msgstr "ஸ்மைலிகளும் மக்களும்"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr ""
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "விலங்குகள் & இயற்கை"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "உணவு மற்றும் பானம்"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "சுற்றுலா & இடங்கள்"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "நடவடிக்கைகள்"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "பொருள்கள்"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "சின்னங்கள்"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "கொடிகள்"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "கடிதங்கள் & சின்னங்கள்"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "நிறுத்தக்குறி"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "அம்புகள்"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "குண்டுகள்"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "படங்கள்"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "நாணயங்கள்"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "கணிதம்"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "எழுத்துக்கள்"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "தேடல் முடிவுகள்"
+
+#: ../lib/window.rb:318
+#, fuzzy
+msgid "Search"
+msgstr "தேடல்"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr ""
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "(_K) விசைப்பலகை குறுக்குவழிகள்"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "(_A) எழுத்துக்களை பற்றி"
+
+#: ../lib/window.rb:346
+#, fuzzy
+msgid "Search characters"
+msgstr "தேடல் முடிவு எழுத்து பட்டியல்"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "சமீபத்திய எழுத்துகள் எதுவும் இல்லை"
+
+#: ../lib/window.rb:363
+#, fuzzy
+msgid "Characters will appear here if you use them"
+msgstr "நீங்கள் பயன்படுத்திய எழுத்துக்கள் இங்கே தோன்றும்."
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "தேடல் முடிவுகள் இல்லை"
+
+#: ../lib/window.rb:371
+#, fuzzy
+msgid "Try a different search"
+msgstr "வேறொரு தேடலை முயற்சிக்கவும்."
+
+#: data/org.gnome.CharactersRb.desktop:4
+#, fuzzy
+msgid "Utility application to find and insert unusual characters"
+msgstr "அசாதாரண எழுத்துக்களைக் கண்டுபிடித்து செருகுவதற்கான பயன்பாடு"
+
+#: data/org.gnome.CharactersRb.desktop:12
+#, fuzzy
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr ""
+"எழுத்துக்குறிகள்; யுனிகோட்; நிறுத்தற்குறிகள்; கணிதம்; கடிதங்கள்; எமோஜி; எமோடிகானைச்;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "எழுத்து வரைபட பயன்பாடு"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"அசாதாரண எழுத்துக்களைக் கண்டுபிடித்து செருகுவதற்கான பயன்பாடு. இதில் திறவுச்சொற்கள் "
+"பயன்படுத்தி எழுத்துக்களை தேடலாம்."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+#, fuzzy
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr "நிறுத்தற்குறி, படங்கள் போன்ற வகைகளால் நீங்கள் எழுத்துக்களை உலாவலாம்."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Loading…"
+#~ msgstr "ஏற்றுதல்..."
+
+#~ msgid "Filter by Font"
+#~ msgstr "எழுத்துரு மூலம் வடிகட்டவும்"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "விசைப்பலகை குறுக்குவழிகள்"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "க்னோம் எழுத்துக்கள்"
+
+#~ msgid "Font to display characters"
+#~ msgstr "எழுத்துகள் காட்ட எழுத்துரு"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "பாத்திரம் பட்டியலில் எழுத்துகள் வழங்க எழுத்துரு பயன்படுத்து."
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "சமீபத்திய அதிகபட்ச எழுத்துகள்"
+
+#, javascript-format
+#~ msgid "%s Category List Row"
+#~ msgstr "%s வகை பட்டியல் வரிசை"
+
+#~ msgid "None"
+#~ msgstr "எதுவுமில்லை"
+
+#, javascript-format
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#, javascript-format
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (%s மட்டுமே)"
+
+#, javascript-format
+#~ msgid "%s Character List"
+#~ msgstr "%s எழுத்து பட்டியல்"
+
+#, javascript-format
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "சமீபத்தில் பயன்படுத்தப்பட்ட %s எழுத்து பட்டியல்"
+
+#~ msgid "Search found no results"
+#~ msgstr "தேடல் முடிவுகள் எதுவும் கிடைக்கவில்லை"
+
+#~ msgid "Current page"
+#~ msgstr "தற்போதைய பக்கம்"
+
+#~ msgid "Characters Application"
+#~ msgstr "எழுத்துகள் விண்ணப்பம்"
+
+#~ msgid "Characters Application started"
+#~ msgstr "எழுத்துகள் விண்ணப்பம் தொடங்கியது"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "எழுத்துப்பிழைகள் பயன்பாடு வெளியேறும்"
+
+#~ msgid "About"
+#~ msgstr "பற்றி"
+
+#~ msgid "gnome-characters"
+#~ msgstr "க்னோம் எழுத்துக்கள்"

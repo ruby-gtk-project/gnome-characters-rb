@@ -1,0 +1,277 @@
+# Cornish translation for gnome-characters.
+# Copyright (C) 2026 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Flynn Peck <cirilla@tuta.io>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-05-29 17:29+0100\n"
+"Last-Translator: Flynn Peck <cirilla@tuta.io>\n"
+"Language-Team: kw\n"
+"Language: kw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-DL-VCS-Web: https://gitlab.gnome.org/GNOME/gnome-characters/\n"
+"X-DL-Lang: kw\n"
+"X-DL-Module: gnome-characters\n"
+"X-DL-Branch: main\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 50.0\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Lytherennow"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "An Ragdres GNOME"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr "Flynn"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Hanow lytheren ankoth"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s nag yw synsys yn %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Lytheren kopys war astel glypp"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "Gweles Ynwedh"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_Kopia Lytheren"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "Unikod"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "_Gweles Ynwedh"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "Ancharjys"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "Lytheren kopys"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "Lytheren o kopys yn sewen"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "_Kesunyansow Bysowek"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Ollgemmyn"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "Ygeri Pennrol"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Hwilas"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Diskwedhes Kesunyansow Bysowek"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Kwytya"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Devnydhys A-Dhiwedhes"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Emojys"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "Gwenyow & Movyansow"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "Tus & Korf"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Miles & Natur"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Boos & Diwes"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Viajyans & Leow"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Gwriansow"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Taklow"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Arwodhyow"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Baneryow"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Lytherennow & Arwodhyow"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Poyntyans"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Sethow"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Poyntys"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Skeusennow"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Arghansedh"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Mathematik"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Lytherennow"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Sewyans Hwithrans"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "Hwilas"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "Pennrol"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "_Kesunyansow Bysowek"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "_A-dro dhe Lytherennow"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "Hwilas lytherennow"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "Nyns eus Lytherennow A-Dhiwedhes"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "Lytherennow a wra diskwedhes omma mar hwi a's devnydhya"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "Nyns eus Sewyansow"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "Assayewgh hwithrans aral"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "App les rag kavos ha gorra a-bervedh lytherennow anusadow"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "lytherennow;unikod;poyntyans;mathematik;emoji;emotikon;arwodhyow;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "App mappa lytherennow"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Lytherennow yw app sempel les rag kavos ha gorra a-bervedh lytherennow "
+"anusadow. Ow kasa dhywgh kavos snell an lytheren ow hwilowgh gans ow hwilas "
+"rag geryow alhwedh."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"Ynwedh, hwi a yll peuri lytherennow gans klassys, kepar ha Poyntyans, "
+"Imajys, h.e."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Lytherennow a-dhiwedhes moyha"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "An ynterfas chif Lytherennow"
+
+#~ msgid "Letters page"
+#~ msgstr "Folen lytherennow"

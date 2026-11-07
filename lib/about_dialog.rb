@@ -2,14 +2,15 @@
 
 require 'adwaita'
 require_relative 'gnome/characters/rb/version'
+require_relative 'i18n'
 
 # AboutDialog is the port of the _about method of upstream's src/window.js,
 # which builds an Adw.AboutDialog inline. The credits, copyright, licence and
 # links are upstream's; the version is this port's.
 class AboutDialog
-  APPLICATION_NAME = 'Characters'
+  include Translatable
+
   APPLICATION_ICON = 'org.gnome.Characters'
-  DEVELOPER_NAME = 'The GNOME Project'
   COPYRIGHT = 'Copyright 2014-2018 Daiki Ueno'
   WEBSITE = 'https://apps.gnome.org/Characters/'
   ISSUE_URL = 'https://gitlab.gnome.org/GNOME/gnome-characters/-/issues/'
@@ -27,13 +28,13 @@ class AboutDialog
 
   def build
     dialog.tap do |widget|
-      widget.application_name = APPLICATION_NAME
+      widget.application_name = _('Characters')
       widget.application_icon = APPLICATION_ICON
-      widget.developer_name = DEVELOPER_NAME
+      widget.developer_name = _('The GNOME Project')
       widget.designers = DESIGNERS
       widget.developers = DEVELOPERS
       # TRANSLATORS: put your names here, one name per line.
-      widget.translator_credits = 'translator-credits'
+      widget.translator_credits = _('translator-credits')
       widget.copyright = COPYRIGHT
       widget.license_type = Gtk::License::GPL_2_0
       widget.version = Gnome::Characters::Rb::VERSION

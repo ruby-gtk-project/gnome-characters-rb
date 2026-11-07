@@ -1,0 +1,352 @@
+# Persian translation for gnome-characters.
+# Copyright (C) 2015 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2015-2017.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2018-2023.
+# Goudarz Jafari <me@goudarzjafari.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-02-02 23:21+0330\n"
+"Last-Translator: Goudarz Jafari <me@goudarzjafari.com>\n"
+"Language-Team: Persian <fa@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "نویسه‌ها"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "پروژهٔ گنوم"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+"آرش موسوی <mousavi.arash@gmail.com>\n"
+"دانیال بهزادی<dani.behzi@ubuntu.com>\n"
+"گودرز جعفری <me@goudarzjafari.com>"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "نام نویسهٔ ناشناخته"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s در %s وجود ندارد"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "نویسه به تخته‌گیره رونوشت شد"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "همچنین ببینید"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_رونوشت از نویسه"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "یونی‌کد"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "_همچنین ببینید"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "اختصاص نیافته"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "نویسه رونوشت شد"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "نویسه با موفّقیت رونوشت شد"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "_میان‌برهای صفحه‌کلید"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "عمومی"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "گشودن فهرست اصلی"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "جست‌وجو"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "نمایش میان‌برهای صفحه‌کلید"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "خروج"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "به‌تازگی استفاده شده"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "ایموجی‌ها"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "شکلک‌ها و احساسات"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "افراد و بدن"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "حیوانات و طبعیت"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "غذا و نوشیدنی"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "سفر و مکان‌ها"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "فعّالیت‌ها"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "اشیا"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "نمادها"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "پرچم‌ها"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "حروف و نشانه‌ها"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "نقطه‌گذاری"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "پیکان‌ها"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "نقطه‌ها"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "نگاره‌ها"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "ارزها"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "ریاضی"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "حروف"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "نتیجهٔ جست‌وجو"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "جست‌وجو"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "فهرست اصلی"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "_میان‌برهای صفحه‌کلید"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "_دربارهٔ نویسه‌ها"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "جست‌وجوی نویسه‌ها"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "نویسهٔ اخیری نیست"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "اگر از نویسه‌ها استفاده کنید، این‌جا ظاهر می‌شوند"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "بدون نتیجه"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "جست‌وجویی دیگر را بیازمایید"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "ابزاری برای یافتن و درج نویسه‌های غیرمعمول"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;نویسه‌ها;یونیکد;یونی‌کد;ریاضی;حروف;شکلک;نقطه‌گذاری;نمادها;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "برنامهٔ نقشهٔ نویسه‌ها"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"نویسه‌ها ابزاری ساده برای یافتن و درج نویسه‌های غیرمعمول است. این ابزار به شما "
+"امکان یافتن سریع نویسه‌ای که به دنبالش هستید را با جست‌وجو برای کلیدواژگان "
+"می‌دهد."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"همچنین می‌توانید نویسه‌ها را بر اساس دسته‌بندی‌هایی چون نقطه‌گذاری، نگاره‌ها و… "
+"بیابید."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "بیشینهٔ نویسه‌های اخیر"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "رابط کاربری اصلی نویسه‌ها"
+
+#~ msgid "Letters page"
+#~ msgstr "صفحهٔ حروف"
+
+#~ msgid "Loading…"
+#~ msgstr "درحال بار کردن…"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s ردیف کناری"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Open menu"
+#~ msgstr "گشودن فهرست"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "میان‌برهای صفحه‌کلید"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "نویسه‌های گنوم"
+
+#~ msgid "Character Map"
+#~ msgstr "نقشهٔ نویسه‌ها"
+
+#~ msgid "Filter by Font"
+#~ msgstr "پالایش بر اساس قلم"
+
+#~ msgid "Font to display characters"
+#~ msgstr "قلم برای نمایش نویسه‌ها"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "استفاده از قلم برای پرداخت نویسه‌ها در فهرست."
+
+#~ msgid "%s Category List Row"
+#~ msgstr "ردیفِ فهرستِ شاخه %s"
+
+#~ msgid "None"
+#~ msgstr "هیچ‌کدام"
+
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s، %s: %s"
+
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (%s فقط)"
+
+#~ msgid "%s Character List"
+#~ msgstr "فهرست نویسه %s"
+
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "فهرست نویسه‌های %s به‌تازگی استفاده شده"
+
+#~ msgid "Search found no results"
+#~ msgstr "جست‌وجو نتیجه‌ای نیافت"
+
+#~ msgid "Current page"
+#~ msgstr "صفحهٔ جاری"
+
+#~ msgid "Characters Application"
+#~ msgstr "برنامهٔ نویسه‌ها"
+
+#~ msgid "Characters Application activate"
+#~ msgstr "برنامهٔ نویسه‌ها به کار افتاد"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "برنامهٔ نویسه‌ها در حال خروج است"
+
+#~ msgid "About"
+#~ msgstr "درباره"
+
+#~ msgid "gnome-characters"
+#~ msgstr "gnome-characters"
+
+#~ msgid "Try another search criteria."
+#~ msgstr "یک محدوده جست‌وجو دیگر را امتحان کنید"
+
+#~ msgid "Emoticons"
+#~ msgstr "شکلک‌ها"
+
+#~ msgid "characters;unicode;"
+#~ msgstr "characters;unicode;نویسه‌ها;یونیکد;"

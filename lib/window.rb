@@ -5,6 +5,7 @@ require_relative 'about_dialog'
 require_relative 'character_dialog'
 require_relative 'characters_view'
 require_relative 'gc'
+require_relative 'i18n'
 require_relative 'sidebar'
 require_relative 'util'
 
@@ -17,6 +18,8 @@ require_relative 'util'
 # the spinner) and the breakpoint that collapses the split view on a narrow
 # window are all upstream's.
 class MainWindow
+  include Translatable
+
   DEFAULT_WIDTH = 800
   DEFAULT_HEIGHT = 600
   MINIMUM_WIDTH = 360
@@ -151,7 +154,7 @@ class MainWindow
     def search_active=(active)
       if active
         sidebar.unselect_all
-        content_page.title = 'Search Result'
+        content_page.title = _('Search Result')
       elsif sidebar.mode != Adwaita::SidebarMode::PAGE
         sidebar.restore_selection
       end
@@ -292,13 +295,13 @@ class MainWindow
     end
 
     def split_view = @split_view ||= Adwaita::NavigationSplitView.new
-    def sidebar_page = @sidebar_page ||= Adwaita::NavigationPage.new(sidebar_toolbar, 'Characters')
+    def sidebar_page = @sidebar_page ||= Adwaita::NavigationPage.new(sidebar_toolbar, _('Characters'))
     def sidebar_toolbar = @sidebar_toolbar ||= Adwaita::ToolbarView.new
     def sidebar_header = @sidebar_header ||= Adwaita::HeaderBar.new
     def content_toolbar = @content_toolbar ||= Adwaita::ToolbarView.new.tap { |view| view.add_css_class('view') }
 
     def content_page
-      @content_page ||= Adwaita::NavigationPage.new(content_toolbar, 'Characters').tap do |page|
+      @content_page ||= Adwaita::NavigationPage.new(content_toolbar, _('Characters')).tap do |page|
         page.tag = 'content'
       end
     end
@@ -312,7 +315,7 @@ class MainWindow
     def search_button
       @search_button ||= Gtk::ToggleButton.new.tap do |button|
         button.icon_name = 'edit-find-symbolic'
-        button.tooltip_text = 'Search'
+        button.tooltip_text = _('Search')
       end
     end
 
@@ -320,7 +323,7 @@ class MainWindow
       @primary_menu_button ||= Gtk::MenuButton.new.tap do |button|
         button.menu_model = primary_menu
         button.icon_name = 'open-menu-symbolic'
-        button.tooltip_text = 'Main Menu'
+        button.tooltip_text = _('Main Menu')
         button.primary = true
       end
     end
@@ -329,8 +332,8 @@ class MainWindow
     def primary_menu
       @primary_menu ||= Gio::Menu.new.tap do |menu|
         Gio::Menu.new.tap do |section|
-          section.append('_Keyboard Shortcuts', 'app.shortcuts')
-          section.append('_About Characters', 'win.about')
+          section.append(_('_Keyboard Shortcuts'), 'app.shortcuts')
+          section.append(_('_About Characters'), 'win.about')
           menu.append_section(nil, section)
         end
       end
@@ -340,7 +343,7 @@ class MainWindow
 
     def search_entry
       @search_entry ||= Gtk::SearchEntry.new.tap do |entry|
-        entry.placeholder_text = 'Search characters'
+        entry.placeholder_text = _('Search characters')
         entry.hexpand = true
       end
     end
@@ -356,16 +359,16 @@ class MainWindow
     def empty_recent_page
       @empty_recent_page ||= Adwaita::StatusPage.new.tap do |page|
         page.icon_name = 'characters-punctuation-symbolic'
-        page.title = 'No Recent Characters'
-        page.description = 'Characters will appear here if you use them'
+        page.title = _('No Recent Characters')
+        page.description = _('Characters will appear here if you use them')
       end
     end
 
     def no_results_page
       @no_results_page ||= Adwaita::StatusPage.new.tap do |page|
         page.icon_name = 'system-search-symbolic'
-        page.title = 'No Results'
-        page.description = 'Try a different search'
+        page.title = _('No Results')
+        page.description = _('Try a different search')
       end
     end
 

@@ -1,0 +1,20 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+#
+# Upstream's POTFILES.in lists its data/*.ui templates and src/*.js files;
+# this port has no .ui templates (its widgets are built declaratively in
+# Ruby — see lib/sidebar.rb, lib/window.rb, lib/character_dialog.rb and
+# lib/shortcuts_dialog.rb for the strings those templates would have held)
+# and ports each upstream source file to one lib/*.rb file, so the list
+# below is lib/*.rb plus the two data/ files that still carry literal
+# translatable text of their own.
+data/org.gnome.CharactersRb.desktop
+data/org.gnome.CharactersRb.metainfo.xml
+lib/about_dialog.rb
+lib/character_dialog.rb
+lib/characters_view.rb
+lib/main.rb
+lib/shell_search_provider.rb
+lib/shortcuts_dialog.rb
+lib/sidebar.rb
+lib/window.rb

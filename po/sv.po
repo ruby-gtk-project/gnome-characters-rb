@@ -1,0 +1,333 @@
+# Swedish translation for gnome-characters.
+# Copyright © 2015-2026 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2026.
+# Sebastian Rasmussen <sebras@gmail.com>, 2015.
+# Luna Jernberg <droidbittin@gmail.com>, 2021, 2022, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-02-22 11:21+0100\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Tecken"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "GNOME-projektet"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+"Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"Luna Jernberg <droidbittin@gmail.com>\n"
+"\n"
+"Skicka synpunkter på översättningen till\n"
+"<tp-sv@listor.tp-sv.se>."
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Okänt teckennamn"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s är inte inkluderat i %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Tecken kopierat till urklipp"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "Se även"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_Kopiera tecken"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "Unicode"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "_Se även"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "Otilldelad"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "Tecken kopierat"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "Lyckades kopiera tecken"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "_Tangentbordsgenvägar"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Allmänt"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "Öppna huvudmeny"
+
+# accessible name
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Sök"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Visa tangentbordsgenvägar"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Avsluta"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Nyligen använda"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Emoji"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "Humörsymboler och känslor"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "Folk och kropp"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Djur och natur"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Mat och dryck"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Resande och platser"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Aktiviteter"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Föremål"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Symboler"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Flaggor"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Bokstäver och symboler"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Skiljetecken"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Pilar"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Punkter"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Bilder"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Valutor"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Matematik"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Bokstäver"
+
+# accessible name
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Sökresultat"
+
+# accessible name
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "Sök"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "Huvudmeny"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "_Tangentbordsgenvägar"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "_Om Tecken"
+
+# accessible name
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "Sök efter tecken"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "Inga nyligen använda tecken"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "Tecken kommer dyka upp här om du använder dem"
+
+# accessible name
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "Inga resultat"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "Försök med en annan sökning"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Nyttoprogram för att söka och infoga ovanliga tecken"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "tecken;unicode;skiljetecken;matematik;bokstäver;emoji;emoticon;humörsymbol;symboler;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "Teckentabellprogram"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Tecken är ett enkelt nyttoprogram för att söka och infoga ovanliga tecken. "
+"Det låter dig snabbt hitta tecknet du söker genom att söka efter nyckelord."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"Du kan också bläddra igenom tecken efter kategorier som skiljetecken, bilder "
+"o.s.v."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Maximalt antal senaste tecken"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "Teckens huvudgränssnitt"
+
+#~ msgid "Letters page"
+#~ msgstr "Bokstavssidan"
+
+#~ msgid "Loading…"
+#~ msgstr "Läser in…"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s-sidofältsrad"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Open menu"
+#~ msgstr "Öppna meny"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "Tangentbordsgenvägar"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "GNOME Tecken"
+
+#~ msgid "Character Map"
+#~ msgstr "Teckentabell"
+
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#~ msgid "Filter by Font"
+#~ msgstr "Filtrera efter typsnitt"
+
+#~ msgid "Font to display characters"
+#~ msgstr "Typsnitt för att visa tecken"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "Använd typsnittet för att rendera tecken i teckenlistan."
+
+# accessible name
+#~ msgid "%s Category List Row"
+#~ msgstr "Listrad för kategorin %s"
+
+# Gäller typsnitt
+#~ msgid "None"
+#~ msgstr "Inget"
+
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (endast %s)"
+
+# accessible name
+#~ msgid "%s Character List"
+#~ msgstr "%s-teckenlista"
+
+# accessible name
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "Lista över senaste %s-tecken"

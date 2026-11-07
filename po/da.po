@@ -1,0 +1,363 @@
+# Danish translation for gnome-characters.
+# Copyright (C) 2015, 2016-2017 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+#
+# Kris Thomsen <mail@kristhomsen.dk>, 2015-2016.
+# scootergrisen, 2016.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2016-2017.
+# Alan Mortensen <alanmortensen.am@gmail.com>, 2017, 2019-23, 26.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-02-23 20:03+0100\n"
+"Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Project-Style: gnome\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Tegn"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "GNOME-projektet"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+"Kris Thomsen\n"
+"scootergrisen\n"
+"Alan Mortensen\n"
+"\n"
+"Dansk-gruppen\n"
+"Websted http://dansk-gruppen.dk\n"
+"E-mail <dansk@dansk-gruppen.dk>"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Ukendt tegn-navn"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s er ikke inkluderet i %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Tegn kopieret til udklipsholderen"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "Se også"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_Kopiér tegn"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "Unicode"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "_Se også"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "Ikke tildelt"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "Tegn kopieret"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "Tegnet blev kopieret"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "Tastaturgenve_je"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Generelt"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "Åbn hovedmenu"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Søgning"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Vis tastaturgenveje"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Afslut"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Senest brugte"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Emojier"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "Smileyer & følelser"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "Mennesker & krop"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Dyr & natur"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Mad & drikke"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Rejse & steder"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Aktiviteter"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Objekter"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Symboler"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Flag"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Bogstaver & symboler"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Tegnsætning"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Pile"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Prikker"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Billeder"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Valutaer"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Matematik"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Bogstaver"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Søgeresultat"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "Søgning"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "Hovedmenu"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "Tastaturgenve_je"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "_Om Tegn"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "Søg efter tegn"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "Ingen seneste tegn"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "Tegn vises her, hvis du bruger dem"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "Ingen resultater"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "Prøv en anden søgning"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Hjælpeværktøj til at finde og indsætte usædvanlige tegn"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "tegn;unicode;tegnsætning;matematik;bogstaver;emoji;smiley;humørikon;symboler;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "Tegnoversigtsprogram"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Tegn er et simpelt hjælpeværktøj til at finde og indsætte usædvanlige tegn. "
+"Det giver dig mulighed for hurtigt at finde tegn, du leder efter, ved at "
+"søge efter nøgleord."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"Du kan også gennemse tegn efter kategorier såsom tegnsætning, billeder osv."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Maksimum antal seneste tegn"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "Tegns primære grænseflade"
+
+#~ msgid "Letters page"
+#~ msgstr "Side med bogstaver"
+
+#~ msgid "Loading…"
+#~ msgstr "Indlæser …"
+
+# Hvad betyder %s? Og skal det være sidebjælke række?
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s sidebjælkerække"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Open menu"
+#~ msgstr "Åbn menu"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "Tastaturgenveje"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "GNOME Tegn"
+
+#~ msgid "Character Map"
+#~ msgstr "Tegnoversigt"
+
+#~ msgid "Filter by Font"
+#~ msgstr "Sortér efter skrifttype"
+
+#~ msgid "Font to display characters"
+#~ msgstr "Skrifttype som tegn skal vises med"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "Brug skrifttypen til at vise tegn i tegnlisten."
+
+#~ msgid "%s Category List Row"
+#~ msgstr "Listerække for kategorien %s"
+
+#~ msgid "None"
+#~ msgstr "Ingen"
+
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (kun %s)"
+
+#~ msgid "%s Character List"
+#~ msgstr "Tegnliste for %s"
+
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "Liste over senest brugte %s-tegn"
+
+#~ msgid "Search found no results"
+#~ msgstr "Søgningen gav intet resultat"
+
+#~ msgid "Current page"
+#~ msgstr "Nuværende side"
+
+#~ msgid "Characters Application"
+#~ msgstr "Programmet Tegn"
+
+#~ msgid "Characters Application activate"
+#~ msgstr "Programmet Tegn aktiveret"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "Programmet Tegn afslutter"
+
+#~ msgid "@appid@"
+#~ msgstr "@appid@"
+
+#~ msgid "About"
+#~ msgstr "Om"
+
+#~ msgid "gnome-characters"
+#~ msgstr "gnome-characters"
+
+#~ msgid "Emoticons"
+#~ msgstr "Humørikoner"
+
+#~ msgid "Try another search criteria."
+#~ msgstr "Prøv et andet søgekriterium."
+
+#~ msgid "characters;unicode;"
+#~ msgstr "tegn;unicode;"

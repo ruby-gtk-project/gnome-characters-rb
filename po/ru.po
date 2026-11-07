@@ -1,0 +1,296 @@
+# Russian translation for gnome-characters.
+# Copyright (C) 2015 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+# Артём Воротников <artem@vorotnikov.me>, 2015.
+# Stas Solovey <whats_up@tut.by>, 2015, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-02-02 13:07+0300\n"
+"Last-Translator: Artur So <Arturios2005@mail.ru>\n"
+"Language-Team: Русский <gnome-cyr@gnome.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.8\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Символы"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "Проект GNOME"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+"Станислав Соловей <whats_up@tut.by>, 2013-2019.\n"
+"Юрий Мясоедов <ymyasoedov@yandex.ru>, 2014.\n"
+"Alexey Rubtsov <rushills@gmail.com>, 2021\n"
+"Aleksandr Melman, 2023"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Неизвестное имя символа"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s не содержится в %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Символ скопирован в буфер обмена"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "См. также"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_Копировать символ"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "Юникод"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "_См. также"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "Не назначено"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "Символ скопирован"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "Символ успешно скопирован"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "_Комбинации клавиш"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Общие"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "Открыть главное меню"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Поиск"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Показать комбинации клавиш"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Закрыть"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Недавно использованные"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Эмодзи"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "Смайлы и эмоции"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "Люди и тело"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Животные и природа"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Еда и напитки"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Путешествие и места"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Занятия"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Объекты"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Символы"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Флаги"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Буквы и символы"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Пунктуация"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Стрелки"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Маркеры"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Картинки"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Валюты"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Математика"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Буквы"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Результат поиска"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "Поиск"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "_Комбинации клавиш"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "_О приложении"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "Поиск символов"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "Нет недавних символов"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "Здесь будут отображаться символы, которые вы используете"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "Нет результатов"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "Попробуйте другой поисковый запрос"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Простое приложение, для поиска и вставки необычных символов"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "символы;юникод;пунктуация;математический;буквы;смайлики;emoji;emoticon;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "Приложение карты символов"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Символы — это простое приложение, для поиска и вставки необычных символов. "
+"Оно позволяет быстро находить нужный символ по ключевым словам."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"Также можно просматривать символы по категориям, таким как знаки пунктуации, "
+"картинки и т.д."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Максимальное количество недавних символов"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "Основной интерфейс приложения"
+
+#~ msgid "Letters page"
+#~ msgstr "Страница с буквами"
+
+#~ msgid "Loading…"
+#~ msgstr "Загрузка…"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s Строка боковой панели"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Open menu"
+#~ msgstr "Открыть меню"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "Комбинации клавиш"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "Символы GNOME"
+
+#~ msgid "Character Map"
+#~ msgstr "Карта символов"

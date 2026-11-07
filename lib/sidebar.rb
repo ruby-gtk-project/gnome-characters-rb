@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'adwaita'
+require_relative 'i18n'
 require_relative 'sidebar_item'
 
 # Sidebar is the port of upstream's src/sidebar.js together with the template
@@ -10,46 +11,13 @@ require_relative 'sidebar_item'
 # seventeen items come from the .ui file, with an InternalChild per row and an
 # itemByName switch mapping a name to the row. Here the same three sections and
 # seventeen items are a table, and itemByName is a lookup in it.
+#
+# Upstream marks every section/item title translatable="yes" in the .ui file;
+# since this port builds the rows in Ruby instead of loading that template,
+# `sections` below is a method (not a frozen constant) so each title can go
+# through `_()` at the point the table is built.
 class Sidebar
-  SECTIONS = [
-    {
-      title: nil,
-      items: [
-        { name: 'recent', title: 'Recently Used', icon: 'document-open-recent-symbolic', category: :none },
-      ],
-    },
-    {
-      title: 'Emojis',
-      items: [
-        { name: 'smileys', title: 'Smileys & Emotion', icon: 'emoji-people-symbolic', category: :emoji_smileys },
-        { name: 'people', title: 'People & Body', icon: 'emoji-body-symbolic', category: :emoji_people },
-        { name: 'animals', title: 'Animals & Nature', icon: 'emoji-nature-symbolic', category: :emoji_animals },
-        { name: 'food', title: 'Food & Drink', icon: 'emoji-food-symbolic', category: :emoji_food },
-        { name: 'travel', title: 'Travel & Places', icon: 'emoji-travel-symbolic', category: :emoji_travel },
-        { name: 'activities', title: 'Activities', icon: 'emoji-activities-symbolic', category: :emoji_activities },
-        { name: 'objects', title: 'Objects', icon: 'emoji-objects-symbolic', category: :emoji_objects },
-        { name: 'symbols', title: 'Symbols', icon: 'emoji-symbols-symbolic', category: :emoji_symbols },
-        { name: 'flags', title: 'Flags', icon: 'emoji-flags-symbolic', category: :emoji_flags },
-      ],
-    },
-    {
-      title: 'Letters & Symbols',
-      items: [
-        {
-          name:     'punctuation',
-          title:    'Punctuation',
-          icon:     'characters-punctuation-symbolic',
-          category: :letter_punctuation,
-        },
-        { name: 'arrows', title: 'Arrows', icon: 'characters-arrow-symbolic', category: :letter_arrow },
-        { name: 'bullets', title: 'Bullets', icon: 'characters-bullet-symbolic', category: :letter_bullet },
-        { name: 'pictures', title: 'Pictures', icon: 'characters-picture-symbolic', category: :letter_picture },
-        { name: 'currency', title: 'Currencies', icon: 'characters-currency-symbolic', category: :letter_currency },
-        { name: 'math', title: 'Math', icon: 'characters-math-symbolic', category: :letter_math },
-        { name: 'latin', title: 'Letters', icon: 'characters-latin-symbolic', category: :letter_latin },
-      ],
-    },
-  ].freeze
+  include Translatable
 
   attr_accessor :last_selected_item
 
@@ -60,7 +28,7 @@ class Sidebar
 
   def build
     sidebar.tap do |widget|
-      SECTIONS.each do |section|
+      sections.each do |section|
         widget.append(section_for(section))
       end
 
@@ -109,12 +77,59 @@ class Sidebar
   # name => SidebarItem, in the order the sections list them, which is the
   # order Adw.Sidebar indexes them in.
   def items
-    @items ||= SECTIONS.flat_map { |section| section[:items] }.to_h do |item|
+    @items ||= sections.flat_map { |section| section[:items] }.to_h do |item|
       [item[:name], SidebarItem.new(item[:title], item[:icon], item[:category])]
     end
   end
 
   private
+
+    def sections
+      [
+        {
+          title: nil,
+          items: [
+            { name: 'recent', title: _('Recently Used'), icon: 'document-open-recent-symbolic', category: :none },
+          ],
+        },
+        {
+          title: _('Emojis'),
+          items: [
+            { name: 'smileys', title: _('Smileys & Emotion'), icon: 'emoji-people-symbolic', category: :emoji_smileys },
+            { name: 'people', title: _('People & Body'), icon: 'emoji-body-symbolic', category: :emoji_people },
+            { name: 'animals', title: _('Animals & Nature'), icon: 'emoji-nature-symbolic', category: :emoji_animals },
+            { name: 'food', title: _('Food & Drink'), icon: 'emoji-food-symbolic', category: :emoji_food },
+            { name: 'travel', title: _('Travel & Places'), icon: 'emoji-travel-symbolic', category: :emoji_travel },
+            { name: 'activities', title: _('Activities'), icon: 'emoji-activities-symbolic', category: :emoji_activities },
+            { name: 'objects', title: _('Objects'), icon: 'emoji-objects-symbolic', category: :emoji_objects },
+            { name: 'symbols', title: _('Symbols'), icon: 'emoji-symbols-symbolic', category: :emoji_symbols },
+            { name: 'flags', title: _('Flags'), icon: 'emoji-flags-symbolic', category: :emoji_flags },
+          ],
+        },
+        {
+          title: _('Letters & Symbols'),
+          items: [
+            {
+              name:     'punctuation',
+              title:    _('Punctuation'),
+              icon:     'characters-punctuation-symbolic',
+              category: :letter_punctuation,
+            },
+            { name: 'arrows', title: _('Arrows'), icon: 'characters-arrow-symbolic', category: :letter_arrow },
+            { name: 'bullets', title: _('Bullets'), icon: 'characters-bullet-symbolic', category: :letter_bullet },
+            { name: 'pictures', title: _('Pictures'), icon: 'characters-picture-symbolic', category: :letter_picture },
+            {
+              name:     'currency',
+              title:    _('Currencies'),
+              icon:     'characters-currency-symbolic',
+              category: :letter_currency,
+            },
+            { name: 'math', title: _('Math'), icon: 'characters-math-symbolic', category: :letter_math },
+            { name: 'latin', title: _('Letters'), icon: 'characters-latin-symbolic', category: :letter_latin },
+          ],
+        },
+      ]
+    end
 
     def section_for(section)
       Adwaita::SidebarSection.new.tap do |widget|

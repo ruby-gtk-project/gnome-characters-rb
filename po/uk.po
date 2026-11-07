@@ -1,0 +1,358 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Daniel Korostil <ted.korostiled@gmail.com>, 2015-2019.
+# Danylo Korostil <ted.korostiled@gmail.com>, 2020.
+# Yuri Chornoivan <yurchor@ukr.net>, 2021, 2022, 2023, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-02-03 05:25+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2\n"
+"X-Generator: Lokalize 23.04.3\n"
+"X-Project-Style: gnome\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Символи"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "Проєкт GNOME"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr "Daniel Korostil <ted.korostiled@gmail.com>"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Невідома назва символу"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s немає в %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Символ скопійовано в буфер"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "Див. також"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "С_копіювати символ"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "Юнікод"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "Д_ивіться також"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "Не призначено"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "Символ скопійовано"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "Символ було успішно скопійовано"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "_Клавіатурні скорочення"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Загальні"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "Відкрити головне меню"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Пошук"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Показати клавіатурні скорочення"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Вихід"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Недавно вжиті"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Емоції"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "Смайлики та емоційки"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "Люди і тіло"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Тварини та природа"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Їжа та напої"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Подорожі та місця"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Діяльність"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Об'єкти"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Символи"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Прапори"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Букви & символи"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Пунктуація"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Стрілки"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Маркери"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Малюнки"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Валюти"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Математика"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Букви"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Результати пошуку"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "Пошук"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "Головне меню"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "_Клавіатурні скорочення"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "_Про «Символи»"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "Пошук символів"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "Немає недавніх символів"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "Символи з'являтимуться тут у міру їхнього використання"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "Нічого не знайдено"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "Спробувати інші критерії пошуку"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Програма для пошуку та вставлення незвичайних символів"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "символи;унікод;пунктуація;математика;букви;літери;емоції;смайлики;символіка;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "Програма символів"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Символи — простенька програм для пошуку та вставлення незвичайних символів. "
+"Він дозволяє швидко знайти символ за допомогою ключових слів."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"Ви також можете переглянути символи через категорії, як-от Пунктуація, "
+"Малюнки тощо."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Максимально нещодавні символи"
+
+#~| msgid "Characters Application started"
+#~ msgid "Characters's main interface"
+#~ msgstr "Головний інтерфейс «Символів»"
+
+#~| msgid "Letters"
+#~ msgid "Letters page"
+#~ msgstr "Сторінка «Букви»"
+
+#~ msgid "Loading…"
+#~ msgstr "Завантаження…"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "Рядок бічної панелі %s"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Open menu"
+#~ msgstr "Відкриття меню"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "Клавіатурні скорочення"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "Символи GNOME"
+
+#~ msgid "Character Map"
+#~ msgstr "Таблиця символів"
+
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#~ msgid "Filter by Font"
+#~ msgstr "Відсіяти за шрифтом"
+
+#~ msgid "Font to display characters"
+#~ msgstr "Шрифт показу символів"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "Використовувати шрифт для відтворення символів у переліку."
+
+#~ msgid "%s Category List Row"
+#~ msgstr "%s рядок переліку категорій"
+
+#~ msgid "None"
+#~ msgstr "Немає"
+
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (тільки %s)"
+
+#~ msgid "%s Character List"
+#~ msgstr "Перелік символів %s"
+
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "Нещодавні перелік символів %s"
+
+#~| msgid "Search produced empty result"
+#~ msgid "Search found no results"
+#~ msgstr "Пошук не дав результатів"
+
+#~ msgid "Current page"
+#~ msgstr "Поточна сторінка"
+
+#~ msgid "Characters Application"
+#~ msgstr "Програма символів"
+
+#~| msgid "Characters Application started"
+#~ msgid "Characters Application activate"
+#~ msgstr "Активування програми символів"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "Програма символів існує"
+
+#~ msgid "About"
+#~ msgstr "Про програму"
+
+#~ msgid "Try another search criteria."
+#~ msgstr "Спробуйте інший критерій пошуку."
+
+#~| msgid "Characters"
+#~ msgid "gnome-characters"
+#~ msgstr "gnome-characters"
+
+#~ msgid "Emoticons"
+#~ msgstr "Емоції"
+
+#~ msgid "characters;unicode;"
+#~ msgstr "символи;унікод;"
+
+#~ msgid "Latin"
+#~ msgstr "Латиниця"

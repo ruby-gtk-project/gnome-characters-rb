@@ -1,0 +1,338 @@
+# Basque translation for gnome-characters.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+#
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2015, 2016, 2017.
+# Asier Saratsua Garmendia  <asier.sarasua@gmail.com>, 2019, 2020, 2021, 2022, 2023.
+# Asier Saratsua Garmendia  <asiersarasua@ni.eus>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-02-14 19:00+0100\n"
+"Last-Translator: Asier Saratsua Garmendia <asiersarasua@ni.eus>\n"
+"Language-Team: Basque <librezale@librezale.eus>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Karaktereak"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "GNOME proiektua"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Karakterearen izena ezezaguna"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "'%s' ez dago '%s' letra-tipoan"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Karakterea arbelean kopiatuta"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "Ikus halaber"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_Kopiatu karakterea"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "Unicode"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "Ikus _halaber"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "Esleitu gabea"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "Karakterea kopiatu da"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "Karakterea ongi kopiatu da"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "Las_ter-teklak"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Orokorra"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "Ireki menu nagusia"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Bilatu"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Erakutsi lasterbideak"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Irten"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Azken aldian erabilia"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Emojiak"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "Aurpegierak eta emozioa"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "Jendea eta gorputza"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Animaliak eta izadia"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Janaria eta edaria"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Bidaiak eta lekuak"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Jarduerak"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Objektuak"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Ikurrak"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Banderak"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Hizkiak eta ikurrak"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Puntuazioa"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Geziak"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Buletak"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Argazkiak"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Dibisak"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Matematikak"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Hizkiak"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Bilaketaren emaitzak"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "Bilatu"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "Menu nagusia"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "Las_ter-teklak"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "Karaktereak aplikazioari _buruz"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "Bilatu karaktereak"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "Ez dago azken aldiko karaktererik"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "Karaktereak hemen agertuko dira erabiltzen badituzu"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "Ez dago emaitzarik"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "Saiatu bestelako bilaketa"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Aplikazio bat da ohikoak ez diren karaktereak bilatu eta txertatzeko"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "karaktereak;unicode;puntuazioa;matematika;hizkiak;aurpegierak;emotikonoak;ikurrak;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "Karaktere-maparen aplikazioa"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Karaktereak aplikazio xume bat da ohikoak ez diren karaktereak bilatu eta "
+"txertatzeko. Gako-hitzen arabera bilatzea nahi duzun karakterea bizkor "
+"aurkitzen du."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"Kategorien arabera ere araka ditzakezu karaktereak. Hala nola, puntuazioa, "
+"irudiak eta abar."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Gehieneko azken karaktereak"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "Karaktereak aplikazioaren interfaze nagusia"
+
+#~ msgid "Letters page"
+#~ msgstr "Letren orria"
+
+#~ msgid "Loading…"
+#~ msgstr "Kargatzen…"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s alboko barraren errenkada"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Open menu"
+#~ msgstr "Ireki menua"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "Laster-teklak"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "GNOMEren Karaktereak"
+
+#~ msgid "Character Map"
+#~ msgstr "Karaktere-mapa"
+
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#~ msgid "Filter by Font"
+#~ msgstr "Iragazi letra-tipoaren arabera"
+
+#~ msgid "Font to display characters"
+#~ msgstr "Letra-tipoa karaktereak bistaratzeko"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "Erabili letra-tipoa karaktereak karaktereen zerrendan marrazteko."
+
+#~ msgid "%s Category List Row"
+#~ msgstr "'%s' kategoria-zerrendako errenkada"
+
+#~ msgid "None"
+#~ msgstr "Bat ere ez"
+
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (%s soilik)"
+
+#~ msgid "%s Character List"
+#~ msgstr "%s karaktere-zerrenda"
+
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "Azken aldian erabilitako %s karaktere-zerrenda"
+
+#~ msgid "Search found no results"
+#~ msgstr "Bilaketak ez du emaitzarik aurkitu"
+
+#~ msgid "Current page"
+#~ msgstr "Uneko orria"
+
+#~ msgid "Characters Application"
+#~ msgstr "Karaktereak aplikazioa"
+
+#~ msgid "Characters Application activate"
+#~ msgstr "Karaktereak aplikazioa aktibatuta"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "Karaktereak aplikaziotik irteten"
+
+#~ msgid "@appid@"
+#~ msgstr "@appid@"

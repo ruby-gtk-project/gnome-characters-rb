@@ -1,0 +1,346 @@
+# Kazakh translation for gnome-characters.
+# Copyright (C) 2015 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2015-2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-02-04 21:42+0500\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Таңбалар"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "GNOME жобасы"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Таңба аты белгісіз"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s %s ішінде жоқ"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Таңба алмасу буферіне көшірілді"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "Тағы қараңыз"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "Таңбаны _көшіріп алу"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "Юникод"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "Тағы қ_арау"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "Тағайындалмаған"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "Таңба көшірілді"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "Таңба сәтті көшірілді"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "П_ернетақта жарлықтары"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Жалпы"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "Басты мәзірді ашу"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Іздеу нәтижесі"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Пернетақта жарлықтарын көрсету"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Шығу"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Жақында қолданылған"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Эмодзи"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "Смайликтер және эмоциялар"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "Адамдар мен денелер"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Жануарлар және табиғат"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Тамақ және сусындар"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Саяхат және орындар"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Белсенділіктер"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Объекттер"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Таңбалар"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Жалаулар"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Әріптер және таңбалар"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Емле таңбалары"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Сызықшалар"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Маркерлер"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Суреттер"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Қаржылар"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Математика"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Әріптер"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Іздеу нәтижесі"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "Іздеу"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "Басты мәзір"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "П_ернетақта жарлықтары"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "Таңбалар қолданбасы туралы"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "Таңбалар ішінен іздеу"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "Жуырдағы таңбалар табылмады"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "Таңбаларды қолдансаңыз, олар осында көрсетіледі"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "Нәтижелер жоқ"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "Басқа сөздерді іздеп көріңіз"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Сирек кездесетін таңбаларды табу және кірістіру үшін арналған қолданба"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;таңбалар;юникод;емле;математика;әріптер;эмодзи;смайлик;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "Таңбалар картасы қолданбасы"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Таңбалар - бұл сирек кездесетін таңбаларды табу және кірістіру үшін арналған "
+"қолданба. Оның көмегімен сіз кілт сөздер көмегімен керек таңбаларды жылдам "
+"таба аласыз."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"Сонымен бірге, сіз таңбаларды санаттар бойынша шола аласыз, мыс. емле "
+"таңбалары, суреттер және т.б."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Жуырдағы таңбалардың макс. саны"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "Таңбалар қолданбасының басты интерфейсі"
+
+#~ msgid "Letters page"
+#~ msgstr "Әріптер беті"
+
+#~ msgid "Loading…"
+#~ msgstr "Жүктеу…"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s бүйірлік панель жолы"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "Пернетақта жарлықтары"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "GNOME таңбалар қолданбасы"
+
+#~ msgid "Character Map"
+#~ msgstr "Таңбалар картасы"
+
+#~ msgid "Filter by Font"
+#~ msgstr "Қаріп бойынша сүзгілеу"
+
+#~ msgid "Font to display characters"
+#~ msgstr "Таңбаларды көрсету қарібі"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "Бұл қаріпті таңбалар тізіміндегі таңбаларды көрсету үшін қолдану."
+
+#~ msgid "%s Category List Row"
+#~ msgstr "%s санаттар тізімінің жолы"
+
+#~ msgid "None"
+#~ msgstr "Ешнәрсе"
+
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (тек %s)"
+
+#~ msgid "%s Character List"
+#~ msgstr "%s таңбалар тізімі"
+
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "Соңғы қолданылған %s таңбалар тізімі"
+
+#~ msgid "Search found no results"
+#~ msgstr "Іздеу нәтижелерді қайтармады"
+
+#~ msgid "Current page"
+#~ msgstr "Ағымдағы бет"
+
+#~ msgid "Characters Application"
+#~ msgstr "Таңбалар қолданбасы"
+
+#~ msgid "Characters Application activate"
+#~ msgstr "Таңбалар қолданбасы белсенді"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "Таңбалар қолданбасы жұмысын аяқтауда"
+
+#~ msgid "@appid@"
+#~ msgstr "@appid@"
+
+#~ msgid "About"
+#~ msgstr "Осы туралы"
+
+#~ msgid "gnome-characters"
+#~ msgstr "gnome-characters"
+
+#~ msgid "Emoticons"
+#~ msgstr "Смайликтер"
+
+#~ msgid "Try another search criteria."
+#~ msgstr "Басқа іздеу шартын қолданып көріңіз."
+
+#~ msgid "characters;unicode;"
+#~ msgstr "таңбалар;unicode;юникод;"

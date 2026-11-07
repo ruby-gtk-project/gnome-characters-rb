@@ -1,0 +1,322 @@
+# Punjabi translation for gnome-characters.
+# Copyright (C) 2015 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+#
+# A S Alam <aalam@fedoraproject.org>, 2015, 2021, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2023-08-30 19:19-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.04.3\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "ਅੱਖਰ"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "ਗਨੋਮ ਪਰੋਜੈਕਟ"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+"ਅ ਸ ਆਲਮ (A S Alam) ੨੦੨੩\n"
+"Punjabi Linux www.punlinux.org"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "ਅਣਜਾਣ ਅੱਖਰ ਨਾਂ"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s %s ਵਿੱਚ ਸ਼ਾਮਲ ਨਹੀਂ ਹੈ"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "ਅੱਖਰ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕੀਤਾ"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "ਇਹ ਵੀ ਵੇਖੋ"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "ਅੱਖਰ ਕਾਪੀ ਕਰੋ(_C)"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "ਯੂਨੀਕੋਡ"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "ਇਹ ਵੀ ਵੇਖੋ(_S)"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "ਨਾ-ਜਾਰੀ"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "ਅੱਖਰ ਕਾਪੀ ਕੀਤਾ"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "ਅੱਖਰ ਕਾਮਯਾਬੀ ਨਾਲ ਕਾਪੀ ਕੀਤਾ ਗਿਆ ਸੀ"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ(_K)"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "ਆਮ"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "ਮੁੱਖ ਮੀਨੂ ਖੋਲ੍ਹੋ"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "ਖੋਜੋ"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ ਵੇਖਾਓ"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "ਬਾਹਰ"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "ਸੱਜਰੇ ਵਰਤੇ"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "ਇਮੋਜ਼ੀ"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "ਸਮਾਈਲੀ ਤੇ ਜਜ਼ਬਾਤ"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "ਲੋਕ ਅਤੇ ਸਰੀਰ"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "ਜਨੌਰ ਤੇ ਕੁਦਰਤ"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "ਖਾਣ ਪੀਣ"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "ਸੈਰ ਸਪਾਟਾ"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "ਸਰਗਰਮੀਆਂ"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "ਚੀਜ਼ਾਂ"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "ਚਿੰਨ੍ਹ"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "ਝੰਡੇ"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "ਅੱਖਰ ਤੇ ਚਿੰਨ੍ਹ"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "ਵਿਰਾਮ ਚਿੰਨ੍ਹ"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "ਤੀਰ"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "ਬਿੰਦੀਆਂ"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "ਤਸਵੀਰਾਂ"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "ਮੁਦਰਾ"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "ਗਣਿਤ"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "ਅੱਖਰ"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "ਖੋਜ ਨਤੀਜਾ"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "ਖੋਜੋ"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "ਮੁੱਖ ਮੇਨੂ"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ(_K)"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "ਅੱਖਰਾਂ ਬਾਰੇ(_A)"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "ਅੱਖਰ ਖੋਜੋ"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "ਕੋਈ ਤਾਜ਼ੇ ਅੱਖਰ ਨਹੀਂ ਹਨ"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "ਜੇ ਤਸੀਂ ਅੱਖਰ ਵਰਤੇ ਤਾਂ ਉਹ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "ਕੋਈ ਨਤੀਜੇ ਨਹੀਂ"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "ਵੱਖਰੀ ਖੋਜ ਕਰਕੇ ਵੇਖੋ"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "ਅਸਧਾਰਨ ਅੱਖਰ ਲੱਭਣ ਤੇ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਸਹਾਇਕ ਐਪਲੀਕੇਸ਼ਨ"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "ਅੱਖਰ;ਲਫ਼ਜ਼;ਯੂਨੀਕੋਡ;ਵਿਚਾਰ-ਚਿੰਨ੍ਹ;ਗਣਿਤ;ਹਿਸਾਬ;ਵਰਣਮਾਲਾ;ਇਮੋਜ਼ੀ;ਜਜ਼ਬਾਤ;ਚਿੰਨ੍ਹ;ਭਾਵਨਾ;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "ਅੱਖਰ ਖਾਕਾ ਐਪਲੀਕੇਸ਼ਨ"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"ਕਰੈਕਟਰ (ਅੱਖਰ) ਅਸਧਾਰਨ ਅੱਖਰ ਲੱਭਣ ਤੇ ਪਾਉਣ ਵਾਲੀ ਸਰਲ ਸਹੂਲਤ ਵਾਲੀ ਐਪਲੀਕੇਸ਼ਨ ਹੈ। ਇਹ ਤੁਹਾਨੂੰ ਖਾਸ "
+"ਢੰਗ ਰਾਹੀਂ ਲੱਭ ਕੇ ਤੁਹਾਨੂੰ ਅੱਖਰ ਲੱਭਣ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦੀ ਹੈ।"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr "ਤੁਸੀਂ ਵਰਗ ਜਿਵੇਂ ਕਿ ਵਿਰਾਮ-ਚਿੰਨ੍ਹ, ਤਸਵੀਰਾਂ ਰਾਹੀਂ ਵੀ ਅੱਖਰਾਂ ਦੀ ਝਲਕ ਵੇਖ ਸਕਦੇ ਹੋ।"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Loading…"
+#~ msgstr "...ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ"
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਤਾਜ਼ਾ ਅੱਖਰ"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s ਬਾਹੀ ਕਤਾਰ"
+
+#~ msgid "Filter by Font"
+#~ msgstr "ਫੋਂਟ ਰਾਹੀਂ ਫਿਲਟਰ"
+
+#~| msgid "_Keyboard Shortcuts"
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "ਕੀਬੋਰਡ ਸ਼ਾਰਟਕੱਟ"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "ਗਨੋਮ ਅੱਖਰ"
+
+#~ msgid "Font to display characters"
+#~ msgstr "ਅੱਖਰ ਦਿਖਾਉਣ ਲਈ ਫ਼ੋਂਟ"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "ਅੱਖਰ ਸੂਚੀ ਉੱਤੇ ਰੈਂਡਰ ਕਰਨ ਅੱਖਰਾਂ ਲਈ ਵਰਤੇ ਜਾਣ ਵਾਲੇ ਫ਼ੋਂਟ ਵਰਤੋ।"
+
+#, javascript-format
+#~ msgid "%s Category List Row"
+#~ msgstr "%s ਕੈਟਾਗਰੀ ਸੂਚੀ ਕਤਾਰ"
+
+#~ msgid "None"
+#~ msgstr "ਕੋਈ ਨਹੀਂ"
+
+#, javascript-format
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#, javascript-format
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (%s ਕੇਵਲ)"
+
+#, javascript-format
+#~ msgid "%s Character List"
+#~ msgstr "%s ਅੱਖਰ ਲਿਸਟ"
+
+#, javascript-format
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "ਹਾਲ ਵਿੱਚ ਵਰਤੀ %s ਅੱਖਰ ਲਿਸਟ "
+
+#~ msgid "Current page"
+#~ msgstr "ਮੌਜੂਦਾ ਸਫ਼ਾ"
+
+#~ msgid "characters;unicode;"
+#~ msgstr "ਅੱਖਰ;ਯੂਨੀਕੋਡ;"
+
+#~ msgid "Emoticons"
+#~ msgstr "ਈਮੋ-ਆਈਕਾਨ"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "ਅੱਖਰ ਐਪਲੀਕੇਸ਼ਨ ਬੰਦ ਹੋ ਰਹੀ ਹੈ"

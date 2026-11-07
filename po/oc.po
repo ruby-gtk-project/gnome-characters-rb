@@ -1,0 +1,353 @@
+# Occitan translation for gnome-characters.
+# Copyright (C) 2015 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+# Cédric Valmary <cvalmary@yahoo.fr>, 2015.
+# Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>, 2015.
+# Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>, 2016, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters gnome-3-16\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-02-02 17:53+0100\n"
+"Last-Translator: Quentin PAGÈS\n"
+"Language-Team: Tot En Òc\n"
+"Language: oc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.8\n"
+"X-Project-Style: gnome\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Caractèrs"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "Lo projècte GNOME"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+"Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>\n"
+"Quentin PAGÈS"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Nom de caractèr desconegut"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s es pas inclús dins %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Caractèrs copiats dempuèi lo quichapapièrs"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "Veire tanben"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_Copiar lo caractèr"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "Unicode"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "_Veire tanben"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "Pas assignat"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "Caractèrs copiat"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "Caractèr copiat amb succès"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "Aco_rchis de clavièr"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "Dobrir lo menú principal"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Recercar"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Mostrar los acorchis clavièr"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Quitar"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Utilizat recentament"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Emoticònas"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "Emoticònas e emocions"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "Gent e còs"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Animals e natura"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Noiridura e bevenda"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Viatges e luòcs"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Activitats"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Objèctes"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Simbòls"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Bandièras"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Letras e simbòls"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Pontuacion"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Sagetas"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Piuses"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Imatges"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Monedas"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Math"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Letras"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Resultat de la recèrca"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "Recercar"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "Menú principal"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "Aco_rchis de clavièr"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "_A prepaus de Caractèrs"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "Recercar de caractèrs"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "Cap de caractèr recent pas trobat"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "Los caractèrs apareisseràn aicí se los utilizatz"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "Pas cap de resultat"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "Ensajatz una recèrca diferenta"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Utilitari per cercar e inserir de caractèrs inabituals"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "caractèrs;unicode;pontuacion;math;letras;emoji;emoticòna;matematicas;simbol;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "Aplicacion de la taula de caractèrs"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Caractèrs es un utilitari per cercar e inserir de caractèrs inabituals. Vos "
+"permet de trobar rapidament lo caractèr que cercatz pel biais de mots-claus."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"Tanben podètz navegar dins los caractèrs per categorias, coma per "
+"Pontuacion, Imatges, etc."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Nombre maximal de caractèrs recents"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "Interfàcia principala de Caractèrs"
+
+#~ msgid "Letters page"
+#~ msgstr "Pagina de letras"
+
+#~ msgid "Loading…"
+#~ msgstr "Cargament…"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s Barra laterala"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Open menu"
+#~ msgstr "Dobrir lo menú"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "Acorchis de clavièr"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "GNOME Caractèrs"
+
+#~ msgid "Character Map"
+#~ msgstr "Taula de caractèrs"
+
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#~ msgid "Filter by Font"
+#~ msgstr "Filtrar per poliça"
+
+#~ msgid "Font to display characters"
+#~ msgstr "Poliça d'afichatge dels caractèrs"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "Utilizar la poliça per afichar la lista dels caractèrs."
+
+#~ msgid "%s Category List Row"
+#~ msgstr "Linha de la categoria %s"
+
+#~ msgid "None"
+#~ msgstr "Pas cap"
+
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (%s solament)"
+
+#~ msgid "%s Character List"
+#~ msgstr "%s lista de caractèrs"
+
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "Lista de caractèrs %s utilizada recentament"
+
+#~ msgid "About"
+#~ msgstr "A prepaus"
+
+#~| msgid "Search produced empty result"
+#~ msgid "Search found no results"
+#~ msgstr "La recèrca a pas donat cap de resultat"
+
+#~ msgid "Current page"
+#~ msgstr "Pagina actuala"
+
+#~| msgid "Characters"
+#~ msgid "gnome-characters"
+#~ msgstr "gnome-characters"
+
+#~ msgid "Characters Application"
+#~ msgstr "Aplicacion de caractèrs"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "Tampadura de l'aplicacion Caractèrs"
+
+#~ msgid "Try another search criteria."
+#~ msgstr "Ensajatz un autre critèri de recèrca."
+
+#~ msgid "Emoticons"
+#~ msgstr "Emoticònas"
+
+#~ msgid "characters;unicode;"
+#~ msgstr "caractèrs;unicode;"
+
+#~ msgid "Latin"
+#~ msgstr "Latin"

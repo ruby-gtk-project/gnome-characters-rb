@@ -1,0 +1,281 @@
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Traducció al català del  gnome-characters
+#
+# Jordi Mas i Hernàndez <jmas@softcatala.org>, 2015, 2022
+# Joan Mas Lloret <joan.mas.lloret@gmail.com>, 2022
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-02-01 22:28+0100\n"
+"Last-Translator: Jordi Mas i Hernàndez <jmas@softcatala.org>\n"
+"Language-Team: \n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.6\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Caràcters"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "El projecte GNOME"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+"Jordi Mas i Hernàndez <jmas@softcatala.org>, 2015, 2022-2023\n"
+"Joan Mas Lloret <joan.mas.lloret@gmail.com>, 2022\n"
+"Victor Dargallo <victordargallo@disroot.org>"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Nom de caràcter desconegut"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s no està inclòs a %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "El caràcter s'ha copiat al porta-retalls"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "Vegeu també"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_Copia el caràcter"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "Unicode"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "_Vegeu també"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "No assignat"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "S'ha copiat el caràcter"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "El caràcter s'ha copiat correctament"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "_Dreceres de teclat"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "Obre el menú"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Cerca"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Mostra les dreceres de teclat"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Surt"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Utilitzats recentment"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Emojis"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "Emoticones i emocions"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "Persones i parts del cos"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Animals i natura"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Menjar i beure"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Viatges i llocs"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Activitats"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Objectes"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Símbols"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Banderes"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Lletres i símbols"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Puntuació"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Fletxes"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Pics"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Imatges"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Monedes"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Matemàtiques"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Lletres"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Resultat de la cerca"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "Cerca"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "Menú principal"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "_Dreceres de teclat"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "_Quant al Caràcters"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "Cerca caràcters"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "No s'han trobat caràcters recents"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "Els caràcters apareixen aquí si els utilitzeu"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "Sense resultats"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "Proveu una cerca diferent"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Una aplicació per a cercar i inserir caràcters inusuals"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "caràcters;unicode;puntuació;mates;lletres;emoji;emoticona;símbols;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "Aplicació per a mostrar caràcters"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Caràcters és una aplicació per a cercar i inserir caràcters inusuals. Us "
+"permet trobar ràpidament els caràcters que esteu cercant usant paraules clau."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"També podeu navegar els caràcters per categories, com ara puntuació, "
+"imatges, etc."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Màxim de caràcters recents"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "Interfície principal del Caràcters"
+
+#~ msgid "Letters page"
+#~ msgstr "Pàgina de lletres"
+
+#~ msgid "Loading…"
+#~ msgstr "S'està carregant..."
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "Fila de la barra lateral %s"

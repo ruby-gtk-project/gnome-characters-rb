@@ -2,6 +2,7 @@
 
 require 'adwaita'
 require_relative 'gc'
+require_relative 'i18n'
 require_relative 'util'
 
 # ShellSearchProvider is the port of upstream's src/searchProvider.js and the
@@ -20,6 +21,8 @@ require_relative 'util'
 # invocation is likewise held until the search finishes, so the shell sees the
 # same asynchronous behaviour.
 class ShellSearchProvider
+  include Translatable
+
   INTERFACE = 'org.gnome.Shell.SearchProvider2'
   MAX_SEARCH_RESULTS = 20
 
@@ -156,7 +159,7 @@ class ShellSearchProvider
         if name
           Util.capitalize(name)
         else
-          'Unknown character name'
+          _('Unknown character name')
         end
       end
     end
@@ -165,7 +168,7 @@ class ShellSearchProvider
       if Gc.character_is_composite?(character)
         ''
       else
-        format('U+%X', Util.to_code_point(character))
+        format(_('U+%s'), Util.to_code_point(character).to_s(16).upcase)
       end
     end
 
@@ -193,8 +196,8 @@ class ShellSearchProvider
     def quote(value) = %("#{value.to_s.gsub(/[\\"]/) { |char| ESCAPES.fetch(char) }}")
 
     def activation_notification
-      Gio::Notification.new('Character copied').tap do |notification|
-        notification.body = 'Character was copied successfully'
+      Gio::Notification.new(_('Character copied')).tap do |notification|
+        notification.body = _('Character was copied successfully')
       end
     end
 end

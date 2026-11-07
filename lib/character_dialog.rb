@@ -2,6 +2,7 @@
 
 require 'adwaita'
 require_relative 'gc'
+require_relative 'i18n'
 require_relative 'util'
 
 # CharacterDialog is the port of upstream's src/characterDialog.js together
@@ -13,6 +14,8 @@ require_relative 'util'
 # action with a page tag; here the row's activation pushes the page itself,
 # which is the same navigation with one fewer indirection.
 class CharacterDialog
+  include Translatable
+
   CONTENT_WIDTH = 360
   CONTENT_HEIGHT = 500
   RELATED_PREFIX_WIDTH = 45
@@ -122,7 +125,7 @@ class CharacterDialog
 
     def fallback_name(character)
       if Gc.character_is_composite?(character)
-        'Unknown character name'
+        _('Unknown character name')
       else
         code_point_label(character)
       end
@@ -147,7 +150,7 @@ class CharacterDialog
           character_stack.visible_child_name = 'character'
         else
           # TRANSLATORS: the first variable is a character, the second a font.
-          missing_label.label = format('%s is not included in %s', name, @font_description.family)
+          missing_label.label = format(_('%s is not included in %s'), name, @font_description.family)
           character_stack.visible_child_name = 'missing'
         end
       end
@@ -224,7 +227,7 @@ class CharacterDialog
     end
 
     def copy_toast
-      Adwaita::Toast.new('Character copied to clipboard').tap do |toast|
+      Adwaita::Toast.new(_('Character copied to clipboard')).tap do |toast|
         toast.timeout = TOAST_TIMEOUT
       end
     end
@@ -246,11 +249,15 @@ class CharacterDialog
 
     def toast_overlay = @toast_overlay ||= Adwaita::ToastOverlay.new
     def navigation_view = @navigation_view ||= Adwaita::NavigationView.new
+    # Upstream's main page title is bound to the dialog's own `title`
+    # property rather than a static string, and show_character overwrites it
+    # before the dialog is ever shown — never a translatable message of its
+    # own, so this placeholder stays a bare literal.
     def main_page = @main_page ||= Adwaita::NavigationPage.new(main_toolbar, 'Character')
     def main_toolbar = @main_toolbar ||= Adwaita::ToolbarView.new
 
     def related_page
-      @related_page ||= Adwaita::NavigationPage.new(related_toolbar, 'See Also').tap do |page|
+      @related_page ||= Adwaita::NavigationPage.new(related_toolbar, _('See Also')).tap do |page|
         page.tag = 'related'
       end
     end
@@ -299,7 +306,7 @@ class CharacterDialog
         button.margin_top = 18
         button.margin_bottom = 18
         button.halign = :center
-        button.label = '_Copy Character'
+        button.label = _('_Copy Character')
         button.use_underline = true
         button.action_name = 'character.copy'
         button.add_css_class('pill')
@@ -324,7 +331,7 @@ class CharacterDialog
       end
     end
 
-    def detail_row = @detail_row ||= Adwaita::ActionRow.new.tap { |row| row.title = 'Unicode' }
+    def detail_row = @detail_row ||= Adwaita::ActionRow.new.tap { |row| row.title = _('Unicode') }
 
     def detail_label
       @detail_label ||= Gtk::Label.new.tap do |label|
@@ -335,7 +342,7 @@ class CharacterDialog
 
     def see_also_row
       @see_also_row ||= Adwaita::ActionRow.new.tap do |row|
-        row.title = '_See Also'
+        row.title = _('_See Also')
         row.use_underline = true
         row.activatable = true
       end

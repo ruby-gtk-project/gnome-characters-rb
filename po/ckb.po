@@ -1,0 +1,334 @@
+# Kurdish (Sorani) translation for gnome-characters
+# Copyright (c) 2020 Rosetta Contributors and Canonical Ltd 2020
+# This file is distributed under the same license as the gnome-characters package.
+# Jwtiyar Nariman <jwtiyar@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2020-02-22 10:29+0300\n"
+"Last-Translator: Jwtiyar Nariman <jwtiyar@gmail.com>\n"
+"Language-Team: Kurdish (Sorani) <ckb@li.org>\n"
+"Language: ckb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2020-02-22 07:28+0000\n"
+"X-Generator: Poedit 2.3\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "نووسەکان"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr ""
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Jwtiyar Nariman https://launchpad.net/~jwtiyar"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "ناوی نووسە نەزانراوە"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s لیست نەکراوە لە ناو %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "نووس لەبەرگیرا لە پارێزەر"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "سەیری ئەوەش بکە"
+
+#: ../lib/character_dialog.rb:309
+#, fuzzy
+msgid "_Copy Character"
+msgstr "لەبەرگرتنەوەی نووسەکان"
+
+#: ../lib/character_dialog.rb:334
+#, fuzzy
+msgid "Unicode"
+msgstr "یونیکۆد U+%04s"
+
+#: ../lib/character_dialog.rb:345
+#, fuzzy
+msgid "_See Also"
+msgstr "سەیری ئەوەش بکە"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "دیارینەکراوە"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr ""
+
+#: ../lib/shell_search_provider.rb:199
+#, fuzzy
+msgid "Character copied"
+msgstr "نەخشەی هێما"
+
+#: ../lib/shell_search_provider.rb:200
+#, fuzzy
+msgid "Character was copied successfully"
+msgstr "نووس لەبەرگیرا لە پارێزەر"
+
+#: ../lib/shortcuts_dialog.rb:23
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:43
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "ئەنجامی گەڕانەکان"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "دوا بەکاربراوەکان"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "ئیمۆجی"
+
+#: ../lib/sidebar.rb:98
+#, fuzzy
+msgid "Smileys & Emotion"
+msgstr "زەردەخەنەکان و کەسەکان"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr ""
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "ئاژاڵەکان و سروشت"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "خواردن و خواردنەوە"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "گەشت و شوێن"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "چالاکییەکان"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "شتەکان"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "هێماكان"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "ئاڵاكان"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "پیتەکان و هێماکان"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "خاڵبەندی"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "تیرەکان"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "خاڵەکان"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "وێنەکان"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "دراوەکان"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "بیرکاری"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "پیتەکان"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "ئەنجامی گەڕانەکان"
+
+#: ../lib/window.rb:318
+#, fuzzy
+msgid "Search"
+msgstr "ئەنجامی گەڕانەکان"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr ""
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/window.rb:336
+#, fuzzy
+msgid "_About Characters"
+msgstr "دەربارەی نووسەکان"
+
+#: ../lib/window.rb:346
+#, fuzzy
+msgid "Search characters"
+msgstr "ئەنجامی گەڕانی لیستەی نووسەکان"
+
+#: ../lib/window.rb:362
+#, fuzzy
+msgid "No Recent Characters"
+msgstr "هیچ نووسێک نەدۆزرایەوە"
+
+#: ../lib/window.rb:363
+#, fuzzy
+msgid "Characters will appear here if you use them"
+msgstr "نووسەکان لێرە دەردەکەون ئەگەر بەکاریان بهێنی"
+
+#: ../lib/window.rb:370
+#, fuzzy
+msgid "No Results"
+msgstr "ئەنجامی گەڕانەکان"
+
+#: ../lib/window.rb:371
+#, fuzzy
+msgid "Try a different search"
+msgstr "گەڕانێکی تر ئەنجام بدە"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "داوانامە بۆ دۆزینەوە و دانانی نووسە نائاساییەکان"
+
+#: data/org.gnome.CharactersRb.desktop:12
+#, fuzzy
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "characters;unicode;punctuation;math;letters;emoji;emoticon;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "داوانامەی خشتەی نووسەکان"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"نووسەکان بریتین لە داوانامە بۆ دۆزینەوە و دانانی نووسەی نائاسایی. ڕێگەت "
+"دەدات بە خێرایی ئەو نووسانە بدۆزیتەوە کە بۆی دەگەڕێیت ئەویش بەبەکارهێنانی "
+"کلیلەووشە."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr "دەتوانی بنواڕیتە نووسەکان بە پێی پۆلەکان، وەک خاڵبەندی، وێنە،هیتر."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Search found no results"
+#~ msgstr "گەڕان هیچی نەدۆزییەوە"
+
+#~ msgid "Loading…"
+#~ msgstr "باردەکرێت..."
+
+#~ msgid "Current page"
+#~ msgstr "پەڕەی ئێستا"
+
+#~ msgid "Filter by Font"
+#~ msgstr "پاڵاوێکردن بە پێی جۆرەپیت"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "نووسەکانی گنۆم"
+
+#~ msgid "@appid@"
+#~ msgstr "@appid@"
+
+#~ msgid "Font to display characters"
+#~ msgstr "بە چ جۆرەپیتێک نووسەکان پیشانبدرێت"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "جۆرەپیت بەکاربێنە بۆ ڕێکخستنی نووسەکان لە لیستەی نوووسەکان"
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "زۆرترین نووسەی کۆتاجار"
+
+#, javascript-format
+#~ msgid "%s Category List Row"
+#~ msgstr "%s ڕیزی لیستەی هاوپۆلەکان"
+
+#~ msgid "Characters Application"
+#~ msgstr "داوانامەی نووسەکان"
+
+#~ msgid "Characters Application started"
+#~ msgstr "داوانامەی نووسەکان دەستیپێکرد"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "داوانامەی نووسەکان دەرچوو"
+
+#~ msgid "None"
+#~ msgstr "هیچ"
+
+#, javascript-format
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#, javascript-format
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (%s تەنها)"
+
+#, javascript-format
+#~ msgid "%s Character List"
+#~ msgstr "لیستەی نووسەکانی %s"
+
+#, javascript-format
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "دوواجار لیستەی نووسەکانی %s  بەکارهێنراوە"

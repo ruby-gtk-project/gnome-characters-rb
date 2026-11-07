@@ -2,6 +2,7 @@
 
 require 'adwaita'
 require_relative 'gc'
+require_relative 'i18n'
 require_relative 'util'
 
 # CharactersView is the port of upstream's src/charactersView.js: the grid of
@@ -17,6 +18,8 @@ require_relative 'util'
 # 0.85 of the cell, the bounding box and wrapped character name for anything
 # the font cannot render — is the same, through Cairo instead of Gsk.
 class CharactersView
+  include Translatable
+
   BASELINE_OFFSET = 0.85
   CELLS_PER_ROW = 5
   NUM_ROWS = 5
@@ -392,7 +395,7 @@ class CharactersView
         if name
           Util.capitalize(name)
         else
-          'Unassigned'
+          _('Unassigned')
         end
       end
     end

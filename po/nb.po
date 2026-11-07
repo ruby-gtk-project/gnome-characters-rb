@@ -1,0 +1,275 @@
+# Norwegian bokmål translation of gnome-characters.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Kjartan Maraas <kjartan.maraas@gmail.com>, 2012-2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-08-06 20:38+0200\n"
+"Last-Translator: Kjartan Maraas <kjartan.maraas@gmail.com>\n"
+"Language-Team: \n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Tegn"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "GNOME"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+"Kjartan Maraas <kmaraas@gnome.org>\n"
+"Brage Fuglseth https://bragefuglseth.dev"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Ukjent navn"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s finnes ikke i %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Tegn kopiert til utklippstavlen"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "Liknende tegn"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_Kopier tegn"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "Unicode"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "_Liknende tegn"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "Ukjent"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "Tegn kopiert"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "Tegnet ble kopiert til utklippstavlen"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "_Tastatursnarveier"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Generelt"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "Vis hovedmeny"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Søk"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Vis tastatursnarveier"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Avslutt"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Nylige"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Emojier"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "Smilefjes og følelser"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "Folk og kropp"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Dyr og natur"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Mat og drikke"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Reise og steder"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Aktiviteter"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Gjenstander"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Symboler"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Flagg"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Symboler"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Skilletegn"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Piler"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Punkter"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Bilder"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Valutaer"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Matematikk"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Bokstaver"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Søketreff"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "Søk"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "Hovedmeny"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "_Tastatursnarveier"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "_Om Tegn"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "Søk etter tegn"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "Ingen nylige tegn"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "Tegn du bruker, dukker opp her"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "Ingen treff"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "Prøv et annet søk"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Se etter spesialtegn"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "tegn;unicode;tegnsetting;punktuering;matte;matematikk;symboler;bokstaver;emojier;smilefjes;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "Se etter spesialtegn"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Noen ganger finnes rett og slett ikke tegnet du ser etter, på tastaturet "
+"ditt. I denne appen kan du søke etter et hvilket som helst tegn, slik at du "
+"kan bruke det der du vil."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"Du kan også bla gjennom alle tegnene i bestemte kategorier, som skilletegn "
+"eller bilder."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Maksimalt antall nylige tegn"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "Brukergrensesnittet i Tegn"
+
+#~ msgid "Letters page"
+#~ msgstr "Siden med bokstaver"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s-seksjon"

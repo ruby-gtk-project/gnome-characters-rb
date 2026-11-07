@@ -1,0 +1,374 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Yosef Or Boczko <yoseforb@gmail.com>, 2014-2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-control-center.HEAD.he\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2026-02-27 08:16+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <yoseforb@gmail.com>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3);\n"
+"X-Generator: Poedit 3.8\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "תווים"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "מיזם GNOME"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+"יוסף אור בוצ׳קו <yoseforb@gmail.com>\n"
+"מיזם תרגום GNOME לעברית https://l10n.gnome.org/teams/he/"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "שם תו לא ידוע"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s אינו כלול בתוך %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "תו הועתק ללוח הגזירים"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "ראו גם"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_העתקת תו"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "יוניקוד"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "_ראו גם"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "לא מיוחס"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "‏U+‏%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "תו הועתק"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "תו הועתק בהצלחה"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "_צירופי מקשים"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "כללי"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "פתיחת תפריט ראשי"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "חיפוש"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "הצגת צירופי מקשים"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "יציאה"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "בשימוש לאחרונה"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "רגשונים"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "חייכנים ורגשונים"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "אנשים ועצמים"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "בעלי חיים וטבע"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "אוכל ושתייה"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "טיולים ומקומות"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "פעילויות"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "עצמים"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "סמלים"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "דגלים"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "אותיות וסמלים"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "פיסוק"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "חצים"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "תבליטים"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "תמונות"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "מטבעות"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "מתמטיקה"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "אותיות"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "תוצאות חיפוש"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "חיפוש"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "תפריט ראשי"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "_צירופי מקשים"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "על אודות _תווים"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "חיפוש תווים"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "אין תווים אחרונים"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "תווים יופיעו כאן אם הם בשימוש"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "לא נמצאו תוצאות"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "יש לנסות חיפוש שונה"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "יישום למציאה ולהכנסת תווים בלתי רגילים"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr ""
+"תו;תווים;יוניקוד;פיסוק;מתמטיקה;אותיות;חייכנים;רגשונים;סמיילים;סמיילי;רגשון;חייכן;סמל "
+"הבעה;ניקוד;טעמים;סמלים;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "יישום מפת תווים"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"תווים זהו יישום שירות פשוט למציאה ולהכנסת תווים בלתי רגילים. הוא מאפשר לך "
+"למצאו במהירות תווים שהנך מחפש באמצעות חיפוש מילות מפתח."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"כמו כן ניתן לדפדף בתווים באמצעות קטגוריות, כמו סימני פיסוק, תמונות וכו׳."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Maximum recent characters"
+
+#~ msgid "Characters's main interface"
+#~ msgstr "מנשק התווים הראשי"
+
+#~ msgid "Letters page"
+#~ msgstr "עמוד אותיות"
+
+#~ msgid "Loading…"
+#~ msgstr "בטעינה…"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "‏%s שורה בסרגל הצד"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Open menu"
+#~ msgstr "פתיחת תפריט"
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "צירופי מקשים"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "‏GNOME תווים"
+
+#~ msgid "Character Map"
+#~ msgstr "מפת תווים"
+
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#~ msgid "Filter by Font"
+#~ msgstr "סינון לפי גופן"
+
+#~ msgid "Font to display characters"
+#~ msgstr "Font to display characters"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "Use the font to render characters on the character list."
+
+# הערות:
+# הוספת הערה
+#
+# מבנה:
+# JavaScript
+#
+# נתיבים:
+# ../src/categoryList.js:94
+#~ msgid "%s Category List Row"
+#~ msgstr "%s רשימת שורות קטגוריה"
+
+#~ msgid "None"
+#~ msgstr "אף אחד"
+
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (%s בלבד)"
+
+#~ msgid "%s Character List"
+#~ msgstr "%s רשימת תווים"
+
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "רשימת תווים %s בשימוש לאחרונה"
+
+#~| msgid "Search produced empty result"
+#~ msgid "Search found no results"
+#~ msgstr "החיפוש לא הניב תוצאות"
+
+#~ msgid "Current page"
+#~ msgstr "דף נוכחי"
+
+#~ msgid "About"
+#~ msgstr "על אודות"
+
+#~ msgid "Try another search criteria."
+#~ msgstr "ניתן לנסות תבחין אחר."
+
+#~| msgid "Characters"
+#~ msgid "gnome-characters"
+#~ msgstr "gnome-characters"
+
+#~ msgid "Emoticons"
+#~ msgstr "פרצופונים"
+
+#~ msgid "Characters Application"
+#~ msgstr "יישום תווים"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "Characters Application exiting"
+
+#~ msgid "characters;unicode;"
+#~ msgstr "תווים;יוניקוד;"
+
+#~ msgid "Latin"
+#~ msgstr "לטינית"
+
+#~ msgid "_New"
+#~ msgstr "_חדש"
+
+#~ msgid "About Example"
+#~ msgstr "על אודות דוגמה"
+
+#~ msgid "Type to Search"
+#~ msgstr "יש להקליד כדי לחפש"
+
+#~ msgid "Done"
+#~ msgstr "בוצע"

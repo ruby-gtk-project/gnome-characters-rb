@@ -1,0 +1,267 @@
+# Thai translation for gnome-characters.
+# Copyright (C) 2023 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+# Aefgh Threenine <aefgh39622@gmail.com>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters main\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2024-09-15 01:36+0700\n"
+"Last-Translator: \n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "อักขระ"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "โครงการ GNOME"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr "Aefgh Threenine <aefgh39622@gmail.com>"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "ไม่ทราบชื่ออักขระ"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s ไม่มีใน %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "คัดลอกอักขระลงคลิปบอร์ดแล้ว"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "ดูเพิ่ม"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_คัดลอกอักขระ"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "ยูนิโค้ด"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "_ดูเพิ่ม"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "ไม่ได้มีการกำหนดไว้"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "คัดลอกอักขระแล้ว"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "อักขระถูกคัดลอกเรียบร้อยแล้ว"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "ปุ่_มลัดแป้นพิมพ์"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "ทั่วไป"
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "เปิดเมนูหลัก"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "ค้นหา"
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "แสดงปุ่มลัดแป้นพิมพ์"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "ออก"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "ใช้ล่าสุด"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "อีโมจิ"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "หน้ายิ้มและอารมณ์"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "ผู้คนและร่างกาย"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "สัตว์และธรรมชาติ"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "อาหารและเครื่องดื่ม"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "ท่องเที่ยวและสถานที่"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "กิจกรรม"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "วัตถุ"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "สัญลักษณ์"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "ธง"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "ตัวอักษรและสัญลักษณ์"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "เครื่องหมายวรรคตอน"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "ลูกศร"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "จุดนำ"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "รูปภาพ"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "สกุลเงิน"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "คณิตศาสตร์"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "ตัวอักษร"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "ผลการค้นหา"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr "ค้นหา"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr "เมนูหลัก"
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "ปุ่_มลัดแป้นพิมพ์"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "เ_กี่ยวกับ “อักขระ”"
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr "ค้นหาอักขระ"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "ไม่มีอักขระล่าสุด"
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr "อักขระต่างๆ จะปรากฏขึ้นที่นี่เมื่อคุณใช้"
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "ไม่พบผลลัพธ์"
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr "ลองค้นหาด้วยคำอื่น"
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "แอปพลิเคชันอรรถประโยชน์สำหรับหาและแทรกอักขระพิเศษ"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "อักขระ;ยูนิโคด;เครื่องหมายวรรคตอน;คณิตศาสตร์;ตัวอักษร;อีโมจิ;อีโมติคอน;สัญลักษณ์;characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "แอปพลิเคชันผังอักขระ"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"\"อักขระ\" เป็นแอปพลิเคชันอรรถประโยชน์อย่างง่ายสำหรับหาและแทรกอักขระพิเศษ "
+"โดยให้คุณหาอักขระที่ต้องการได้อย่างรวดเร็วโดยค้นหาด้วยคำสำคัญ"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr "คุณยังสามารถท่องดูอักขระตามหมวดหมู่ต่างๆ ได้ เช่น เครื่องหมายวรรคตอน รูปภาพ ฯลฯ"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "จำนวนสูงสุดของอักขระล่าสุด"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "แถวแถบข้าง %s"
+
+#~ msgid "Loading…"
+#~ msgstr "กำลังโหลด…"

@@ -1,0 +1,346 @@
+# Croatian translation for gnome-characters.
+# Copyright (C) 2017 gnome-characters's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-characters package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-characters master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2022-09-11 17:09+0200\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
+"Language-Team: Croatian <hr@li.org>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Znakovi"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr "GNOME projekt"
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr "gogo https://launchpad.net/~trebelnik-stefina"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Nepoznat naziv znaka"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "%s nije uključen u %s"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Znak je kopiran u međuspremnik"
+
+#: ../lib/character_dialog.rb:260
+#, fuzzy
+msgid "See Also"
+msgstr "_Još pogledajte"
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr "_Kopiraj znak"
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr "_Unikôd"
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr "_Još pogledajte"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr "Nedodjeljeno"
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr "U+%s"
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr "Znak je kopiran"
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr "Znak je kopiran uspješno"
+
+#: ../lib/shortcuts_dialog.rb:23
+#, fuzzy
+msgid "Keyboard Shortcuts"
+msgstr "_Prečaci tipkovnice"
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Općenito"
+
+#: ../lib/shortcuts_dialog.rb:42
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr "Otvori izbornik"
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Pretraži"
+
+#: ../lib/shortcuts_dialog.rb:44
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "_Prečaci tipkovnice"
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Zatvori"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Nedavno korišteno"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr "Emotikoni"
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr "Smajliji i emocije"
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr "Ljudi i tijelo"
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr "Životinje i priroda"
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr "Hrana i piće"
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr "Putovanja i mjesta"
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr "Aktivnosti"
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr "Objekti"
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr "Simboli"
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr "Zastave"
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr "Slova i simboli"
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Interpunkcija"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Strelice"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Grafičke oznake"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Slike"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Valute"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Matematika"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Slova"
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr "Rezult pretrage"
+
+#: ../lib/window.rb:318
+#, fuzzy
+msgid "Search"
+msgstr "Pretraži"
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr ""
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr "_Prečaci tipkovnice"
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr "_O Znakovima"
+
+#: ../lib/window.rb:346
+#, fuzzy
+msgid "Search characters"
+msgstr "Pretraži rezultat popisa znakova"
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr "Nema nedavnih znakova"
+
+#: ../lib/window.rb:363
+#, fuzzy
+msgid "Characters will appear here if you use them"
+msgstr "Znakovi će se pojaviti ovdje ako ih korsitite."
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr "Nema rezultata"
+
+#: ../lib/window.rb:371
+#, fuzzy
+msgid "Try a different search"
+msgstr "Pokušajte drugačiju pretragu."
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Aplikacija pomagala za pronalazak i umetanje neuobičajenih znakova"
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "znakovi;unikôd;interpunkcija;matematika;slova;smajli;emotkoin;simboli;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr "Aplikacija za umetanje znakova"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Znakovi je mala aplikacija pomagala za pronalazak i umetanje neuobičajenih "
+"znakova. Omogućuje vam brz pronalazak znaka kojeg tražite pretragom po "
+"ključnoj riječi."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"Isto tako možete pregledavati znakove po kategorijama, poput interpunkcija, "
+"slika, itd."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgctxt "shortcut window"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "Prečaci tipkovnice"
+
+#~ msgid "Loading…"
+#~ msgstr "Učitavanje…"
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Najviše nedavnih znakova"
+
+#, javascript-format
+#~ msgid "%s Sidebar Row"
+#~ msgstr "%s redak bočne trake"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "GNOME znakovi"
+
+#~ msgid "Character Map"
+#~ msgstr "Umetnite znak"
+
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#~ msgid "Filter by Font"
+#~ msgstr "Filtriraj po slovima"
+
+#~ msgid "Font to display characters"
+#~ msgstr "Slovo za prikaz znaka"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "Koristi slovo za prikaz znakova na popisu znaka."
+
+#~ msgid "%s Category List Row"
+#~ msgstr "%s redak popisa kategorije"
+
+#~ msgid "None"
+#~ msgstr "Nepoznat"
+
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (%s samo)"
+
+#~ msgid "%s Character List"
+#~ msgstr "%s popis znakova"
+
+#~ msgid "Recently Used %s Character List"
+#~ msgstr "Nedavno korišten %s popis znakova"
+
+#~ msgid "Search found no results"
+#~ msgstr "Nema pronađenih rezultata"
+
+#~ msgid "Current page"
+#~ msgstr "Trenutna stranica"
+
+#~ msgid "Characters Application"
+#~ msgstr "Aplikacija znakova"
+
+#~ msgid "Characters Application started"
+#~ msgstr "Aplikacija znakova pokrenuta"
+
+#~ msgid "Characters Application activate"
+#~ msgstr "Aplikacija znakova aktivirana"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "Aplikacija znakova zatvorena"
+
+#~ msgid "@appid@"
+#~ msgstr "@appid@"
+
+#~ msgid "About"
+#~ msgstr "O programu"
+
+#~ msgid "gnome-characters"
+#~ msgstr "gnome-characters"
+
+#~ msgid "Emoticons"
+#~ msgstr "Emotkoini"

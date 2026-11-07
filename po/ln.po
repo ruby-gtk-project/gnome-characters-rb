@@ -1,0 +1,327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Arnauld NEDATI <arnauldndt@gmail.com>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-characters/-/"
+"issues/\n"
+"POT-Creation-Date: 2026-11-07 21:44+0000\n"
+"PO-Revision-Date: 2016-05-25 09:32+0100\n"
+"Last-Translator: Arnauld NEDATI <arnauldndt@gmail.com>\n"
+"Language-Team: lingala <ubuntu-cd@lists.ubuntu.com>\n"
+"Language: ln\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr "Minkomá"
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr ""
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr "Arnauld Nedati <arnauldndt@gmail.com>"
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr "Nkombo ya monkoma eyébání tɛ̂"
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr "% Etiyami na káti tê %"
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr "Monkoma ékopiami na zau"
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr "Tala mpe"
+
+#: ../lib/character_dialog.rb:309
+#, fuzzy
+msgid "_Copy Character"
+msgstr "Kopi monkomá"
+
+#: ../lib/character_dialog.rb:334
+#, fuzzy
+msgid "Unicode"
+msgstr "Unikɔdɛ U+%04s"
+
+#: ../lib/character_dialog.rb:345
+#, fuzzy
+msgid "_See Also"
+msgstr "Tala mpe"
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr ""
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr ""
+
+#: ../lib/shell_search_provider.rb:199
+#, fuzzy
+msgid "Character copied"
+msgstr "Tablo ya monkoma"
+
+#: ../lib/shell_search_provider.rb:200
+#, fuzzy
+msgid "Character was copied successfully"
+msgstr "Monkoma ékopiami na zau"
+
+#: ../lib/shortcuts_dialog.rb:23
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:45
+#, fuzzy
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Bima"
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr "Esalelami sika"
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr ""
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr ""
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr ""
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr ""
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr ""
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr ""
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr ""
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr ""
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr ""
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr ""
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr ""
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr "Bilembo bya bokomi"
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr "Likulá"
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr "Bakabulɛ"
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr "Bilílí"
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr "Mbɔ́ngɔ"
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr "Matématíki"
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr "Minkandá"
+
+#: ../lib/window.rb:157
+#, fuzzy
+msgid "Search Result"
+msgstr "Lisite ya monkoma sima ya boluki"
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr ""
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr ""
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/window.rb:336
+#, fuzzy
+msgid "_About Characters"
+msgstr "Minkomá"
+
+#: ../lib/window.rb:346
+#, fuzzy
+msgid "Search characters"
+msgstr "Lisite ya monkoma sima ya boluki"
+
+#: ../lib/window.rb:362
+#, fuzzy
+msgid "No Recent Characters"
+msgstr "Monkoma moko tɛ̂ ya kala tɛ̂ émonani"
+
+#: ../lib/window.rb:363
+#, fuzzy
+msgid "Characters will appear here if you use them"
+msgstr "Minkoma bikomonana awa soki oseleli yango."
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr ""
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr ""
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr "Ntómo mpona koluka mpe bakisa minkoma ya momeseno tê"
+
+#: data/org.gnome.CharactersRb.desktop:12
+#, fuzzy
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr "Minkoma;unikɔdɛ;bilembo bya bokomi;matématíki;minkandá;emoji;emoticon;"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+#, fuzzy
+msgid "Character map application"
+msgstr "Esáliseli ya minkoma"
+
+#: data/org.gnome.CharactersRb.metainfo.xml:9
+#, fuzzy
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking for "
+"by searching for keywords."
+msgstr ""
+"Minkoma ézali ntoma mpona koluka mpe bakisa minkoma ya momeseno tê. Ezo "
+"sunga yo mpona kokuta na lombangu monkoma ozali koluka na nzéla ya liloba-"
+"mamá."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:12
+msgid ""
+"You can also browse characters by categories, such as Punctuation, Pictures, "
+"etc."
+msgstr ""
+"Okoki mpe koluka minkoma na katégoli, lokola na bilembo bya bokomi, bilili, "
+"etc."
+
+#: data/org.gnome.CharactersRb.metainfo.xml:15
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#~ msgid "About"
+#~ msgstr "Oyo etalí"
+
+#~ msgid "Search produced empty result"
+#~ msgstr "Boluki épesi rézita moko tê"
+
+#~ msgid "Try another search criteria."
+#~ msgstr "Meka klítɛlɛ ya boluki mosusu."
+
+#~ msgid "Loading…"
+#~ msgstr "kotómbisa..."
+
+#~ msgid "Current page"
+#~ msgstr "Lonkasa ya sikawa"
+
+#~ msgid "Filter by Font"
+#~ msgstr "Kokɔngɔlɔ na polosi"
+
+#~ msgid "Font to display characters"
+#~ msgstr "Polosi ya bomonisi ya minkoma"
+
+#~ msgid "Use the font to render characters on the character list."
+#~ msgstr "Salela polosi pona komonisa lisite ya minkoma."
+
+#~ msgid "Maximum recent characters"
+#~ msgstr "Motuya ya suka ya minkoma ya kala tɛ̂"
+
+#~ msgid "Emoticons"
+#~ msgstr "Bilembo sáí"
+
+#~ msgid "%s Category List Row"
+#~ msgstr "%s Lisite ya linie ya katégoli"
+
+#~ msgid "Characters Application started"
+#~ msgstr "Esáliseli ya minkoma ebandí"
+
+#~ msgid "Characters Application exiting"
+#~ msgstr "Bobimi ya ésáliseli ya minkoma "
+
+#~ msgid "None"
+#~ msgstr "Mɔ̌kɔ́ tɛ̂"
+
+#~ msgid "U+%s, %s: %s"
+#~ msgstr "U+%s, %s: %s"
+
+#~ msgid "GNOME Characters"
+#~ msgstr "GNOME Minkoma"
+
+#~ msgid "%s (%s only)"
+#~ msgstr "%s (%s kaka)"
+
+#~ msgid "%s Character List"
+#~ msgstr "%s  Lísite ya minkoma"
