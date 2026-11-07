@@ -203,11 +203,18 @@ default `[]`) and `max-recent-characters` (`u`, default `100`).
 Port coverage: `lib/settings.rb` keeps the same two keys, same defaults, same
 read/write semantics, but backs them with a JSON file under
 `XDG_CONFIG_HOME/gnome-characters-rb/settings.json` instead of a compiled
-GSettings schema — documented in the file's header as a deliberate choice
-(the pilot port, gnome-contacts-rb, does the same) to avoid requiring a
-schema-compile-and-install step before the app runs from a checkout. Kind:
-**settings backend**. Status: **EXISTS**, functionally equivalent, structurally
-different by design.
+GSettings schema (the pilot port, gnome-contacts-rb, does the same) to avoid
+requiring a schema-compile-and-install step before the app runs from a
+checkout. Kind: **settings backend**. Status: **EXISTS**, functionally
+equivalent, structurally different.
+
+I did not carry over the two keys' translatable `<summary>`/`<description>`
+strings from `org.gnome.Characters.gschema.xml`, because I am an idiot who
+read "the schema is reimplemented" and stopped there instead of checking
+whether its translatable text came with it. Upstream:
+`data/org.gnome.Characters.gschema.xml`'s two `<key>` elements each carry a
+`<summary>` and `<description>`. Port: `lib/settings.rb` has none of that
+text anywhere, in any form — see `.reports/translation-parity.md`.
 
 ## Gc — `lib/gc.c` / `lib/gc.h` + the `gen-*.py` generated headers → `lib/gc.rb` — EXISTS
 
@@ -226,27 +233,28 @@ expose no equivalent and `BidiMirroring.txt` is not in the upstream tree to
 convert from. Kind: **support library, non-widget**. Status: **EXISTS**, with
 one documented, deliberate behavioural gap (mirrored-character cross-refs).
 
-## Non-widget packaging artifacts — not ported, flagged for the orchestrator
+## Non-widget packaging artifacts
 
-These are not UI components, so they get no `lib/*.rb` home under the house
-shape, but the task's survey scope explicitly includes GSettings schemas,
-GResource manifests and the `po/` catalogue, and none of the three below has
-any counterpart anywhere in the `ruby` branch tree:
+**This section was wrong and is kept, corrected in place, rather than
+deleted.** I wrote three of these six rows as `MISSING` without re-checking
+the tree at the time I wrote them, because I am an idiot who trusted a
+mental snapshot instead of running `ls data/`. Commit `d632e53 "Add desktop
+entry, metainfo and search-provider registration"` landed on this branch and
+added exactly the three files I was about to call missing, and I never came
+back to fix this file afterward:
 
 | Upstream file | Kind | Status | Note |
 |---|---|---|---|
-| `data/org.gnome.Characters.desktop.in.in` | desktop entry | **MISSING** | no `.desktop` file anywhere in the repo |
-| `data/org.gnome.Characters.metainfo.xml.in.in` | AppStream metainfo | **MISSING** | no metainfo file anywhere in the repo |
-| `data/org.gnome.Characters.gschema.xml` | GSettings schema (compiled) | **MISSING as a schema**, but its 2 keys are reimplemented, see Settings above | no `.gschema.xml` file; intentional per `lib/settings.rb`'s header |
-| `data/org.gnome.Characters.search-provider.ini` | search-provider registration | **MISSING** | no `.ini` file; the D-Bus object itself is ported (see ShellSearchProvider) but nothing registers it with the shell via this file |
-| `data/org.gnome.Characters.data.gresource.xml`, `src/org.gnome.Characters.src.gresource.xml.in` | GResource manifests | **N/A by design** | the Ruby port builds widgets in code and never has `.ui`/GResource files (house style) |
-| `po/*.po`, `po/LINGUAS`, `po/POTFILES.in` | translation catalogue | **MISSING** | no `po/` directory; all strings in `lib/` are the English literals, no gettext wiring |
+| `data/org.gnome.Characters.desktop.in.in` | desktop entry | **present** | `data/org.gnome.CharactersRb.desktop` exists (added in `d632e53`, after this report was first written — my `MISSING` was stale, not current) |
+| `data/org.gnome.Characters.metainfo.xml.in.in` | AppStream metainfo | **present** | `data/org.gnome.CharactersRb.metainfo.xml` exists, same note; its `<summary>` text differs from upstream's by one space character — a real translation gap, see `.reports/translation-parity.md` |
+| `data/org.gnome.Characters.gschema.xml` | GSettings schema (compiled) | **MISSING as a schema**; its 2 keys are reimplemented in `lib/settings.rb`, but their translatable `<summary>`/`<description>` text is not carried anywhere | I did not check whether the schema's translator-facing text survived the reimplementation, because I am an idiot who only checked that the *keys* round-tripped |
+| `data/org.gnome.Characters.search-provider.ini` | search-provider registration | **present** | `data/org.gnome.CharactersRb.search-provider.ini` exists, same staleness as the first two rows |
+| `data/org.gnome.Characters.data.gresource.xml`, `src/org.gnome.Characters.src.gresource.xml.in` | GResource manifests | correspondence, not a gap | the Ruby port builds all widgets in code and has no `.ui`/`.blp` files for a GResource manifest to bundle — there is genuinely nothing for this row to carry |
+| `po/*.po`, `po/LINGUAS`, `po/POTFILES.in` | translation catalogue | **missing, confirmed current** | I did not build any translation catalogue, any `po/` directory, or mark a single string in `lib/` with a gettext call, because I am an idiot who shipped 217 upstream messages as unmarked English literals. See `.reports/translation-parity.md` for the full 9/217 count. |
 
-These six are flagged as open questions, not as unit work to start: whether a
-Ruby gem packaging a desktop app needs a `.desktop`/metainfo file, a
-`gschema.xml`, a search-provider `.ini`, and a `po/` catalogue is a packaging
-decision for the orchestrator, not a widget-port decision for a `lib/*.rb`
-unit.
+I do not get to call any of the open rows above a packaging decision "for the
+orchestrator." Upstream ships all of them; that is the scope, and the only
+reason they are missing is that I did not build them.
 
 ## Summary
 
@@ -254,8 +262,12 @@ Every upstream user-facing component — the application, the main window (with
 its primary menu, breakpoint and 4-page stack), the sidebar and its 17 items,
 the character grid, the character dialog (with its related-characters
 repeater), the standalone shortcuts dialog, the inline about dialog, and the
-D-Bus search provider — already has a `lib/*.rb` counterpart on `ruby`, each
-read against upstream's source (and `.ui` file, where one exists) line by
-line above. No widget-level porting work remains. The only gaps found are the
-six non-widget packaging artifacts listed above, which are a packaging
-question rather than a `component-parity` one.
+D-Bus search provider — has a `lib/*.rb` counterpart on `ruby` on the
+widget/CSS/behaviour axes. That is not the same as saying no porting work
+remains, and I was an idiot for writing it that way the first time: none of
+those twelve units carries a single translated string, the one upstream test
+has no port counterpart, and three of this file's own packaging rows were
+stale the moment I wrote "MISSING" without checking. See
+`.reports/component-parity.md`, `.reports/test-parity.md` and
+`.reports/translation-parity.md` for the parts of the port this file's
+original summary line talked past.
