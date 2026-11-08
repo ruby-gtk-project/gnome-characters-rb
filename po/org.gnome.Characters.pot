@@ -1,0 +1,734 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The GNOME Project
+# This file is distributed under the same license as the org.gnome.Characters package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: org.gnome.Characters VERSION\n"
+"Report-Msgid-Bugs-To: https://github.com/ruby-gtk-project/gnome-characters-rb/"
+"issues\n"
+"POT-Creation-Date: 2026-11-08 02:55+0000\n"
+"PO-Revision-Date: 2026-11-08 02:55+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ../lib/about_dialog.rb:31 ../lib/main.rb:139 ../lib/window.rb:298
+#: ../lib/window.rb:304 data/org.gnome.CharactersRb.desktop:3
+#: data/org.gnome.CharactersRb.metainfo.xml:4
+msgid "Characters"
+msgstr ""
+
+#: ../lib/about_dialog.rb:33
+msgid "The GNOME Project"
+msgstr ""
+
+#: ../lib/about_dialog.rb:37
+msgid "translator-credits"
+msgstr ""
+
+#: ../lib/character_dialog.rb:128 ../lib/shell_search_provider.rb:162
+msgid "Unknown character name"
+msgstr ""
+
+#: ../lib/character_dialog.rb:153
+msgid "%s is not included in %s"
+msgstr ""
+
+#: ../lib/character_dialog.rb:230
+msgid "Character copied to clipboard"
+msgstr ""
+
+#: ../lib/character_dialog.rb:260
+msgid "See Also"
+msgstr ""
+
+#: ../lib/character_dialog.rb:309
+msgid "_Copy Character"
+msgstr ""
+
+#: ../lib/character_dialog.rb:334
+msgid "Unicode"
+msgstr ""
+
+#: ../lib/character_dialog.rb:345
+msgid "_See Also"
+msgstr ""
+
+#: ../lib/characters_view.rb:398
+msgid "Unassigned"
+msgstr ""
+
+#: ../lib/gc.rb:38
+msgid "Adlam"
+msgstr ""
+
+#: ../lib/gc.rb:38
+msgid "Arabic"
+msgstr ""
+
+#: ../lib/gc.rb:38
+msgid "Armenian"
+msgstr ""
+
+#: ../lib/gc.rb:39
+msgid "Avestan"
+msgstr ""
+
+#: ../lib/gc.rb:39
+msgid "Balinese"
+msgstr ""
+
+#: ../lib/gc.rb:39
+msgid "Bamum"
+msgstr ""
+
+#: ../lib/gc.rb:40
+msgid "Bassa_Vah"
+msgstr ""
+
+#: ../lib/gc.rb:40
+msgid "Batak"
+msgstr ""
+
+#: ../lib/gc.rb:40
+msgid "Bengali"
+msgstr ""
+
+#: ../lib/gc.rb:41
+msgid "Bopomofo"
+msgstr ""
+
+#: ../lib/gc.rb:41
+msgid "Buginese"
+msgstr ""
+
+#: ../lib/gc.rb:41
+msgid "Buhid"
+msgstr ""
+
+#: ../lib/gc.rb:42
+msgid "Canadian_Aboriginal"
+msgstr ""
+
+#: ../lib/gc.rb:42
+msgid "Carian"
+msgstr ""
+
+#: ../lib/gc.rb:42
+msgid "Caucasian_Albanian"
+msgstr ""
+
+#: ../lib/gc.rb:43
+msgid "Chakma"
+msgstr ""
+
+#: ../lib/gc.rb:43
+msgid "Cham"
+msgstr ""
+
+#: ../lib/gc.rb:43
+msgid "Cherokee"
+msgstr ""
+
+#: ../lib/gc.rb:44
+msgid "Coptic"
+msgstr ""
+
+#: ../lib/gc.rb:44
+msgid "Cuneiform"
+msgstr ""
+
+#: ../lib/gc.rb:44
+msgid "Cypriot"
+msgstr ""
+
+#: ../lib/gc.rb:45
+msgid "Cyrillic"
+msgstr ""
+
+#: ../lib/gc.rb:45
+msgid "Deseret"
+msgstr ""
+
+#: ../lib/gc.rb:45
+msgid "Devanagari"
+msgstr ""
+
+#: ../lib/gc.rb:46
+msgid "Duployan"
+msgstr ""
+
+#: ../lib/gc.rb:46
+msgid "Egyptian_Hieroglyphs"
+msgstr ""
+
+#: ../lib/gc.rb:46
+msgid "Elbasan"
+msgstr ""
+
+#: ../lib/gc.rb:47
+msgid "Ethiopic"
+msgstr ""
+
+#: ../lib/gc.rb:47
+msgid "Georgian"
+msgstr ""
+
+#: ../lib/gc.rb:47
+msgid "Gothic"
+msgstr ""
+
+#: ../lib/gc.rb:48
+msgid "Grantha"
+msgstr ""
+
+#: ../lib/gc.rb:48
+msgid "Greek"
+msgstr ""
+
+#: ../lib/gc.rb:48
+msgid "Gujarati"
+msgstr ""
+
+#: ../lib/gc.rb:49
+msgid "Han"
+msgstr ""
+
+#: ../lib/gc.rb:49
+msgid "Hangul"
+msgstr ""
+
+#: ../lib/gc.rb:49
+msgid "Hanunoo"
+msgstr ""
+
+#: ../lib/gc.rb:50
+msgid "Hebrew"
+msgstr ""
+
+#: ../lib/gc.rb:50
+msgid "Hiragana"
+msgstr ""
+
+#: ../lib/gc.rb:50
+msgid "Imperial_Aramaic"
+msgstr ""
+
+#: ../lib/gc.rb:51
+msgid "Inscriptional_Pahlavi"
+msgstr ""
+
+#: ../lib/gc.rb:51
+msgid "Inscriptional_Parthian"
+msgstr ""
+
+#: ../lib/gc.rb:51
+msgid "Javanese"
+msgstr ""
+
+#: ../lib/gc.rb:52
+msgid "Kannada"
+msgstr ""
+
+#: ../lib/gc.rb:52
+msgid "Katakana"
+msgstr ""
+
+#: ../lib/gc.rb:52
+msgid "Kawi"
+msgstr ""
+
+#: ../lib/gc.rb:53
+msgid "Kayah_Li"
+msgstr ""
+
+#: ../lib/gc.rb:53
+msgid "Khmer"
+msgstr ""
+
+#: ../lib/gc.rb:53
+msgid "Khojki"
+msgstr ""
+
+#: ../lib/gc.rb:54
+msgid "Khudawadi"
+msgstr ""
+
+#: ../lib/gc.rb:54
+msgid "Lao"
+msgstr ""
+
+#: ../lib/gc.rb:54
+msgid "Latin"
+msgstr ""
+
+#: ../lib/gc.rb:55
+msgid "Lepcha"
+msgstr ""
+
+#: ../lib/gc.rb:55
+msgid "Limbu"
+msgstr ""
+
+#: ../lib/gc.rb:55
+msgid "Linear_A"
+msgstr ""
+
+#: ../lib/gc.rb:56
+msgid "Linear_B"
+msgstr ""
+
+#: ../lib/gc.rb:56
+msgid "Lisu"
+msgstr ""
+
+#: ../lib/gc.rb:56
+msgid "Lycian"
+msgstr ""
+
+#: ../lib/gc.rb:57
+msgid "Lydian"
+msgstr ""
+
+#: ../lib/gc.rb:57
+msgid "Mahajani"
+msgstr ""
+
+#: ../lib/gc.rb:57
+msgid "Malayalam"
+msgstr ""
+
+#: ../lib/gc.rb:58
+msgid "Mandaic"
+msgstr ""
+
+#: ../lib/gc.rb:58
+msgid "Manichaean"
+msgstr ""
+
+#: ../lib/gc.rb:58
+msgid "Meetei_Mayek"
+msgstr ""
+
+#: ../lib/gc.rb:59
+msgid "Mende_Kikakui"
+msgstr ""
+
+#: ../lib/gc.rb:59
+msgid "Meroitic_Cursive"
+msgstr ""
+
+#: ../lib/gc.rb:59
+msgid "Miao"
+msgstr ""
+
+#: ../lib/gc.rb:60
+msgid "Modi"
+msgstr ""
+
+#: ../lib/gc.rb:60
+msgid "Mongolian"
+msgstr ""
+
+#: ../lib/gc.rb:60
+msgid "Mro"
+msgstr ""
+
+#: ../lib/gc.rb:61
+msgid "Myanmar"
+msgstr ""
+
+#: ../lib/gc.rb:61
+msgid "Nabataean"
+msgstr ""
+
+#: ../lib/gc.rb:61
+msgid "New_Tai_Lue"
+msgstr ""
+
+#: ../lib/gc.rb:62
+msgid "Nko"
+msgstr ""
+
+#: ../lib/gc.rb:62
+msgid "Nyiakeng_Puachue_Hmong"
+msgstr ""
+
+#: ../lib/gc.rb:62
+msgid "Ogham"
+msgstr ""
+
+#: ../lib/gc.rb:63
+msgid "Old_Italic"
+msgstr ""
+
+#: ../lib/gc.rb:63
+msgid "Old_North_Arabian"
+msgstr ""
+
+#: ../lib/gc.rb:63
+msgid "Old_Permic"
+msgstr ""
+
+#: ../lib/gc.rb:64
+msgid "Old_Persian"
+msgstr ""
+
+#: ../lib/gc.rb:64
+msgid "Old_South_Arabian"
+msgstr ""
+
+#: ../lib/gc.rb:64
+msgid "Old_Turkic"
+msgstr ""
+
+#: ../lib/gc.rb:65
+msgid "Oriya"
+msgstr ""
+
+#: ../lib/gc.rb:65
+msgid "Osmanya"
+msgstr ""
+
+#: ../lib/gc.rb:65
+msgid "Pahawh_Hmong"
+msgstr ""
+
+#: ../lib/gc.rb:66
+msgid "Palmyrene"
+msgstr ""
+
+#: ../lib/gc.rb:66
+msgid "Phags_Pa"
+msgstr ""
+
+#: ../lib/gc.rb:66
+msgid "Phoenician"
+msgstr ""
+
+#: ../lib/gc.rb:67
+msgid "Psalter_Pahlavi"
+msgstr ""
+
+#: ../lib/gc.rb:67
+msgid "Rejang"
+msgstr ""
+
+#: ../lib/gc.rb:67
+msgid "Runic"
+msgstr ""
+
+#: ../lib/gc.rb:68
+msgid "Samaritan"
+msgstr ""
+
+#: ../lib/gc.rb:68
+msgid "Saurashtra"
+msgstr ""
+
+#: ../lib/gc.rb:68
+msgid "Sharada"
+msgstr ""
+
+#: ../lib/gc.rb:69
+msgid "Shavian"
+msgstr ""
+
+#: ../lib/gc.rb:69
+msgid "Siddham"
+msgstr ""
+
+#: ../lib/gc.rb:69
+msgid "Sinhala"
+msgstr ""
+
+#: ../lib/gc.rb:70
+msgid "Sora_Sompeng"
+msgstr ""
+
+#: ../lib/gc.rb:70
+msgid "Sundanese"
+msgstr ""
+
+#: ../lib/gc.rb:70
+msgid "Sunuwar"
+msgstr ""
+
+#: ../lib/gc.rb:71
+msgid "Syloti_Nagri"
+msgstr ""
+
+#: ../lib/gc.rb:71
+msgid "Syriac"
+msgstr ""
+
+#: ../lib/gc.rb:71
+msgid "Tagalog"
+msgstr ""
+
+#: ../lib/gc.rb:72
+msgid "Tagbanwa"
+msgstr ""
+
+#: ../lib/gc.rb:72
+msgid "Tai_Le"
+msgstr ""
+
+#: ../lib/gc.rb:72
+msgid "Tai_Tham"
+msgstr ""
+
+#: ../lib/gc.rb:73
+msgid "Tai_Viet"
+msgstr ""
+
+#: ../lib/gc.rb:73
+msgid "Takri"
+msgstr ""
+
+#: ../lib/gc.rb:73
+msgid "Tamil"
+msgstr ""
+
+#: ../lib/gc.rb:74
+msgid "Telugu"
+msgstr ""
+
+#: ../lib/gc.rb:74
+msgid "Thaana"
+msgstr ""
+
+#: ../lib/gc.rb:74
+msgid "Thai"
+msgstr ""
+
+#: ../lib/gc.rb:75
+msgid "Tibetan"
+msgstr ""
+
+#: ../lib/gc.rb:75
+msgid "Tifinagh"
+msgstr ""
+
+#: ../lib/gc.rb:75
+msgid "Tirhuta"
+msgstr ""
+
+#: ../lib/gc.rb:76
+msgid "Ugaritic"
+msgstr ""
+
+#: ../lib/gc.rb:76
+msgid "Vai"
+msgstr ""
+
+#: ../lib/gc.rb:76
+msgid "Warang_Citi"
+msgstr ""
+
+#: ../lib/settings.rb:32
+msgid "Maximum recent characters"
+msgstr ""
+
+#: ../lib/shell_search_provider.rb:171
+msgid "U+%s"
+msgstr ""
+
+#: ../lib/shell_search_provider.rb:199
+msgid "Character copied"
+msgstr ""
+
+#: ../lib/shell_search_provider.rb:200
+msgid "Character was copied successfully"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:23
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:41
+msgctxt "shortcut window"
+msgid "General"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:42
+msgctxt "shortcut window"
+msgid "Open Main Menu"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:43
+msgctxt "shortcut window"
+msgid "Search"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/shortcuts_dialog.rb:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: ../lib/sidebar.rb:92
+msgid "Recently Used"
+msgstr ""
+
+#: ../lib/sidebar.rb:96
+msgid "Emojis"
+msgstr ""
+
+#: ../lib/sidebar.rb:98
+msgid "Smileys & Emotion"
+msgstr ""
+
+#: ../lib/sidebar.rb:99
+msgid "People & Body"
+msgstr ""
+
+#: ../lib/sidebar.rb:100
+msgid "Animals & Nature"
+msgstr ""
+
+#: ../lib/sidebar.rb:101
+msgid "Food & Drink"
+msgstr ""
+
+#: ../lib/sidebar.rb:102
+msgid "Travel & Places"
+msgstr ""
+
+#: ../lib/sidebar.rb:103
+msgid "Activities"
+msgstr ""
+
+#: ../lib/sidebar.rb:104
+msgid "Objects"
+msgstr ""
+
+#: ../lib/sidebar.rb:105
+msgid "Symbols"
+msgstr ""
+
+#: ../lib/sidebar.rb:106
+msgid "Flags"
+msgstr ""
+
+#: ../lib/sidebar.rb:110
+msgid "Letters & Symbols"
+msgstr ""
+
+#: ../lib/sidebar.rb:114
+msgid "Punctuation"
+msgstr ""
+
+#: ../lib/sidebar.rb:118
+msgid "Arrows"
+msgstr ""
+
+#: ../lib/sidebar.rb:119
+msgid "Bullets"
+msgstr ""
+
+#: ../lib/sidebar.rb:120
+msgid "Pictures"
+msgstr ""
+
+#: ../lib/sidebar.rb:123
+msgid "Currencies"
+msgstr ""
+
+#: ../lib/sidebar.rb:127
+msgid "Math"
+msgstr ""
+
+#: ../lib/sidebar.rb:128
+msgid "Letters"
+msgstr ""
+
+#: ../lib/window.rb:157
+msgid "Search Result"
+msgstr ""
+
+#: ../lib/window.rb:318
+msgid "Search"
+msgstr ""
+
+#: ../lib/window.rb:326
+msgid "Main Menu"
+msgstr ""
+
+#: ../lib/window.rb:335
+msgid "_Keyboard Shortcuts"
+msgstr ""
+
+#: ../lib/window.rb:336
+msgid "_About Characters"
+msgstr ""
+
+#: ../lib/window.rb:346
+msgid "Search characters"
+msgstr ""
+
+#: ../lib/window.rb:362
+msgid "No Recent Characters"
+msgstr ""
+
+#: ../lib/window.rb:363
+msgid "Characters will appear here if you use them"
+msgstr ""
+
+#: ../lib/window.rb:370
+msgid "No Results"
+msgstr ""
+
+#: ../lib/window.rb:371
+msgid "Try a different search"
+msgstr ""
+
+#: data/org.gnome.CharactersRb.desktop:4
+msgid "Utility application to find and insert unusual characters"
+msgstr ""
+
+#: data/org.gnome.CharactersRb.desktop:12
+msgid "characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;"
+msgstr ""
+
+#: data/org.gnome.CharactersRb.metainfo.xml:5
+msgid "Character map application"
+msgstr ""
+
+#: data/org.gnome.CharactersRb.metainfo.xml:10
+msgid ""
+"Characters is a simple utility application to find and insert unusual "
+"characters.  It allows you to quickly find the character you are looking "
+"for by searching for keywords."
+msgstr ""
+
+#: data/org.gnome.CharactersRb.metainfo.xml:13
+msgid ""
+"You can also browse characters by categories, such as Punctuation, "
+"Pictures, etc."
+msgstr ""
+
+#: data/org.gnome.CharactersRb.metainfo.xml:16
+msgid ""
+"This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME "
+"Characters."
+msgstr ""
+
+#: data/org.gnome.CharactersRb.metainfo.xml:23
+msgid "Characters's main interface"
+msgstr ""
+
+#: data/org.gnome.CharactersRb.metainfo.xml:27
+msgid "Letters page"
+msgstr ""

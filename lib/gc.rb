@@ -2,6 +2,7 @@
 
 require 'set'
 require 'glib2'
+require_relative 'i18n'
 
 # Gc is the port of upstream's libgc: lib/gc.c and lib/gc.h, the small C
 # library that GJS imports as the `Gc` namespace.
@@ -19,6 +20,62 @@ require 'glib2'
 # data glib reads it from instead: lib/data/mirroring.tsv, converted from
 # Unicode's BidiMirroring.txt (15.0.0, matching Ruby's own Unicode tables).
 module Gc
+  extend GetText
+  bindtextdomain(Translatable::DOMAIN, path: Translatable::LOCALE_DIR)
+
+  # gc_get_scripts_for_language: upstream's lib/gen-scripts.py writes every
+  # script name into lib/scripts.h wrapped in N_(), marking each one
+  # translatable even though gc.c never calls _() on it — the name is
+  # matched as a raw ISO 15924/Unicode script property, not shown to a
+  # person, so translating it before matching would break the match.
+  # lib/data/language_scripts.tsv carries the same 117 names one-for-one,
+  # but a plain .tsv row is invisible to a gettext extractor, so this list
+  # restates them behind the same N_() marker upstream's header uses, and
+  # #script_display_name resolves one through _() for the one place (if
+  # any, now or later) a caller wants to show a script name to a person
+  # rather than match against it.
+  SCRIPT_NAMES = [
+    N_('Adlam'), N_('Arabic'), N_('Armenian'),
+    N_('Avestan'), N_('Balinese'), N_('Bamum'),
+    N_('Bassa_Vah'), N_('Batak'), N_('Bengali'),
+    N_('Bopomofo'), N_('Buginese'), N_('Buhid'),
+    N_('Canadian_Aboriginal'), N_('Carian'), N_('Caucasian_Albanian'),
+    N_('Chakma'), N_('Cham'), N_('Cherokee'),
+    N_('Coptic'), N_('Cuneiform'), N_('Cypriot'),
+    N_('Cyrillic'), N_('Deseret'), N_('Devanagari'),
+    N_('Duployan'), N_('Egyptian_Hieroglyphs'), N_('Elbasan'),
+    N_('Ethiopic'), N_('Georgian'), N_('Gothic'),
+    N_('Grantha'), N_('Greek'), N_('Gujarati'),
+    N_('Han'), N_('Hangul'), N_('Hanunoo'),
+    N_('Hebrew'), N_('Hiragana'), N_('Imperial_Aramaic'),
+    N_('Inscriptional_Pahlavi'), N_('Inscriptional_Parthian'), N_('Javanese'),
+    N_('Kannada'), N_('Katakana'), N_('Kawi'),
+    N_('Kayah_Li'), N_('Khmer'), N_('Khojki'),
+    N_('Khudawadi'), N_('Lao'), N_('Latin'),
+    N_('Lepcha'), N_('Limbu'), N_('Linear_A'),
+    N_('Linear_B'), N_('Lisu'), N_('Lycian'),
+    N_('Lydian'), N_('Mahajani'), N_('Malayalam'),
+    N_('Mandaic'), N_('Manichaean'), N_('Meetei_Mayek'),
+    N_('Mende_Kikakui'), N_('Meroitic_Cursive'), N_('Miao'),
+    N_('Modi'), N_('Mongolian'), N_('Mro'),
+    N_('Myanmar'), N_('Nabataean'), N_('New_Tai_Lue'),
+    N_('Nko'), N_('Nyiakeng_Puachue_Hmong'), N_('Ogham'),
+    N_('Old_Italic'), N_('Old_North_Arabian'), N_('Old_Permic'),
+    N_('Old_Persian'), N_('Old_South_Arabian'), N_('Old_Turkic'),
+    N_('Oriya'), N_('Osmanya'), N_('Pahawh_Hmong'),
+    N_('Palmyrene'), N_('Phags_Pa'), N_('Phoenician'),
+    N_('Psalter_Pahlavi'), N_('Rejang'), N_('Runic'),
+    N_('Samaritan'), N_('Saurashtra'), N_('Sharada'),
+    N_('Shavian'), N_('Siddham'), N_('Sinhala'),
+    N_('Sora_Sompeng'), N_('Sundanese'), N_('Sunuwar'),
+    N_('Syloti_Nagri'), N_('Syriac'), N_('Tagalog'),
+    N_('Tagbanwa'), N_('Tai_Le'), N_('Tai_Tham'),
+    N_('Tai_Viet'), N_('Takri'), N_('Tamil'),
+    N_('Telugu'), N_('Thaana'), N_('Thai'),
+    N_('Tibetan'), N_('Tifinagh'), N_('Tirhuta'),
+    N_('Ugaritic'), N_('Vai'), N_('Warang_Citi'),
+  ].freeze
+
   # GcCategory, in upstream's declaration order — searchByCategory compares
   # against LETTER_LATIN to decide whether to draw a baseline, so the order is
   # part of the interface, not decoration.
@@ -364,6 +421,14 @@ module Gc
         Data.language_aliases[name] || name
       end
     end
+
+    # The translated form of one of SCRIPT_NAMES, for a caller that wants to
+    # show a script name to a person. Never called from #scripts_for_language
+    # or the scripts search below: the raw, untranslated name is the
+    # \p{ScriptName} property name a Regexp needs, and translating it there
+    # would break every match for anyone not running in English, the same
+    # reason upstream's own gc.c never calls _() on scripts.h's table either.
+    def script_display_name(name) = _(name)
 
     def printable?(character) = !NOT_PRINTABLE.match?(character)
     def graphic?(character) = !NOT_GRAPHIC.match?(character)

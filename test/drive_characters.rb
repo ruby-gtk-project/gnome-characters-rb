@@ -262,7 +262,19 @@ GtkDriver.drive(App.new(app_id: APP_ID), shots: SHOTS) do |d, app|
     end
   end
 
-  d.step('the collapsed layout renders') { d.shot('07-collapsed') }
+  # Same race as '06-search' above: the collapsed layout's size-allocate
+  # pass can still be a tick behind when the shot is taken, so this retries
+  # with a fresh pump between attempts and asserts on the result instead of
+  # letting shot()'s own internal rescue swallow a real render failure.
+  d.step('the collapsed layout renders') do
+    path = nil
+    5.times do
+      path = d.shot('07-collapsed')
+      break if path
+      pump(300)
+    end
+    d.check('the collapsed layout produced a screenshot') { !path.nil? }
+  end
 
   d.step('widening the window back restores the split view') do
     window = app.main_window.window

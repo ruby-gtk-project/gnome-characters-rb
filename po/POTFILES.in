@@ -13,7 +13,9 @@ data/org.gnome.CharactersRb.metainfo.xml
 lib/about_dialog.rb
 lib/character_dialog.rb
 lib/characters_view.rb
+lib/gc.rb
 lib/main.rb
+lib/settings.rb
 lib/shell_search_provider.rb
 lib/shortcuts_dialog.rb
 lib/sidebar.rb

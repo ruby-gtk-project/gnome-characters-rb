@@ -1,16 +1,20 @@
 # frozen_string_literal: true
 
-# Compiles and refreshes the gnome-characters-rb text domain's catalogues
+# Compiles and refreshes the org.gnome.Characters text domain's catalogues
 # under po/. Mirrors what upstream's meson build does with msgfmt/msgmerge
 # for its own po/*.po files, run by hand here since this port has no build
 # system of its own.
+#
+# DOMAIN matches upstream's real gettext domain (po/meson.build's
+# `i18n.gettext('org.gnome.Characters', ...)`), not this port's repo name,
+# so lib/i18n.rb's Translatable.bindtextdomain finds what this task compiles.
 namespace :gettext do
-  DOMAIN = 'gnome-characters-rb'
+  DOMAIN = 'org.gnome.Characters'
   PO_DIR = File.expand_path('../po', __dir__)
   LOCALE_DIR = File.join(PO_DIR, 'locale')
   POT_FILE = File.join(PO_DIR, "#{DOMAIN}.pot")
 
-  desc 'Compile po/*.po into po/locale/<lang>/LC_MESSAGES/gnome-characters-rb.mo'
+  desc 'Compile po/*.po into po/locale/<lang>/LC_MESSAGES/org.gnome.Characters.mo'
   task :compile do
     linguas = File.readlines(File.join(PO_DIR, 'LINGUAS')).map(&:strip).reject(&:empty?)
     linguas.each do |lang|

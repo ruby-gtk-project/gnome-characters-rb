@@ -2,6 +2,7 @@
 
 require 'json'
 require 'fileutils'
+require_relative 'i18n'
 
 # Settings holds the keys of upstream's org.gnome.Characters GSettings schema
 # (data/org.gnome.Characters.gschema.xml): the list of recently used
@@ -14,10 +15,21 @@ require 'fileutils'
 # XDG_CONFIG_HOME instead. This is the same arrangement the pilot port
 # (gnome-contacts-rb lib/settings.rb) uses.
 class Settings
+  include Translatable
+
   DEFAULTS = {
     'recent-characters'     => [],
     'max-recent-characters' => 100,
   }.freeze
+
+  # The <summary> upstream's data/org.gnome.Characters.gschema.xml carries on
+  # the max-recent-characters key (recent-characters has none). A GSettings
+  # schema's summary/description are translated through the schema's own
+  # gettext domain the same way a .ui template's strings are; this port has
+  # no compiled schema for a tool like dconf-editor to read it from, so the
+  # string is carried here instead, on the Settings object its key belongs
+  # to, translated the same way everything else in lib/ is.
+  def max_recent_characters_summary = _('Maximum recent characters')
 
   def initialize(path: nil)
     @path = path || default_path

@@ -12,7 +12,13 @@ require 'gettext'
 # .ui templates, so every one of those UI strings is marked here instead, at
 # the Ruby call site that sets it.
 module Translatable
-  DOMAIN = 'gnome-characters-rb'
+  # Upstream's real gettext domain, per po/meson.build's
+  # `i18n.gettext('org.gnome.Characters', preset: 'glib')` and
+  # meson.build's project name — not this port's gem/repo name. Every
+  # catalogue this port ships (po/*.po, po/locale/*/LC_MESSAGES/*.mo) is
+  # built under this same domain so a .mo installed into a system
+  # locale directory under this name is found the same way upstream's is.
+  DOMAIN = 'org.gnome.Characters'
   LOCALE_DIR = File.expand_path('../po/locale', __dir__)
 
   def self.included(base)
