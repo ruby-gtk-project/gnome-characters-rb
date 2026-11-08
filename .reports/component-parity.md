@@ -3,9 +3,33 @@
 | | |
 |---|---|
 | Upstream | `main` @ `4b42297` |
-| Port | `ruby` @ `d89d6f1` |
+| Port | `ruby` @ `ca1d509` |
 | Units with parity (widget/CSS/behaviour axes only) | 10 / 12 |
-| Units with parity (all four axes, text included) | **0 / 12** |
+| Units with parity (all four axes, text included) | **8 / 12** |
+
+## This round — the text axis changed completely, re-derived rather than re-cited
+
+The prior round (pinned at `d89d6f1`) reported 0/12 on axis 4 because no
+Ruby file called any translation marker at all. Commit `3135717` landed
+since (`lib/i18n.rb`, `_()`/`p_()` calls across most of `lib/`) and the
+text axis was re-checked unit by unit against `translation-parity.md`'s
+fresh census rather than assuming the prior "0/12" still holds — it does
+not. Per-unit:
+
+| Unit | Text axis |
+|---|---|
+| App, MainWindow, Sidebar, SidebarItem, CharacterDialog, ShortcutsDialog, AboutDialog, ShellSearchProvider | marked, byte-identical keys confirmed in `translation-parity.md`'s census — **pass** |
+| CharactersView | its one marked string (`Unassigned`, `lib/characters_view.rb:398`) matches; **but** the script-name data it consumes (`Gc.scripts_for_language` → `lib/data/language_scripts.tsv`) carries zero translation markers — **gap**, detailed below |
+| Gc | zero markers anywhere in `lib/gc.rb`; it owns the 117-script-name table that is the dominant finding of `translation-parity.md` — **gap** |
+| Settings | the two GSettings-equivalent keys' `summary`/`description` text was never carried (no `.gschema.xml` at all) — **gap**, carried forward unchanged from the prior round |
+| Non-widget packaging | `Maximum recent characters` (gschema) and the metainfo's two screenshot `<caption>`s are the only remaining packaging-text gaps — **gap** |
+
+So the honest axis-4 count is **8 of 12** (App, MainWindow, Sidebar,
+SidebarItem, CharacterDialog, ShortcutsDialog, AboutDialog,
+ShellSearchProvider), not the 0/12 the prior round correctly reported for
+its own commit, and not a full 12/12 either — **CharactersView, Gc,
+Settings and the non-widget packaging unit each still carry a real,
+located text-axis gap.**
 
 The widget/CSS/behaviour read in this report leans on
 `.reports/component-inventory.md`, which was re-verified file by file against
@@ -40,23 +64,18 @@ since been closed is not a dangerous direction to be wrong in by itself, but
 it means every number in that document has to be re-verified rather than
 cited — which is what this report and `component-identification.md` did.
 
-## Axis 4 — text (the one that fails)
+## Axis 4 — text (stale, corrected above)
 
-The port's `lib/*.rb` files mark **zero** strings with any translation
-marker. There is no `require "gettext"`, no `_()`/`N_()`/`n_()` call, no
-`FastGettext`, anywhere in `lib/` or `exe/`. Every label a user sees —
-"Copy", "Unicode", "Related Characters", every sidebar section/item title,
-every dialog title, "Character copied to clipboard", the four shortcuts
-items, the about dialog's strings — is a bare Ruby literal.
-
-That makes the fourth axis fail for **all twelve units**, including the ten
-marked `parity` above on the other three axes. Per the skill: "A unit has
-parity when every row says parity... One gap is not a pass with a note" — the
-text axis is the one gap every single unit shares, so the honest top-line
-number is **0 / 12**, not 10/12. The widget/CSS/behaviour read is still worth
-keeping separately because it answers a different, real question (does the
-port *look* and *click* the same) — but it must not be read as "10 units have
-parity."
+**This section's original claim — "the port's `lib/*.rb` files mark zero
+strings with any translation marker" — was true of `d89d6f1` and is false
+of `ca1d509`.** Commit `3135717` wired `_()`/`p_()` through most of `lib/`.
+Rather than silently delete the now-wrong claim, it is struck here and
+replaced by the "This round" table above, which is re-derived from the
+current tree rather than carried forward. The remaining real axis-4 gaps —
+`Gc`'s 117 unmarked script names, `CharactersView`'s dependency on that same
+table, `Settings`' two gschema-equivalent strings, and two metainfo
+screenshot captions — are detailed in `translation-parity.md` and are not
+repeated verbatim here; this ledger names which **unit** owns each one.
 
 The metainfo `<summary>` byte-mismatch this report previously flagged (the
 port was missing one space after the first sentence relative to upstream's
@@ -96,12 +115,14 @@ unverified rather than claimed.
 ## Summary
 
 Widget/CSS/behaviour: 10 of 12 units read as faithful ports this round —
-Gc's mirrored-character cross-ref gap from the prior round is now closed
-(commit `b1ecdbc`) and re-verified by running `spec/gc_spec.rb` directly, and
-the non-widget packaging files are confirmed present and byte-correct. 1 unit
-(Settings) still has a translatable-string gap (the GSettings-equivalent
-`summary`/`description` text was never carried, on top of an otherwise sound
-JSON-backend implementation) on top of a sound implementation. Text axis: 0
-of 12 — every unit's user-visible strings are untranslatable English
-literals, which remains the dominant finding of this audit and is detailed
-fully in `translation-parity.md`.
+Gc's mirrored-character cross-ref gap from an earlier round is closed
+(commit `b1ecdbc`), and the non-widget packaging files are confirmed present
+and byte-correct. Text axis: **8 of 12**, a large improvement over the
+prior round's 0/12 following commit `3135717`'s gettext wiring, but not a
+clean sweep — `Gc` (117 unmarked Unicode script names used for both
+locale-default category selection and script-name search), `CharactersView`
+(consumes that same unmarked table), `Settings` (two gschema-equivalent
+strings never carried) and the non-widget packaging unit (two metainfo
+screenshot captions, one gschema summary) each carry a real, located
+text-axis gap. All four-axis failures are detailed in `translation-parity.md`
+and are not re-litigated here beyond naming the owning unit.

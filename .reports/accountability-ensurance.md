@@ -151,14 +151,49 @@ FastGettext\|_("' lib/ exe/` still returns nothing) — which remain the
 dominant gap in this port and are not touched by any of the three commits
 above.
 
+## This round — the prior round's own closing claim went stale, caught before re-citing it
+
+The prior round's "Verdict" section below ends: *"zero gettext anywhere in
+`lib/`/`exe/`, 0/78 languages shipped, no `po/` directory... remain the
+dominant gap in this port."* Commit `3135717` landed since and makes that
+sentence false — `po/` exists, 75 languages ship, `lib/i18n.rb` wires
+`require 'gettext'` through most of `lib/`. Per this skill's own rule
+against citing a stale claim as current, this is flagged and corrected here
+rather than left standing under "Verdict" below, even though the direction
+of the staleness (claiming a bigger gap than currently exists) is the safer
+one to be wrong in.
+
+**That does not make this round's translation finding a non-finding.**
+`translation-parity.md` this round finds **120 real gaps against upstream's
+174-message count** (down from the stale "208/217"), and a **domain
+mismatch** (`gnome-characters-rb` vs upstream's `org.gnome.Characters`) that
+no prior report caught, because no prior report checked `po/meson.build`
+against `lib/i18n.rb`. The dominant piece of the 120 — 117 Unicode script
+names (`lib/gc.rb`, `lib/data/language_scripts.tsv`) that carry zero
+translation markers — is a real, located, unexcused gap: `lib/gc.rb` offers
+no sentence anywhere claiming this is fine, by design, or out of scope. It
+is simply absent, and `translation-parity.md`/`component-parity.md` both
+say so by file and line rather than by label. No excuse language was found
+attached to it, which is correct, but its absence from an excuse is not the
+same as its absence from the port — it is still owed.
+
+Two scanner defects were found and fixed by hand this round (HTML-entity
+decoding in `.ui` XML, a Python format-string false positive) rather than
+reported as port gaps that do not exist — see `translation-parity.md`'s
+"Step 1" for both, with the `.po` cross-check that proves each one.
+
 ## Verdict
 
-The port's actual code (`lib/`, `exe/`) carries no excuse language — the
-failure this audit found is not code comments hiding gaps, it is a **report**
-(`.reports/component-inventory.md`) that was stale on three rows and used
-"by design"/"not ported"/"N/A" phrasing on two more, describing real,
-uncounted work (the Settings unit's lost translatable strings, the missing
-`po/` catalogue) as though it were a closed question. Both are fixed in
-place in this commit. The translation and test gaps themselves remain open —
-see `.reports/translation-parity.md` and `.reports/test-parity.md` — and are
-not excused anywhere in this audit's own reports.
+The port's actual code (`lib/`, `exe/`) carries no excuse language across
+every round so far, this one included — re-scanned this round
+(`find-excuses.sh .`, hand `grep` over `lib/exe/.reports`), zero real hits
+in `lib/`/`exe/`. The failures this skill exists to catch keep showing up
+in **reports**, not code: the first round's `.reports/component-inventory.md`
+was stale and excuse-worded on five rows; this round's own prior version of
+this document closed with a now-false claim ("0/78 languages, no `po/`")
+that commit `3135717` had already overtaken. Both are fixed in place, named
+in their own "This round" sections, not silently swapped. The 120 real
+translation gaps and the domain mismatch this round's `translation-parity.md`
+found are real, located by file and line, and carry no excuse anywhere —
+the script-name table is simply unmarked, stated as exactly that, nothing
+more.

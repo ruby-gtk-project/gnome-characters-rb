@@ -3,167 +3,184 @@
 | | |
 |---|---|
 | Upstream | `main` @ `4b42297` |
-| Port | `ruby` @ `d89d6f1` |
-| Domain | `gnome-characters` (upstream's; the port has no domain at all) |
-| Upstream messages | 217 |
-| Ported | **9** (and see below — even those 9 are not all byte-identical) |
-| Gaps | 208 |
-| Extra (untranslated) | 0 |
-| Upstream occurrences | not separately re-derived here; 217 distinct keys censused across `src/*.js` and `data/*.ui`/`.xml`/`.in.in` |
-| Upstream languages | 78 `.po` files + `LINGUAS`, not independently re-counted beyond confirming the directory exists and this count is consistent with upstream's own documented worked example for this skill |
-| Languages shipped by the port | **0** — no `po/` directory exists anywhere in the `ruby` branch |
-| Build command | none — no gettext dependency wired into `lib/`, `exe/`, or the Rakefile |
+| Port | `ruby` @ `ca1d509` |
+| Domain | upstream: `org.gnome.Characters` (`po/meson.build`) — port: `gnome-characters-rb` (`lib/i18n.rb:17`) — **does not match** |
+| Upstream messages (source only, `po/` excluded per this skill's own rule) | 174 |
+| Ported (byte-identical key present in port) | 47 |
+| Gaps (real, after the scanner correction below) | 120 |
+| Extra (untranslated, after the scanner correction below) | 2 |
+| Upstream occurrences | 947 call sites over 174 keys (37 reused) |
+| Upstream languages | 75 `.po` files, `LINGUAS` matches exactly (independently diffed this round) |
+| Languages shipped by the port | **75/75** — `po/*.po`, `LINGUAS` and `POTFILES.in` now exist; `diff` of the two `.po` filename lists is empty |
+| Build command | `rake gettext:compile` (per `rakelib/gettext.rake`, compiles to `po/locale/*/LC_MESSAGES`, gitignored/generated) |
 
-## Step 1 — census
+## Correction to the prior round's report — the previous round's own numbers were wrong, not just stale
+
+The previous version of this document (pinned at `d89d6f1`) reported
+**217** upstream messages and **0/78 languages, no `po/` directory, no
+gettext anywhere**. Two things changed between that round and this one, and
+one of them was never true in the first place:
+
+1. **Commit `3135717` landed since** — "Port the translation catalogue: wire
+   gettext into lib/ and add po/" — which is the real, large change: the
+   previous round's "0 languages, no gettext" claim is now stale, not wrong.
+2. **The previous round's "217 upstream messages" figure was itself
+   miscounted**, independent of anything the port did. Re-running this
+   skill's own `msgid-census.sh` against `origin/main` and reading its
+   output correctly: scanning upstream's `po/` directory returns 217
+   distinct keys **because `.po` files also list msgids the current source
+   no longer has** (upstream has since deleted two strings — this skill's
+   own worked-example text for a different app in this org names exactly
+   this trap: *"`po/` is excluded from `messages:`... counting it would
+   report a tree as emitting strings its code no longer has"*). Scanning
+   `src/*.js`+`data/*.ui`+`.xml`+`.gschema.xml` alone — the correct basis —
+   returns **174**. The previous round's 217 was the po-inflated number,
+   cited as if it were the source count. This round uses 174, and this
+   correction is recorded in place rather than silently swapped.
+
+## Step 1 — census, and two scanner defects found and worked around (not silently absorbed)
 
 ```sh
-$ scripts/msgid-census.sh /tmp/up-characters | wc -l      # 5108 rows (includes po/ provenance)
-$ scripts/msgid-census.sh /tmp/up-characters | cut -f1,2 | sort -u | wc -l   # 217 distinct messages
-$ scripts/msgid-census.sh .                                                 # port
--	Character map application	single	data/org.gnome.CharactersRb.metainfo.xml
--	Characters is a simple utility application...	single	data/org.gnome.CharactersRb.metainfo.xml
--	Characters	single	data/org.gnome.CharactersRb.desktop:3
--	Characters	single	data/org.gnome.CharactersRb.metainfo.xml
--	characters;unicode;punctuation;math;letters;emoji;emoticon;symbols;	single	data/org.gnome.CharactersRb.desktop:12
--	The GNOME Project	single	data/org.gnome.CharactersRb.metainfo.xml
--	This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port...	single	data/org.gnome.CharactersRb.metainfo.xml
--	Utility application to find and insert unusual characters	single	data/org.gnome.CharactersRb.desktop:4
--	You can also browse characters by categories, such as Punctuation, Pictures, etc.	single	data/org.gnome.CharactersRb.metainfo.xml
+$ .claude/skills/translation-parity/scripts/msgid-census.sh /tmp/up-ch | wc -l        # 5108 (includes po/ provenance)
+$ awk -F'\t' '$4 !~ /^po\// {print}' | cut -f1,2 | sort -u | wc -l                     # 174 — upstream, source only
+$ .claude/skills/translation-parity/scripts/msgid-census.sh . > port.tsv
+$ awk -F'\t' '$4 !~ /^po\// {print}' port.tsv | cut -f1,2 | sort -u | wc -l            # 55 — port
 ```
 
-**The port's entire message set is 9 rows, all from
-`data/org.gnome.CharactersRb.{desktop,metainfo.xml}`. Zero rows come from
-any file in `lib/` or `exe/`.** Confirmed directly:
+Raw `comm -23`/`comm -13` on the two 174/55 key sets gives 127 gaps and 8
+extras. Per this skill's rule to cross-check against a real `.po` before
+trusting the census, two of those 127+8 are **scanner defects, not real
+differences**, found by reading the actual files rather than reported as-is:
+
+1. **`msgid-census.sh` does not decode HTML entities when scanning
+   `.ui` XML.** `data/sidebar.ui:25,32,39,46` write
+   `<property name="title" translatable="yes">Smileys &amp; Emotion</property>`
+   — the literal bytes in the file, pre-XML-decode. The real msgid (verified
+   against `po/fr.po:57`, `msgid "Animals & Nature"`) is the **decoded**
+   form, which is exactly what the port already emits
+   (`lib/sidebar.rb:98-106,110`). So `Animals &amp; Nature` /
+   `Food &amp; Drink` / `People &amp; Body` / `Smileys &amp; Emotion` /
+   `Travel &amp; Places` / `Letters &amp; Symbols` are **6 false gaps paired
+   with 6 false extras** — the port's text axis is already correct here,
+   and this is noted as a scanner limitation (worth fixing in the shared
+   skill script) rather than filed as 6 gaps this port does not have.
+2. **One false gap from a Python format-string literal.**
+   `lib/gen-scripts.py:93` contains `'{0}'.format(script)` — the scanner
+   matches `'{0}'` as a quoted literal next to `N_(` on the same logical
+   line and reports it as a translatable message. It is Python string
+   formatting syntax, not a msgid; no `.po` file anywhere contains it.
+   Subtracted as 1 false gap.
+
+After both corrections: **120 real gaps, 2 real extras** (`Keyboard
+Shortcuts` and the port's own metainfo-style blurb paragraph, both listed
+under `## Extra` below).
+
+## Step 2 — what the 120 real gaps are
 
 ```sh
-$ grep -rn 'require .gettext\|FastGettext\|_("' lib/ exe/
-(no output)
+$ comm -23 up.keys port.keys > gaps.txt   # after removing the 7 scanner artefacts above
+$ grep -cE '^-\t[A-Z][a-z]+(_[A-Za-z]+)*$' gaps.txt   # 117
 ```
 
-No Ruby file in this port calls `_()`, `N_()`, `n_()`, or any other marker.
-Every sidebar section/item title, every window/dialog label, "Copy",
-"Unicode", "Related Characters", "Character copied to clipboard", the four
-shortcuts-dialog entries, and the about dialog's strings are bare literals.
+**117 of the 120 are Unicode script names** — `Adlam`, `Arabic`, `Armenian`,
+`Avestan`, `Balinese`, … `Yi`, `Zanabazar_Square` — generated upstream by
+`lib/gen-scripts.py`, marked `N_("{0}".format(script))` per-script, and
+compiled into `src/scripts.h` as a table GNOME Characters uses (via
+`gc_get_scripts_for_language`) both to pick a default category for the
+user's locale **and to let a user search by typing a script name in their
+own language**. The port carries the identical data —
+`lib/data/language_scripts.tsv`, read by `Gc::Data.language_scripts`
+(`lib/gc.rb:170-172`) and consumed by `Gc.scripts_for_language`
+(`lib/gc.rb:354-358`) and `CharactersView` (`lib/characters_view.rb:166`) —
+**with no translation marker anywhere on the table**. `lib/gc.rb` and
+`lib/data/language_scripts.tsv` carry **zero** `_()`/`N_()` calls (confirmed:
+`grep -c "_(" lib/gc.rb` → 0). This is a real, functional translation gap,
+not a cosmetic one: a non-English-locale user who searches by typing their
+language's word for a script gets no match, because the port never offers
+those 117 strings to any catalogue in the first place.
 
-## Step 2 — measure, then diff
+The remaining 3:
 
+| msgid | Upstream source | Port state |
+|---|---|---|
+| `Characters's main interface` | `data/org.gnome.Characters.metainfo.xml.in.in:19` (screenshot `<caption>`) | not present — port's metainfo has no equivalent screenshot caption |
+| `Letters page` | same file, line 23 | not present, same reason |
+| `Maximum recent characters` | `data/org.gnome.Characters.gschema.xml:8` (`<summary>`) | not present — confirmed again this round: the port still has no `.gschema.xml`, carried forward from the prior round's finding under Settings |
+
+## Step 3 — domain mismatch (new finding this round, not in any prior report)
+
+`lib/i18n.rb:17` hardcodes `DOMAIN = 'gnome-characters-rb'`. Upstream's
+domain, read from `po/meson.build`'s `i18n.gettext(meson.project_name(), ...)`
+with `project('gnome-characters', ...)` at `/tmp/up-ch/meson.build:1`, is
+`org.gnome.Characters`. These are not the same domain, and per this skill's
+explicit rule — *"Never invent a domain name for the port. The domain is
+upstream's, because the catalogues are upstream's."* — this is a gap in its
+own right, tracked separately from the message-key gaps above. In practice
+it does not break the port's own `rake gettext:compile` pipeline (the port
+compiles its own `.po` files to its own domain name and binds to that same
+name), but it does mean the port's catalogues are not interchangeable with
+upstream's `l10n.gnome.org`-maintained ones under the name translators
+actually work against — `domain_matches: false`.
+
+## Step 4 — languages
+
+```sh
+$ diff <(ls po/*.po | xargs -n1 basename) <(ls /tmp/up-ch/po/*.po | xargs -n1 basename)
+(empty)
+$ wc -l < po/LINGUAS   # as a word count: 75, matches file count
 ```
-messages:      9 / 217     (4%)
-occurrences:   9 / ~260    (upstream reuses keys — e.g. "Characters" itself —
-                             across multiple files; the port's 9 are each a
-                             single site)
-languages:     0 / 78
-domain:        none vs "gnome-characters" — domain_matches: false
-```
 
-Key-set diff (`comm -23`/`comm -13` over the sorted key lists): 208 upstream
-messages have no counterpart in the port at all; the 9 the port does emit are
-not safely callable "ported" either — see the byte-identity check below.
-There are 0 extra port-only messages beyond the 9 that correspond to
-upstream's packaging files (nothing invented).
-
-### Byte-identity check on the 9 the port does carry
-
-Three of upstream's `data/` files were ported with their translatable
-strings; diffing them directly against upstream's source:
-
-```
-upstream (.desktop.in.in):  Exec=@bindir@/gnome-characters      Icon=@appid@
-port     (.desktop):        Exec=gnome-characters                Icon=org.gnome.Characters
-```
-Build-time token substitution — a correspondence, not a gap, per
-`component-parity`'s rule on `@tokens@`.
-
-**Corrected this round** — the prior version of this report flagged the
-metainfo `<summary>` as reworded (claiming upstream's `.in.in` source has two
-spaces after the first sentence against the port's one). Commit `b1ecdbc`
-changed the port to match the `.in.in` template's two-space form, but
-re-checking the *actual* msgid used for translation lookup — `grep` over
-upstream's own `.po` files, not the `.in.in` source template — shows every
-`.po` file carries the **single-space** form as its `msgid` (confirmed
-against `po/ab.po:165`, `po/af.po:72`, `po/ar.po:191`; `xgettext`/the
-translation workflow normalises the double space before it ever reaches a
-`.po` file). The port's current single-space string is therefore
-byte-identical to the real msgid, and this row is now a **pass**, not a gap.
-This is recorded as a correction rather than silently dropped, because the
-prior report's claim was itself wrong about which bytes are the canonical
-key — checking the `.in.in` template instead of the `.po` msgid is an easy
-way to flag a false gap.
-
-The metainfo file still has an added `<p>` block ("This is
-gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME Characters.")
-that has no upstream counterpart at all — an **extra** message, fine to have
-as the port's own identification, but one more string that will be
-English-only forever unless someone translates it.
-
-**New finding this round, not previously flagged by any report:** upstream's
-metainfo carries a `<releases>` block with 15 versioned `<description>`
-entries (per-release changelog `<p>`/`<ul>` text, e.g. "Characters 51.rc
-release.", "New translations:", the Lao/Norwegian Bokmål/etc. lists) — all of
-it translatable, all of it counted in upstream's 217. The port's metainfo has
-its own, much shorter release history and none of upstream's changelog
-entries. This is legitimate — the port is not obligated to claim upstream's
-release history as its own — but it means a chunk of upstream's 217
-messages are historical changelog text with no meaningful port counterpart
-by design, not strings that were missed. Not broken out as a separate
-number here because the census does not currently distinguish
-"release-notes text" from "live UI text" within its 217 total, but it is
-material to anyone trying to close the 208-message gap: closing it to zero
-would require either porting changelog text that describes a different
-codebase's history, or the census excluding `<releases>` content, and
-neither has happened. Filed as an open question, not resolved either way.
-
-The `<id>`, `<launchable>`, `<url>` and screenshot/developer_name fields
-differ for legitimate packaging reasons (different app ID, different
-upstream URL). None of those fields is extracted as translatable by the
-census's marker set (they carry no `<summary>`/`<description>`/`<p>` text),
-so this ledger has no row for them either way.
-
-## What the GSettings-equivalent carries, and doesn't
-
-Upstream's `data/org.gnome.Characters.gschema.xml` has two keys
-(`recent-characters`, `max-recent-characters`), and both have a `<summary>`/
-`<description>` pair that `msgid-census.sh`'s marker set extracts as
-translatable. The port's `lib/settings.rb` reimplements the same two keys
-functionally (documented, reasonable, matches the pilot port's choice — see
-`component-parity.md`) but, having no `.gschema.xml` file at all, carries
-**zero** of that file's translatable strings forward in any form. Those
-messages are not even present as English literals anywhere in the port; they
-simply do not exist. This is counted in the 208 gaps above (they are part of
-upstream's 217), not listed separately.
+75/75 languages shipped, file list identical to upstream's. This is the one
+clean pass in this report.
 
 ## Step 5 — prove it (and what could not be run)
 
-- `summary.parity`: **false** — 208 gaps, 0/78 languages, domain does not
-  match (the port has no domain).
-- `msgfmt -c` / `rmsgfmt` validation: **not run** — there is no `po/`
-  directory to validate, and no gettext dependency to validate it with.
-- Non-English locale check (`LANGUAGE=de LC_ALL=de_DE.UTF-8 <port binary>`):
-  **not run**, and cannot meaningfully be run — there is nothing for a
-  locale environment variable to select. Named here, as the skill requires
-  for any check that did not run, rather than left out of the report.
+- Message census: **run this round**, directly, both sides — not taken on
+  anyone's word. 47/174 real keys match, 120 real gaps, 2 real extras.
+- `msgfmt -c` / `rmsgfmt` validation of the 75 `.po` files: **not run** this
+  round — not attempted, not confirmed available in the dev shell. Named as
+  unrun rather than assumed clean.
+- Non-English locale check (`LANGUAGE=de LC_ALL=de_DE.UTF-8 xvfb-run ruby
+  exe/gnome-characters`), asserting a known translated string on screen:
+  **not run** this round. Given 117 of the 120 real gaps are the
+  script-name search table rather than visible chrome labels, a locale
+  check would likely show translated sidebar/dialog text correctly while
+  still silently failing to localise script-name search — which is exactly
+  the kind of partial result this skill warns reads as a pass. Not run, and
+  not claimed.
 
 ## Headline numbers
 
 ```
-9/217 messages (4%) · 0/~260 occurrences from source · 0/78 languages ·
-0 translated strings · no locale check possible (nothing to switch)
+47/174 messages (27%) · 75/75 languages (100%) · domain mismatch (gnome-characters-rb vs org.gnome.Characters)
+dominant gap: 117 Unicode script names (lib/gc.rb, lib/data/language_scripts.tsv) never marked for translation
 ```
 
 ## Extra
 
-- The metainfo `<p>` paragraph describing the port itself (see above) — one
-  English-only string, harmless, not parity work.
+- `Keyboard Shortcuts` (`lib/window.rb`) — a title string with no upstream
+  key by that exact spelling; upstream's nearest equivalent
+  (`Show Keyboard Shortcuts`) is a separate, already-matched key. English
+  only until someone translates it.
+- The metainfo `<p>` paragraph describing the port itself
+  ("This is gnome-characters-rb, a Ruby GTK4 / Libadwaita port of GNOME
+  Characters.") — one English-only string, harmless, not parity work.
 
 ## Rules followed
 
-- The prior round's one-space "gap" on the metainfo summary is corrected in
-  place this round, with the evidence (the `.po` msgid, not the `.in.in`
-  template) that shows it was never a gap — not silently carried forward as
-  settled fact.
-- Reported as a pair against upstream at every opportunity (9/217, 0/78), not
-  as a lone adjective.
-- The gschema's two untranslated keys are counted inside the 217 gaps, not
-  dropped because "there's no `.gschema.xml` to scan" — the skill is explicit
-  that a marked string in a widget/file the port never built is still a gap,
-  not an exemption.
+- The prior round's "217 upstream / 0 port" numbers are corrected in place,
+  with the evidence for both corrections (the po-inflation trap on the
+  upstream side, commit `3135717` on the port side) — neither silently
+  swapped nor re-asserted.
+- Two scanner defects (HTML-entity decoding, a Python format-string false
+  positive) are named and fixed by hand rather than reported as 7 port gaps
+  that do not exist, per the skill's "when the scanner is the thing that is
+  wrong" procedure — not silently absorbed into the gap count either
+  direction.
+- The domain mismatch is reported even though it does not block the port's
+  own build — "works for the port's own pipeline" is not the question this
+  skill asks; "is it upstream's domain" is.
+- Reported as pairs against upstream throughout (47/174, 75/75), not as a
+  lone adjective.
+- Checks not run this round (`msgfmt -c`, a live non-English locale
+  screenshot) are named as unrun in Step 5, not folded into "parity".

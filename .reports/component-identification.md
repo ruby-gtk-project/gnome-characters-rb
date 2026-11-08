@@ -3,7 +3,17 @@
 | | |
 |---|---|
 | Upstream | `main` @ `4b42297` |
-| Port | `ruby` @ `d89d6f1` |
+| Port | `ruby` @ `ca1d509` |
+
+## This round
+
+Two commits landed since this document was last written (`3135717`,
+`ca1d509`): `3135717` adds a **new unit** not previously identified —
+`Translatable` (`lib/i18n.rb`), the gettext-binding module every UI unit
+includes — plus the `po/` catalogue itself, which the "Non-widget packaging"
+table below previously (correctly, at the time) reported as confirmed
+missing. Both are updated in place rather than left to contradict
+`translation-parity.md`'s fresh census.
 
 Upstream has no `.ui`/`.blp` files for most of the app except `data/window.ui`,
 `data/sidebar.ui`, `data/character_dialog.ui`, `data/shortcuts.ui` — read
@@ -25,6 +35,10 @@ D-Bus search provider (`src/searchProvider.js` + `data/ShellSearchProvider2.xml`
 10. **Settings** — `data/org.gnome.Characters.gschema.xml` → `lib/settings.rb`
 11. **Gc** (native support library) — `lib/gc.c`/`lib/gc.h` + `gen-*.py` tables → `lib/gc.rb`
 12. **Util** — `src/util.js` → `lib/util.rb`
+13. **Translatable** — no single upstream file owns this; it corresponds to
+    upstream's combination of `po/meson.build`'s `i18n.gettext()` call and
+    every `_()`/`N_()` call site across `src/*.js`/`data/*.ui` → `lib/i18n.rb`
+    (added commit `3135717`, this round)
 
 ## Widget scan, both trees (component-scan.sh, gir-symbols.sh backed)
 
@@ -63,7 +77,7 @@ center) without ever opening the app's window.
 | `data/org.gnome.Characters.metainfo.xml.in.in` | `data/org.gnome.CharactersRb.metainfo.xml` | **present**, same staleness note |
 | `data/org.gnome.Characters.search-provider.ini` | `data/org.gnome.CharactersRb.search-provider.ini` | **present**, same staleness note |
 | `data/org.gnome.Characters.gschema.xml` | none — reimplemented as `lib/settings.rb` (JSON file backend) | no `.gschema.xml` on either side of the Settings unit; this is a correspondence per `component-parity`, not a gap, as long as the two translatable keys (`summary`/`description` on `recent-characters` / `max-recent-characters`) are carried — see translation-parity report, they are not |
-| `po/*.po`, `po/LINGUAS`, `po/POTFILES.in` (84 files) | none | **confirmed missing** — no `po/` directory anywhere in the tree, no `.po`, no `LINGUAS`, no `.pot`. See translation-parity report. |
+| `po/*.po`, `po/LINGUAS`, `po/POTFILES.in` (75 files, upstream) | `po/*.po` (75), `po/LINGUAS`, `po/POTFILES.in` | **present** since commit `3135717` — file-list diff against upstream is empty (75/75). The catalogue's *contents* (which messages actually reach it, whether the domain matches) is a `translation-parity.md` question, not this one; that report finds 120 real message gaps and a domain mismatch despite the directory itself being complete. |
 | `data/org.gnome.Characters.data.gresource.xml`, `src/org.gnome.Characters.src.gresource.xml.in` | none | correspondence, confirmed by reading the whole tree — the port builds every widget in Ruby code (house style) and has no `.ui`/`.blp` file anywhere, so there is no bundle for a manifest to list |
 
 ## Build/test registration cross-check
