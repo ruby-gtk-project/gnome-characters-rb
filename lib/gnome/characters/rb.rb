@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'rb/version'
 require_relative '../../util'
 require_relative '../../gc'
+require_relative "rb/version"
 
 # Gem entry point: `require "gnome/characters/rb"` is what `bundler/gem_tasks`
 # and RSpec's spec_helper expect for a gem named gnome-characters-rb, and it
